@@ -1,0 +1,155 @@
+.night{
+    width: 90%;
+    height: 80%;
+    position: relative;
+    top: .5rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    /* background-color: red; */
+    background-color: rgb(41, 41, 41);
+}
+
+.moon{
+    position: relative;
+    right: .5rem;
+    bottom: .2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: cyan;
+    transition: all 1s ease;
+    transition-delay: .8s;
+    transform: translateY(1rem);
+    opacity: 0;
+    filter: blur(.1rem);
+}
+
+.moon::before{
+    content: '';
+    display: block;
+    z-index: 2;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sea{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    /* background-color: red; */
+    backdrop-filter: blur(40px);
+    z-index: 66;
+    /* background-color: rgb(41, 41, 41); */
+    /* background-color: aliceblue; */
+}
+
+.nightfont{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 1rem;
+    top: 0;
+    left: 1rem;
+    /* background-color: red; */
+    font-size: .35rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    transition: all 1s ease;
+    transition-delay: .5s;
+    transform: translateX(-3rem);
+    opacity: 0;
+    filter: blur(.1rem);
+}
+
+.night span:nth-child(1){
+    color: aliceblue !important;
+}
+
+.night span:nth-child(2){
+    color: #fff !important;
+}
+
+.nightgl{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 5rem;
+    height: .5rem;
+    position: absolute;
+    left: 1.2rem;
+    top: 1.1rem;
+    color: aliceblue;
+    font-weight: 70;
+    font-size: .2rem;
+    transition: all 1s ease;
+    transition-delay: 1s;
+    transform: translateX(-3.5rem);
+    opacity: 0;
+    filter: blur(.1rem);
+}
+
+.nightgl::after{
+    content: 'Work hard silently and let success be your voice';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: .1rem !important;
+    color: aliceblue;
+}
+
+
+
+@media screen and (max-width: 1000px){
+    .night{
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nightfont{
+        width: 100%;
+        height: 2rem;
+        background-color: red;
+        font-size: .56rem;
+        top: 20%;
+        left: 0;
+    }
+
+    .nightgl{
+        width: 10%;
+        top: 25%;
+        left: 10%;
+        width: 100%;
+        height: 2rem;
+        /* background-color: #66a6ff; */
+        font-size: .4rem;
+    }
+
+    .nightgl::after{
+        font-size: .3rem !important;
+    }
+
+    .moon{
+        width: 6rem;
+        height: 6rem;
+        bottom: 16% !important;
+    }
+
+    .moon::before{
+        width: 4rem;
+        height: 4rem;
+    }
+}

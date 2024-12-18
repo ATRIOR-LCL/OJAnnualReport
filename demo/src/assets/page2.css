@@ -1,0 +1,144 @@
+.xinzeng{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 55%;
+    /* background-color: red; */
+    /* color: #fff; */
+    /* background-color: red; */
+}
+
+.yh{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: .8rem;
+    font-size: .5rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    top: 0;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    transition-delay: .5s;
+    transition: all 1s ease;
+    transform: translateY(.2rem);
+    opacity: 0;
+    filter: blur(.1rem);
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+.tj{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: .8rem;
+    font-size: .5rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    background-color: green;
+    color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    transition: all 1s ease;
+    transition-delay: 1s;
+    filter: blur(.1rem);
+    opacity: 0;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+.yhnum{
+    transform: scale(1.4);
+    margin-left: .2rem;
+    margin-right: .2rem;
+    background-clip: text;
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+
+.yh::after{
+    content: 'This year, OJ has added 0000 new users !';
+    position: absolute;
+    display: flex;
+    width: 8rem;
+    height: .3rem;
+    /* background-color: red; */
+    font-weight: 70;
+    font-size: .2rem;
+    bottom: -.25rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    letter-spacing: .01rem;
+}
+
+.tj::after{
+    content: 'New submissions 0000 !';
+    position: absolute;
+    display: flex;
+    width: 8rem;
+    height: .3rem;
+    /* background-color: red; */
+    font-weight: 70;
+    font-size: .2rem;
+    bottom: -.2rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    letter-spacing: .01rem;
+}
+
+.tjnum{
+    transform: scale(1.4);
+    margin-left: .2rem;
+    margin-right: .2rem;
+    background-clip: text;
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+
+@media screen and (max-width: 1000px){
+    .xinzeng{
+        height: 45%;
+        transform: scale(1.6);
+        /* font-size: ; */
+        /* justify-content: center; */
+    }
+    .yh{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 3rem;
+        background-color: #5D9FFF;
+        word-wrap: break-word;
+    }
+
+    .tj{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 3rem;
+        background-color: #5D9FFF;
+        word-wrap: break-word;
+    }
+
+    .tj span{
+        display: flex;
+        width: 100%;
+        height: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yh span{
+        display: flex;
+        width: 100%;
+        height: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+

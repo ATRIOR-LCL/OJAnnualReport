@@ -1,0 +1,144 @@
+.hard{
+    width: 90%;
+    height: 80%;
+    position: relative;
+    top: .5rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    /* background-color: red; */
+    
+    background-color: rgb(41, 41, 41);
+}
+
+.hardtxt{
+    letter-spacing: .1rem;
+    width: 6rem;
+    height: .6rem;
+    display: flex;
+    font-size: .35rem;
+    font-weight: 700;
+    justify-content: start;
+    align-items: center;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    position: absolute;
+    left: 1rem;
+    top: 0rem;
+    transition: all 1s ease;
+    transition-delay: .5s;
+    transform: translateX(-3rem);
+    opacity: 0;
+    filter: blur(.1rem);
+}
+
+.hardtxt span:nth-child(2){
+    margin-left: .1rem;
+    margin-right: .1rem;
+    color: aliceblue;
+}
+
+.hardtxt span:nth-last-child(1){
+    color: #fff !important;
+}
+
+.hard_slogan{
+    /* background-color: green; */
+    width: 4rem;
+    height: .3rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: .2rem;
+    /* font-size: .1rem; */
+    font-weight: 70;
+    display: flex;
+    color: aliceblue;
+    justify-content: start;
+    align-items: center;
+    transition: all 1s ease;
+    transition-delay: 1s;
+    transform: translateX(-3.5rem);
+    opacity: 0;
+    filter: blur(.1rem);
+}
+
+.hard_slogan::after{
+    content: 'As long as the road is right,don\'t have to worry about the distance.';
+    position: absolute;
+    font-size: .1rem;
+    bottom: -.2rem;
+    left: 0;
+    font-weight: 40;
+    word-wrap: none;
+}
+
+.sun{
+    width: 3rem;
+    height: 3rem;
+    background-color: orange;
+    border-radius: 50%;
+    position: relative;
+    bottom: .2rem;
+    right: .5rem;
+    z-index: 0;
+    transition: all 1s ease;
+    transition-delay: .8s;
+    transform: translateY(1rem);
+    opacity: 0;
+    filter: blur(.1rem);
+}
+.hdsea{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    /* background-color: red; */
+    backdrop-filter: blur(40px);
+    z-index: 66;
+    /* background-color: rgb(41, 41, 41); */
+    /* background-color: aliceblue; */
+}
+
+@media screen and (max-width: 1000px){
+    .hard{
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hardtxt{
+        width: 100%;
+        height: 2rem;
+        background-color: red;
+        font-size: .56rem;
+        top: 20%;
+        left: 10%;
+    }
+
+    .hard_slogan{
+        width: 10%;
+        top: 25%;
+        left: 10%;
+        width: 100%;
+        height: 2rem;
+        /* background-color: #66a6ff; */
+        font-size: .4rem;
+    }
+
+    .hard_slogan::after{
+        font-size: .3rem !important;
+    }
+
+    .sun{
+        width: 6rem;
+        height: 6rem;
+        bottom: 16% !important;
+    }
+
+    .moon::before{
+        width: 4rem;
+        height: 4rem;
+    }
+}

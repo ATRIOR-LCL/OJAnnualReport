@@ -1,0 +1,23 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@layui/layui-vue": "^2.21.0",
+    "fullpage.js": "^4.0.31",
+    "vue": "^3.5.13",
+    "vue-fullpage.js": "^0.2.20",
+    "vue3-fullpage": "^0.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.3",
+    "vite-plugin-vue-devtools": "^7.6.5"
+  }
+}
