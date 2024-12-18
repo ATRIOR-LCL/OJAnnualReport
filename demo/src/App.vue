@@ -1,5 +1,5 @@
 <template>
-<Vue3Fullpage :hide-navigation="true" class="main" >
+<Vue3Fullpage :hide-navigation="true" :scrollingEnabled="false" class="main" >
   <p class="title fontremove">SDUT Online Judge</p>
   <!-- <section>
     <lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange=fullscreen style="z-index: 999;position: relative;top: 1rem;">
@@ -68,7 +68,6 @@ import Question from "./components/Question.vue";
 const fullscreen = (isFullscreen) => {
   console.log(isFullscreen)
 }
-
 const isClick = ref(false)
 const tsxx = ref(true);
 const scr = ref(false)
@@ -136,7 +135,7 @@ function open(){
   text-align: center;
   overflow-y: scroll;
   font-size: 70px;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 .main::-webkit-scrollbar {
     width: 0px;  
@@ -151,7 +150,7 @@ section{
   height: 100vh;
   overflow: hidden;
   transition: all .1s linear;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .fontremove{
