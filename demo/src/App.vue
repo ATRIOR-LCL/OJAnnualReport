@@ -1,8 +1,15 @@
 <template>
 <Vue3Fullpage :hide-navigation="true" class="main" :class="{'cll': waiting}">
   <p class="title fontremove">SDUT Online Judge</p>
-  
   <section>
+    <lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange=fullscreen style="z-index: 999;position: relative;top: 1rem;">
+    <lay-button type="primary" @click="enter()">进入全屏</lay-button>  
+    <lay-button type="primary" @click="exit()">退出</lay-button> 
+    <lay-button type="default" @click="toggle()">切换: {{isFullscreen ? "退出" : "进入全屏"}}</lay-button>
+  </lay-fullscreen>
+  </section>
+  <section>
+    
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -57,6 +64,10 @@ import Diligent from "./components/Diligent.vue";
 import XinZeng from "./components/XinZeng.vue";
 import Busy from "./components/Busy.vue";
 import Question from "./components/Question.vue";
+
+const fullscreen = (isFullscreen) => {
+  console.log(isFullscreen)
+}
 
 const isClick = ref(false)
 const tsxx = ref(true);
