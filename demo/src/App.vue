@@ -1,5 +1,4 @@
 <template>
-<div  class="main" >
   <p class="title fontremove">SDUT Online Judge</p>
   <!-- <section>
     <lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange=fullscreen style="z-index: 999;position: relative;top: 1rem;">
@@ -8,7 +7,7 @@
     <lay-button type="default" @click="toggle()">切换: {{isFullscreen ? "退出" : "进入全屏"}}</lay-button>
   </lay-fullscreen>
   </section> -->
-  <section>
+  <section id="page1" class="page" style="z-index: 999999999;">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -37,19 +36,18 @@
             <img src="./assets/img/sdutacm_logo_colorful-02a05aa9.svg" alt="" class="acmsvg">
         </lay-ripple>
       </div>
-      <div class="lt2"></div>
+      <div class="lt2 "></div>
       <div class="lt3"></div>
     </div>
   </section>
-  <XinZeng></XinZeng>
-  <Diligent></Diligent>
-  <Achievement></Achievement>
+  <XinZeng id="page2" class="page hide"></XinZeng>
+  <Diligent id="page3" class="page hide"></Diligent>
+  <!-- <Achievement></Achievement>
   <Busy></Busy>
   <Night></Night>
   <Hard></Hard>
   <Question></Question>
-  <Last></Last>
-</div>
+  <Last></Last> -->
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
@@ -70,60 +68,50 @@ const scr = ref(false);
 const waiting = ref(false);
 const wait = ref(null);
 
-const maxScrollDistance = window.innerHeight; // 每次翻页的最大距离（100vh）
+    onMounted(()=>{
+      let currentPage = 0;
+    let isTouching = false;
+    const pages = document.querySelectorAll('.page');
+    const totalPages = pages.length;
 
-let startTouchY = 0; // 触摸起始位置
-let isScrolling = false; // 滚动中标志
-let currentScrollY = 0; // 当前滚动位置
+    const handleTouch = (event) => {
+      console.log("yes")
+      if (isTouching) return; // 防止快速触摸多次翻页
 
-// 触摸开始事件
-const handleTouchStart = (e) => {
-  startTouchY = e.touches[0].clientY; // 获取触摸起始位置
-  isScrolling = false; // 在每次触摸开始时，重置滚动标志
-};
+      const touchStart = event.touches[0].clientY;
+      let touchEnd;
 
-// 触摸移动事件
-const handleTouchMove = (e) => {
-  if (isScrolling) return; // 如果正在滚动，则不处理滑动事件
+      const handleTouchMove = (moveEvent) => {
+        touchEnd = moveEvent.touches[0].clientY;
+      };
 
-  let currentTouchY = e.touches[0].clientY; // 获取当前触摸位置
-  let distance = startTouchY - currentTouchY; // 计算滑动的距离
+      const handleTouchEnd = () => {
+        if (touchEnd - touchStart > 50 && currentPage > 0) {
+          // 向下滑动，上一页
+          pages[currentPage].classList.add('hide');
+          currentPage--;
+          pages[currentPage].classList.remove('hide');
+        } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 1) {
+          // 向上滑动，下一页
+          pages[currentPage].classList.add('hide');
+          currentPage++;
+          pages[currentPage].classList.remove('hide');
+        }
 
-  // 如果滑动的距离大于半屏高度，就准备滚动
-  if (Math.abs(distance) > maxScrollDistance / 2) {
-    isScrolling = true; // 设置滚动状态为正在滚动
+        // 移除事件监听，等待下次触摸
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
+        isTouching = false;
+      };
 
-    // 根据滑动的方向判断是否向下或向上滚动
-    if (distance > 0) {
-      // 向下滚动（滚动到下一个页面）
-      window.scrollTo(0, currentScrollY + maxScrollDistance);
-    } else {
-      // 向上滚动（滚动到上一页）
-      window.scrollTo(0, currentScrollY - maxScrollDistance);
-    }
+      isTouching = true;
+      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchend', handleTouchEnd);
+    };
 
-    // 阻止默认滚动行为
-    e.preventDefault();
-  }
-};
-
-// 触摸结束事件
-const handleTouchEnd = () => {
-  // 更新当前滚动位置
-  currentScrollY = window.scrollY;
-
-  // 重置滚动状态
-  isScrolling = false;
-};
-
-onMounted(() => {
-  // 监听触摸事件
-  const mainElement = document.querySelector('.main');
-  mainElement.addEventListener('touchstart', handleTouchStart, { passive: false });
-  mainElement.addEventListener('touchmove', handleTouchMove, { passive: false });
-  mainElement.addEventListener('touchend', handleTouchEnd, { passive: false });
-});
-
+    // 监听 touchstart 事件
+    document.addEventListener('touchstart', handleTouch);
+    })
 
 if (window.screen.width < 1000) {
   scr.value = true;
@@ -132,7 +120,7 @@ if (window.screen.width < 1000) {
 function open() {
   setTimeout(() => {
     const main = document.querySelector('.main');
-    main.classList.remove('cll');
+    // main.classList.remove('cll');
   }, 1500);
 
   const confettis = document.querySelector('.confettis');
@@ -172,7 +160,7 @@ function open() {
 .main {
   text-align: center;
   font-size: 70px;
-  -webkit-overflow-scrolling: touch; /* 提升移动端滑动体验 */
+  overflow-y: scroll;
 }
 
 .main::-webkit-scrollbar {
@@ -181,6 +169,8 @@ function open() {
 }
 
 section {
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,11 +178,16 @@ section {
   height: 100vh;
   overflow: hidden;
   transition: all 0.3s linear;
+  /* z-index: 99999999999; */
 }
 
 .fontremove {
   opacity: 0;
 }
+
+.hide {
+      transform: translateY(-100%);
+  }
 
 .fontactive {
   filter: blur(0);
