@@ -65,6 +65,24 @@ import XinZeng from "./components/XinZeng.vue";
 import Busy from "./components/Busy.vue";
 import Question from "./components/Question.vue";
 
+let maxScrollDistance = window.innerHeight; // 每次翻页的最大距离（100vh）
+
+window.addEventListener('wheel', function(e) {
+  let scrollDirection = e.deltaY; // 获取滚动的方向和距离
+
+  if (scrollDirection > 0) {
+    // 向下滚动，翻到下一页
+    window.scrollBy(0, Math.min(scrollDirection, maxScrollDistance)); 
+  } else {
+    // 向上滚动，翻到上一页
+    window.scrollBy(0, Math.max(scrollDirection, -maxScrollDistance)); 
+  }
+
+  // 阻止默认行为，防止页面继续滚动
+  e.preventDefault();
+}, { passive: false });
+
+
 const fullscreen = (isFullscreen) => {
   console.log(isFullscreen)
 }
