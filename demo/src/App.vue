@@ -65,22 +65,8 @@ import XinZeng from "./components/XinZeng.vue";
 import Busy from "./components/Busy.vue";
 import Question from "./components/Question.vue";
 
-let maxScrollDistance = window.innerHeight; // 每次翻页的最大距离（100vh）
 
-window.addEventListener('wheel', function(e) {
-  let scrollDirection = e.deltaY; // 获取滚动的方向和距离
 
-  if (scrollDirection > 0) {
-    // 向下滚动，翻到下一页
-    window.scrollBy(0, Math.min(scrollDirection, maxScrollDistance)); 
-  } else {
-    // 向上滚动，翻到上一页
-    window.scrollBy(0, Math.max(scrollDirection, -maxScrollDistance)); 
-  }
-
-  // 阻止默认行为，防止页面继续滚动
-  e.preventDefault();
-}, { passive: false });
 
 
 const fullscreen = (isFullscreen) => {
@@ -92,9 +78,45 @@ const scr = ref(false)
 const waiting = ref(false)
 const wait = ref(null)
 
+
+const maxScrollDistance = window.innerHeight; // 每次翻页的最大距离（100vh）
+
+let startTouchY = 0;
+let isScrolling = false;
+
+const handleTouchStart = (e) => {
+  startTouchY = e.touches[0].clientY; // 获取触摸起始位置
+};
+
+const handleTouchEnd = (e) => {
+  if (isScrolling) return; // 防止多次触发
+
+  let endTouchY = e.changedTouches[0].clientY; // 获取触摸结束位置
+  let distance = startTouchY - endTouchY; // 计算滑动的距离
+
+  // 如果滑动的距离大于某个阈值（例如，50px），则认为是翻页
+  if (Math.abs(distance) > 50) {
+    if (distance > 0) {
+      // 向下滑动，翻到下一页
+      window.scrollBy(0, Math.min(distance, maxScrollDistance)); 
+    } else {
+      // 向上滑动，翻到上一页
+      window.scrollBy(0, Math.max(distance, -maxScrollDistance)); 
+    }
+    isScrolling = true;
+    setTimeout(() => {
+      isScrolling = false;
+    }, 500); // 防止短时间内触发多次滚动
+  }
+};
+
 onMounted(()=>{
   const main = document.querySelector('.main');
     main.classList.add('cll')
+
+    const mainElement = document.querySelector('.main');
+    mainElement.addEventListener('touchstart', handleTouchStart);
+    mainElement.addEventListener('touchend', handleTouchEnd);
 })
 
 
@@ -151,7 +173,8 @@ function open(){
 }
 .main{
   text-align: center;
-  overflow-y: scroll;
+  overflow: hidden;
+  /* overflow-y: scroll; */
   font-size: 70px;
   /* scroll-snap-type: y mandatory; */
 }
