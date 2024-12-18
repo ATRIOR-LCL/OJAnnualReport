@@ -1,13 +1,13 @@
 <template>
-<Vue3Fullpage :hide-navigation="true" class="main" :class="{'cll': waiting}">
+<Vue3Fullpage :hide-navigation="true" class="main">
   <p class="title fontremove">SDUT Online Judge</p>
-  <section>
+  <!-- <section>
     <lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange=fullscreen style="z-index: 999;position: relative;top: 1rem;">
     <lay-button type="primary" @click="enter()">进入全屏</lay-button>  
     <lay-button type="primary" @click="exit()">退出</lay-button> 
     <lay-button type="default" @click="toggle()">切换: {{isFullscreen ? "退出" : "进入全屏"}}</lay-button>
   </lay-fullscreen>
-  </section>
+  </section> -->
   <section>
     
     <div class="confettis" v-if="true">
@@ -57,7 +57,7 @@ import Hard from "./components/Hard.vue";
 import Last from "./components/Last.vue";
 import "vue3-fullpage/styles";
 import { Vue3Fullpage } from "vue3-fullpage";
-import { ref } from 'vue';
+import { onMounted, ref, nextTick } from 'vue';
 import Night from "./components/Night.vue";
 import Achievement from "./components/Achievement.vue";
 import Diligent from "./components/Diligent.vue";
@@ -73,6 +73,13 @@ const isClick = ref(false)
 const tsxx = ref(true);
 const scr = ref(false)
 const waiting = ref(false)
+const wait = ref(null)
+
+onMounted(()=>{
+  const main = document.querySelector('.main');
+    main.classList.add('cll')
+})
+
 
 if(window.screen.width<1000){
     console.log('yes')
@@ -81,7 +88,8 @@ if(window.screen.width<1000){
 
 function open(){
   setTimeout(()=>{
-    waiting.value = false
+    const main = document.querySelector('.main');
+    main.classList.remove('cll')
   }, 1500)
   const confettis = document.querySelector('.confettis')
   confettis.classList.add('Delay')
