@@ -19,7 +19,7 @@ onMounted(()=>{
             entry.target.classList.remove('fontactive')
         }
         })
-    }, {threshold: 0.5})
+    }, {threshold: 1})
 
     const page2font = document.querySelectorAll('.yh, .tj, .qf1, .qf2, .qf3, .emoji')
     page2font.forEach(page2font=> page2anim.observe(page2font))
