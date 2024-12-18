@@ -1,8 +1,7 @@
 <template>
 <Vue3Fullpage :hide-navigation="true" class="main" :class="{'cll': waiting}">
   <p class="title fontremove">SDUT Online Judge</p>
-  <Last></Last>
-  <Question></Question>
+  
   <section>
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -41,7 +40,8 @@
   <Busy></Busy>
   <Night></Night>
   <Hard></Hard>
-  
+  <Question></Question>
+  <Last></Last>
 </Vue3Fullpage>
 </template>
 
