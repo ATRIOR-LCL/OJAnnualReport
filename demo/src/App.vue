@@ -173,8 +173,8 @@ function open(){
 }
 .main{
   text-align: center;
-  overflow: hidden;
-  /* overflow-y: scroll; */
+  /* overflow: hidden; */
+  overflow-y: scroll;
   font-size: 70px;
   /* scroll-snap-type: y mandatory; */
 }
