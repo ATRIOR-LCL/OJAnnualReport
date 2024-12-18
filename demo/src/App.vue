@@ -151,6 +151,7 @@ section{
   height: 100vh;
   overflow: hidden;
   transition: all .1s linear;
+  scroll-snap-align: start;
 }
 
 .fontremove{
