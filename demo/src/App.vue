@@ -1,5 +1,5 @@
 <template>
-<Vue3Fullpage :hide-navigation="true" :scrollingEnabled="false" class="main" >
+<Vue3Fullpage :hide-navigation="true" class="main" >
   <p class="title fontremove">SDUT Online Judge</p>
   <!-- <section>
     <lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange=fullscreen style="z-index: 999;position: relative;top: 1rem;">
@@ -51,7 +51,6 @@
   <Last></Last>
 </Vue3Fullpage>
 </template>
-
 <script setup>
 import Hard from "./components/Hard.vue";
 import Last from "./components/Last.vue";
@@ -65,146 +64,134 @@ import XinZeng from "./components/XinZeng.vue";
 import Busy from "./components/Busy.vue";
 import Question from "./components/Question.vue";
 
-
-
-
-
-const fullscreen = (isFullscreen) => {
-  console.log(isFullscreen)
-}
-const isClick = ref(false)
+const isClick = ref(false);
 const tsxx = ref(true);
-const scr = ref(false)
-const waiting = ref(false)
-const wait = ref(null)
-
+const scr = ref(false);
+const waiting = ref(false);
+const wait = ref(null);
 
 const maxScrollDistance = window.innerHeight; // 每次翻页的最大距离（100vh）
 
-let startTouchY = 0;
-let isScrolling = false;
+let startTouchY = 0; // 触摸起始位置
+let isScrolling = false; // 滚动中标志
+let currentScrollY = 0; // 当前滚动位置
 
+// 触摸开始事件
 const handleTouchStart = (e) => {
   startTouchY = e.touches[0].clientY; // 获取触摸起始位置
+  isScrolling = false; // 在每次触摸开始时，重置滚动标志
 };
 
-const handleTouchEnd = (e) => {
-  if (isScrolling) return; // 防止多次触发
+// 触摸移动事件
+const handleTouchMove = (e) => {
+  // 如果当前正在滚动，则直接返回，避免多次触发
+  if (isScrolling) return;
 
-  let endTouchY = e.changedTouches[0].clientY; // 获取触摸结束位置
-  let distance = startTouchY - endTouchY; // 计算滑动的距离
+  let currentTouchY = e.touches[0].clientY; // 获取当前触摸位置
+  let distance = startTouchY - currentTouchY; // 计算滑动的距离
 
-  // 如果滑动的距离大于某个阈值（例如，50px），则认为是翻页
-  if (Math.abs(distance) > 50) {
-    if (distance > 0) {
-      // 向下滑动，翻到下一页
-      window.scrollBy(0, Math.min(distance, maxScrollDistance)); 
-    } else {
-      // 向上滑动，翻到上一页
-      window.scrollBy(0, Math.max(distance, -maxScrollDistance)); 
-    }
-    isScrolling = true;
-    setTimeout(() => {
-      isScrolling = false;
-    }, 500); // 防止短时间内触发多次滚动
+  // 控制最大滑动距离为100vh
+  if (Math.abs(distance) > maxScrollDistance) {
+    distance = distance > 0 ? maxScrollDistance : -maxScrollDistance;
   }
+
+  // 设置页面滚动
+  window.scrollTo(0, currentScrollY + distance);
+
+  // 阻止默认滚动行为，避免页面继续滚动
+  e.preventDefault();
 };
 
-onMounted(()=>{
-  const main = document.querySelector('.main');
-    main.classList.add('cll')
+// 触摸结束事件
+const handleTouchEnd = () => {
+  currentScrollY = window.scrollY; // 更新当前滚动位置
+  isScrolling = false; // 重置滚动状态
+};
 
-    const mainElement = document.querySelector('.main');
-    mainElement.addEventListener('touchstart', handleTouchStart);
-    mainElement.addEventListener('touchend', handleTouchEnd);
-})
+onMounted(() => {
+  // 监听触摸事件
+  const mainElement = document.querySelector('.main');
+  mainElement.addEventListener('touchstart', handleTouchStart, { passive: false });
+  mainElement.addEventListener('touchmove', handleTouchMove, { passive: false });
+  mainElement.addEventListener('touchend', handleTouchEnd, { passive: false });
+});
 
+if (window.screen.width < 1000) {
+  scr.value = true;
+}
 
-if(window.screen.width<1000){
-    console.log('yes')
-    scr.value = true
-  }
-
-function open(){
-  setTimeout(()=>{
+function open() {
+  setTimeout(() => {
     const main = document.querySelector('.main');
-    main.classList.remove('cll')
-  }, 1500)
-  const confettis = document.querySelector('.confettis')
-  confettis.classList.add('Delay')
+    main.classList.remove('cll');
+  }, 1500);
+
+  const confettis = document.querySelector('.confettis');
+  confettis.classList.add('Delay');
   
-  const upp = document.querySelector('.lt_txt')
-  upp.classList.add('upp')
+  const upp = document.querySelector('.lt_txt');
+  upp.classList.add('upp');
 
-  const donn = document.querySelector('.letter')
-  donn.classList.add('donn')
+  const donn = document.querySelector('.letter');
+  donn.classList.add('donn');
 
-  const ts = document.querySelector('.ts')
-  ts.classList.add('fontremove')
+  const ts = document.querySelector('.ts');
+  ts.classList.add('fontremove');
 
-  const jy = document.querySelector('.jiyu')
-  jy.classList.add('fontactive')
+  const jy = document.querySelector('.jiyu');
+  jy.classList.add('fontactive');
 
   const emojis = document.querySelectorAll(".e1,.e2,.e3,.e4");
-  emojis.forEach(emoji=>{
-    emoji.classList.add('fontactive')
-    
-  })
-  setTimeout(()=>{
-      emojis.forEach(i=>{
-        i.classList.remove('fontactive')
-      })
-    }, 1500)
-    const title = document.querySelector('.title')
-    title.classList.add('fontactive')
+  emojis.forEach((emoji) => {
+    emoji.classList.add('fontactive');
+  });
+
+  setTimeout(() => {
+    emojis.forEach((i) => {
+      i.classList.remove('fontactive');
+    });
+  }, 1500);
+
+  const title = document.querySelector('.title');
+  title.classList.add('fontactive');
 }
 </script>
 
 <style scoped>
 @import url('../src/assets/main.css');
 
-.dis{
-  display: flex;
-}
-
-.Delay{
-  filter: blur(0);
-  opacity: 1;
-}
-.main{
+.main {
   text-align: center;
-  /* overflow: hidden; */
-  overflow-y: scroll;
   font-size: 70px;
-  /* scroll-snap-type: y mandatory; */
-}
-.main::-webkit-scrollbar {
-    width: 0px;  
-    background: transparent;
+  -webkit-overflow-scrolling: touch; /* 提升移动端滑动体验 */
 }
 
-section{
+.main::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+section {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  transition: all .1s linear;
-  /* scroll-snap-align: start; */
+  transition: all 0.1s linear;
 }
 
-.fontremove{
-    opacity: 0;
+.fontremove {
+  opacity: 0;
 }
 
-.fontactive{
-    filter: blur(0);
-    opacity: 1;
-    transform: translateX(0) translateY(0);
+.fontactive {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateX(0) translateY(0);
 }
 
-.cll{
+.cll {
   overflow: hidden;
 }
 </style>
