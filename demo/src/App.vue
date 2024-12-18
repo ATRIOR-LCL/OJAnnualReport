@@ -1,5 +1,5 @@
 <template>
-<Vue3Fullpage :hide-navigation="true" class="main" >
+<div  class="main" >
   <p class="title fontremove">SDUT Online Judge</p>
   <!-- <section>
     <lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange=fullscreen style="z-index: 999;position: relative;top: 1rem;">
@@ -49,7 +49,7 @@
   <Hard></Hard>
   <Question></Question>
   <Last></Last>
-</Vue3Fullpage>
+</div>
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
@@ -84,28 +84,36 @@ const handleTouchStart = (e) => {
 
 // 触摸移动事件
 const handleTouchMove = (e) => {
-  // 如果当前正在滚动，则直接返回，避免多次触发
-  if (isScrolling) return;
+  if (isScrolling) return; // 如果正在滚动，则不处理滑动事件
 
   let currentTouchY = e.touches[0].clientY; // 获取当前触摸位置
   let distance = startTouchY - currentTouchY; // 计算滑动的距离
 
-  // 控制最大滑动距离为100vh
-  if (Math.abs(distance) > maxScrollDistance) {
-    distance = distance > 0 ? maxScrollDistance : -maxScrollDistance;
+  // 如果滑动的距离大于半屏高度，就准备滚动
+  if (Math.abs(distance) > maxScrollDistance / 2) {
+    isScrolling = true; // 设置滚动状态为正在滚动
+
+    // 根据滑动的方向判断是否向下或向上滚动
+    if (distance > 0) {
+      // 向下滚动（滚动到下一个页面）
+      window.scrollTo(0, currentScrollY + maxScrollDistance);
+    } else {
+      // 向上滚动（滚动到上一页）
+      window.scrollTo(0, currentScrollY - maxScrollDistance);
+    }
+
+    // 阻止默认滚动行为
+    e.preventDefault();
   }
-
-  // 设置页面滚动
-  window.scrollTo(0, currentScrollY + distance);
-
-  // 阻止默认滚动行为，避免页面继续滚动
-  e.preventDefault();
 };
 
 // 触摸结束事件
 const handleTouchEnd = () => {
-  currentScrollY = window.scrollY; // 更新当前滚动位置
-  isScrolling = false; // 重置滚动状态
+  // 更新当前滚动位置
+  currentScrollY = window.scrollY;
+
+  // 重置滚动状态
+  isScrolling = false;
 };
 
 onMounted(() => {
@@ -115,6 +123,7 @@ onMounted(() => {
   mainElement.addEventListener('touchmove', handleTouchMove, { passive: false });
   mainElement.addEventListener('touchend', handleTouchEnd, { passive: false });
 });
+
 
 if (window.screen.width < 1000) {
   scr.value = true;
@@ -178,7 +187,7 @@ section {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  transition: all 0.1s linear;
+  transition: all 0.3s linear;
 }
 
 .fontremove {
