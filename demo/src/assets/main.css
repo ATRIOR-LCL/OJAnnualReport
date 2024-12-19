@@ -12,7 +12,7 @@
     display: block;
     height: .2rem;
     text-align: center;
-    width: 2rem;
+    width: inherit;
     color: #fff;
     font-size: .2rem;
     position: fixed;
