@@ -3,6 +3,7 @@
     <div class="special">
         <div class="splanimall">
             <div ref="bili1" class="bili1">
+                <p class="bili1txt">SDUT ACM</p>
                 <div class="eyes"></div>
             </div>
             <div ref="bili2" class="bili2">
@@ -39,6 +40,19 @@ onMounted(()=>{
         bili1.value.style.boxShadow = shadow
         bili2.value.style.boxShadow = shadow2
     }
+
+    const allanim = new IntersectionObserver((lists)=>{
+        lists.forEach((list)=>{
+            if(list.isIntersecting){
+                list.target.classList.add('erase')
+            }else{
+                list.target.classList.remove('erase')
+            }
+        })
+    }, {threshold: 0.5})
+
+    const animall = document.querySelector('.splanimall');
+    allanim.observe(animall)
 })
 
 
@@ -46,4 +60,7 @@ onMounted(()=>{
 
 <style scoped>
 @import url('../assets/special.css');
+.erase{
+    opacity: 1;
+}
 </style>

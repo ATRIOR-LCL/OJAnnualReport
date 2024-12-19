@@ -13,11 +13,12 @@
     .spl1{
         width: inherit;
         height: 8%;
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+        /* background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%); */
         background-clip: text;
         color: transparent;
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 0;
         display: flex;
         justify-content: start;
@@ -31,11 +32,11 @@
     .spl2{
         width: inherit;
         height: 8%;
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
         background-clip: text;
         color: transparent;
         position: absolute;
-        top: 60%;
+        top: 65%;
         left: 0;
         display: flex;
         justify-content: start;
@@ -50,11 +51,11 @@
     .spl3{
         width: inherit;
         height: 8%;
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
         background-clip: text;
         color: transparent;
         position: absolute;
-        top: 70%;
+        top: 75%;
         left: 0;
         display: flex;
         justify-content: start;
@@ -90,11 +91,11 @@
     .spl4{
         width: inherit;
         height: 8%;
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
         background-clip: text;
         color: transparent;
         position: absolute;
-        top: 64%;
+        top: 69%;
         left: 0;
         display: flex;
         justify-content: start;
@@ -110,6 +111,9 @@
         /* background-color: red; */
         position: relative;
         top: -15%;
+        transition: all 1s ease;
+        transition-delay: 1s;
+        opacity: 0;
     }
 
     .bili1{
@@ -162,6 +166,13 @@
         border-radius: .1rem;
         background-color: rgb(109, 109, 109);
     }
+    .bili1txt{
+        position: absolute;
+        bottom: 0.1rem;
+        font-size: .3rem;
+        color: #333333;
+        font-weight: 600;
+    }
 
     .eyes{
         width: 1.5rem;
@@ -195,7 +206,7 @@
         position: absolute;
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         width: 1rem;
         height: .8rem;
         border-radius: .1rem;
@@ -204,6 +215,13 @@
         transform: rotate(-10deg);
         background-color: #fff;
         animation: bili2anim linear 2s infinite alternate;
+    }
+
+    .bili2::after{
+        content: 'code';
+        color: #333333;
+        font-size: .3rem;
+        font-weight: 700;
     }
 
     @keyframes bili2anim{
