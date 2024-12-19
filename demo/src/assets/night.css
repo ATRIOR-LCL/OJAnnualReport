@@ -145,7 +145,7 @@
     .moon{
         width: 6rem;
         height: 6rem;
-        bottom: 26% !important;
+        bottom: 31% !important;
     }
 
     .moon::before{
@@ -154,6 +154,7 @@
     }
 
     .sea{
-        bottom: 10%;
+        /* height: calc(100*0.1); */
+        bottom: 15%;
     }
 }
