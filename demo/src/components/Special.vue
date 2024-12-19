@@ -53,6 +53,19 @@ onMounted(()=>{
 
     const animall = document.querySelector('.splanimall');
     allanim.observe(animall)
+
+    const heiheianim = new IntersectionObserver(lists=>{
+        lists.forEach(list=>{
+            if(list.isIntersecting){
+                list.target.classList.add('heihei')
+            }else{
+                list.target.classList.remove('heihei')
+            }
+        })
+    })
+
+    const heiheis = document.querySelectorAll('.spl1, .spl2, .spl3, .spl4')
+    heiheis.forEach(heihei=>heiheianim.observe(heihei))
 })
 
 
@@ -62,5 +75,11 @@ onMounted(()=>{
 @import url('../assets/special.css');
 .erase{
     opacity: 1;
+}
+
+.heihei{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
 }
 </style>
