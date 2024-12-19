@@ -11,10 +11,10 @@
             <img src="../assets/img/codesmall.svg" alt="" class="codesmall">
             <img src="../assets/img/code.svg" alt="" class="code">
         </div>
-        <p class="spl1"><span class="spl1time">0000-00-00</span>是个特殊的日子。</p>
+        <p class="spl1">0000-00-00是个特殊的日子。</p>
         <p class="spl2">在这一天，注定不平凡的你，</p>
-        <p class="spl4">开始了与<span class="spl2oj">SDUT OJ</span>的不期而遇。</p>
-        <p class="spl3">时至今日，我们的旅程已经开始了<span class="spl3time">0000</span>天</p>
+        <p class="spl4">开始了与SDUT OJ的不期而遇。</p>
+        <p class="spl3">时至今日，我们的旅程已经开始了0000天</p>
     </div>
 </section>
 </template>
