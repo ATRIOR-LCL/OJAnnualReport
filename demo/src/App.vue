@@ -7,7 +7,7 @@
     <lay-button type="default" @click="toggle()">切换: {{isFullscreen ? "退出" : "进入全屏"}}</lay-button>
   </lay-fullscreen>
   </section> -->
-  <section id="page1" class="page" style="z-index: 999999999;">
+  <section id="page1" class="page">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -114,10 +114,6 @@ if (window.screen.width < 1000) {
 }
 
 function open() {
-  setTimeout(() => {
-    const main = document.querySelector('.main');
-    // main.classList.remove('cll');
-  }, 1500);
 
   const confettis = document.querySelector('.confettis');
   confettis.classList.add('Delay');
@@ -152,7 +148,9 @@ function open() {
 
 <style scoped>
 @import url('../src/assets/main.css');
-
+.Delay{
+  opacity: 1;
+}
 .main {
   text-align: center;
   font-size: 70px;
