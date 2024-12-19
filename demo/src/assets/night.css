@@ -44,7 +44,7 @@
     height: 20%;
     /* background-color: red; */
     /* background-color: red; */
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(30px);
     z-index: 66;
     /* background-color: rgb(41, 41, 41); */
     /* background-color: aliceblue; */
@@ -145,11 +145,15 @@
     .moon{
         width: 6rem;
         height: 6rem;
-        bottom: 16% !important;
+        bottom: 26% !important;
     }
 
     .moon::before{
         width: 4rem;
         height: 4rem;
+    }
+
+    .sea{
+        bottom: 10%;
     }
 }
