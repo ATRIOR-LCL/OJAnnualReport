@@ -126,7 +126,7 @@
         height: 2.1rem;
         border-radius: .3rem;
         right: 1rem;
-        top: 2rem;
+        top: 70%;
         transform: rotate(10deg);
         background-color: #fff;
         animation: bili1anim 2s linear infinite alternate;
