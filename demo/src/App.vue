@@ -42,12 +42,12 @@
   </section>
   <XinZeng id="page2" class="page hide"></XinZeng>
   <Diligent id="page3" class="page hide"></Diligent>
-  <!-- <Achievement></Achievement>
-  <Busy></Busy>
-  <Night></Night>
-  <Hard></Hard>
-  <Question></Question>
-  <Last></Last> -->
+  <Achievement id="page4" class="page hide"></Achievement>
+  <Busy id="page5" class="page hide"></Busy>
+  <Night id="page6" class="page hide"></Night>
+  <Hard id="page7" class="page hide"></Hard>
+  <Question id="page8" class="page hide"></Question>
+  <Last id="page9" class="page hide"></Last>
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
@@ -87,18 +87,15 @@ const wait = ref(null);
 
       const handleTouchEnd = () => {
         if (touchEnd - touchStart > 50 && currentPage > 0) {
-          // 向下滑动，上一页
           pages[currentPage].classList.add('hide');
           currentPage--;
           pages[currentPage].classList.remove('hide');
         } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 1) {
-          // 向上滑动，下一页
           pages[currentPage].classList.add('hide');
           currentPage++;
           pages[currentPage].classList.remove('hide');
         }
 
-        // 移除事件监听，等待下次触摸
         document.removeEventListener('touchmove', handleTouchMove);
         document.removeEventListener('touchend', handleTouchEnd);
         isTouching = false;
@@ -109,7 +106,6 @@ const wait = ref(null);
       document.addEventListener('touchend', handleTouchEnd);
     };
 
-    // 监听 touchstart 事件
     document.addEventListener('touchstart', handleTouch);
     })
 
