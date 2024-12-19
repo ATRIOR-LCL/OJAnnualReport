@@ -92,6 +92,7 @@ const wait = ref(null);
           pages[currentPage].classList.remove('hide');
         } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 1) {
           pages[currentPage].classList.add('hide');
+          pages[currentPage].classList.remove('fontactive');
           currentPage++;
           pages[currentPage].classList.remove('hide');
         }

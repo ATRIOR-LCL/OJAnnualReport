@@ -102,6 +102,10 @@ onMounted(()=>{
     const sdutojanimation = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
         if(entry.isIntersecting){
+            const rains = document.querySelectorAll(".s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10")
+            rains.forEach(rain=>{
+                rain.classList.add('animrunning')
+            })
             entry.target.classList.add('sdutojanim')
         }else{
             entry.target.classList.remove('sdutojanim')
@@ -119,6 +123,16 @@ onMounted(()=>{
         })
     }, {threshold: 0.5})
 
+    const bottomIconanim = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('btm-logo')
+        }else{
+            entry.target.classList.remove('btm-logo')
+        }
+        })
+    }, {threshold: 0.5})
+
     const chars = document.querySelectorAll('.chars, .nc')
     chars.forEach(char=>charsanimation.observe(char))
 
@@ -130,6 +144,10 @@ onMounted(()=>{
 
     const font2s = document.querySelector('.font2')
     font2animation.observe(font2s)
+
+    const bottomIcon = document.querySelector('.bottom-icon')
+    bottomIconanim.observe(bottomIcon)
+
     })
 </script>
 <style scoped>
@@ -146,4 +164,18 @@ section{
     overflow: hidden;
     transition: all .1s linear;
 }
+.btm-logo{
+    animation: opop ease 1s forwards;
+    animation-delay: 7.5s;
+}
+
+.animrunning{
+    animation-play-state: running;
+}
+
+@keyframes opop{
+        100%{
+            opacity: 1;
+        }
+    }
 </style>
