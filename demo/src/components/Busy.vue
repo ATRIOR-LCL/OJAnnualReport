@@ -28,7 +28,7 @@ onMounted(()=>{
             entry.target.classList.remove('fontactive')
         }
         })
-    }, {threshold: 0.5})
+    }, {threshold: 0.1})
     const busys = document.querySelectorAll('.busytxt, .zyt, .cartoon')
     busys.forEach(busy=> busyanim.observe(busy))
 })
