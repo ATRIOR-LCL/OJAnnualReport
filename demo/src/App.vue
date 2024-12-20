@@ -1,6 +1,6 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <section id="page1" class="page">
+  <section id="page2" class="page">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -39,10 +39,11 @@
   <AC id="page5" class="page hide"></AC>
   <Diligent id="page6" class="page hide"></Diligent>
   <Achievement id="page7" class="page hide"></Achievement>
-  <Busy id="page7" class="page hide"></Busy>
+  <!-- <Busy id="page7" class="page hide"></Busy> -->
   <Night id="page8" class="page hide"></Night>
   <Hard id="page9" class="page hide"></Hard>
-  <Question id="page10" class="page hide"></Question>
+  <BiSai id="page10" class="page hide"></BiSai>
+  <!-- <Question id="page10" class="page hide"></Question> -->
   <Last id="page11" class="page hide"></Last>
 </template>
 <script setup>
@@ -60,6 +61,7 @@ import Question from "./components/Question.vue";
 import Special from "./components/Special.vue";
 import NewContest from "./components/NewContest.vue";
 import AC from "./components/AC.vue";
+import BiSai from "./components/BiSai.vue";
 const isClick = ref(false);
 const tsxx = ref(true);
 const scr = ref(false);
