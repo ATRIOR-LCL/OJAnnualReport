@@ -1,0 +1,230 @@
+@media screen and (max-width: 1000px){
+    .newcontest{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* background-color: aliceblue; */
+    }
+
+    .ncttxt{
+        position: absolute;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: .1rem;
+        width: 100%;
+        height: 20%;
+        transform: translateY(1rem);
+        opacity: 0;
+        filter: blur(.1rem);
+        transition: all 1s ease;
+        transition-delay: .5s;
+        /* background-color: red; */
+    }
+
+    .saishi{
+        display: block;
+        width: 100%;
+        height: auto;
+        font-size: .5rem;
+        font-weight: 700;
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .saishi span:nth-child(1){
+        color: #fff;
+    }
+
+    .bipin{
+        display: block;
+        width: 100%;
+        height: auto;
+        font-size: .5rem;
+        font-weight: 700;
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .bipin span{
+        color: #fff;
+    }
+
+    .acmacm{
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        transition: all 1s ease-in-out;
+        transition-delay: .8s;
+        opacity: 0;
+        filter: blur(.1rem);
+    }
+
+    .acmacm::before{
+        content: 'ACM网络擂台赛';
+        position: absolute;
+        color: #cfcfcf;
+        font-weight: 700;
+        top: -5%;
+        left: -45%;
+        animation: lts 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes lts{
+        0%{
+            transform: translate(.1rem , .3rem);
+        }
+        50%{
+            transform: translate(-.3rem, .4rem);
+        }
+        100%{
+            transform: translate(.3rem, -.2rem);
+        }
+    }
+
+    .acmacm::after{
+        content: 'ACM校赛';
+        position: absolute;
+        position: absolute;
+        color: #cfcfcf;
+        font-weight: 700;
+        top: 5%;
+        right: -45%;
+        animation: xs 5s ease infinite alternate;
+    }
+
+    @keyframes xs {
+        from{
+            transform: translateY(-.3rem);
+        }to{
+            transform: translateY(.3rem);
+        }
+    }
+
+    .qds{
+        /* content: 'ACM校赛'; */
+        position: absolute;
+        position: absolute;
+        color: #cfcfcf;
+        font-weight: 700;
+        top: 25%;
+        left: -55%;
+        animation: qdsanim 4s ease-in-out infinite alternate;
+    }
+    @keyframes qdsanim {
+        0%{
+            transform: translate(-.3rem, -.3rem);
+        }
+        50%{
+            transform: translate(-.2rem, .2rem);
+        }
+        100%{
+            transform: translate(.2rem, 0);
+        }
+    }
+
+    .wls{
+        position: absolute;
+        position: absolute;
+        color: #cfcfcf;
+        font-weight: 700;
+        top: 35%;
+        right: -55%;
+        animation: wlsanim 5s ease-in-out infinite alternate;
+        
+    }
+
+    @keyframes wlsanim {
+        from{
+            transform: translateY(.3rem);
+        }to{
+            transform: translateY(-.3rem);
+        }
+    }
+
+    .lts{
+        position: absolute;
+        position: absolute;
+        color: #cfcfcf;
+        font-weight: 700;
+        top: 65%;
+        left: -50%;
+        animation: ltsanim 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes ltsanim {
+        from{
+            transform: translateY(-.3rem);
+        }to{
+            transform: translateY(.3rem);
+        }
+    }
+
+    .acmacm img{
+        /* opacity: 1; */
+        z-index: 22;
+        width: 4rem;
+        /* transition: all .5s ease-in-out; */
+    }
+
+    .pd1{
+        top: 70%;
+        right: -10%;
+        position: absolute;
+        text-align: center;
+        line-height: .8rem;
+        width: 200vw;
+        height: .8rem;
+        background-color: rgb(255, 221, 0);
+        transform-origin: 50% 50% ;
+        transform: rotate(70deg) translateX(-100%);
+        font-weight: 700;
+        overflow: hidden;
+        transition: all .3s linear;
+        transition-delay: .6s;
+    }
+
+    .pd2{
+        top: 70%;
+        left:25%;
+        position: absolute;
+        text-align: center;
+        line-height: .8rem;
+        width: 200vw;
+        height: .8rem;
+        background-color: rgb(255, 221, 0);
+        transform-origin: 50% 50% ;
+        transform: rotate(-35deg) translateX(-100%);
+        font-weight: 700;
+        overflow: hidden;
+        transition: all .3s linear;
+        transition-delay: .9s;
+    }
+
+    .pd3{
+        top: 70%;
+        position: absolute;
+        text-align: center;
+        line-height: .8rem;
+        width: 200vw;
+        height: .8rem;
+        background-color: rgb(255, 221, 0);
+        transform-origin: 50% 50% ;
+        transform: rotate(-25deg) translateX(-100%);
+        font-weight: 700;
+        overflow: hidden;
+        transition: all .3s linear;
+        transition-delay: 1.2s;
+    }
+
+    
+}
