@@ -36,13 +36,14 @@
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
-  <Diligent id="page5" class="page hide"></Diligent>
-  <Achievement id="page6" class="page hide"></Achievement>
+  <AC id="page5" class="page hide"></AC>
+  <Diligent id="page6" class="page hide"></Diligent>
+  <Achievement id="page7" class="page hide"></Achievement>
   <Busy id="page7" class="page hide"></Busy>
-  <Night id="page6" class="page hide"></Night>
-  <Hard id="page7" class="page hide"></Hard>
-  <Question id="page8" class="page hide"></Question>
-  <Last id="page9" class="page hide"></Last>
+  <Night id="page8" class="page hide"></Night>
+  <Hard id="page9" class="page hide"></Hard>
+  <Question id="page10" class="page hide"></Question>
+  <Last id="page11" class="page hide"></Last>
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
@@ -58,7 +59,7 @@ import Busy from "./components/Busy.vue";
 import Question from "./components/Question.vue";
 import Special from "./components/Special.vue";
 import NewContest from "./components/NewContest.vue";
-
+import AC from "./components/AC.vue";
 const isClick = ref(false);
 const tsxx = ref(true);
 const scr = ref(false);
@@ -178,6 +179,7 @@ section {
 }
 
 .hide {
+  opacity: 0;
       transform: translateY(-100%);
   }
 
