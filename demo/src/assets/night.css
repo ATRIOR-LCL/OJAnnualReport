@@ -54,7 +54,7 @@
     position: absolute;
     z-index: 3;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 6rem;
     height: 1rem;
@@ -102,7 +102,7 @@
 }
 
 .nightgl::after{
-    content: 'Work hard silently and let success be your voice';
+    content: 'This is your sleepless night.';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -124,18 +124,28 @@
         height: 2rem;
         background-color: red;
         font-size: .56rem;
-        top: 20%;
+        top: 10%;
         left: 0;
+        margin-left: .1rem;
     }
 
     .nightgl{
         width: 10%;
-        top: 25%;
-        left: 10%;
+        top: 20%;
+        left: 0 ;
+        /* left: 10%; */
         width: 100%;
         height: 2rem;
         /* background-color: #66a6ff; */
         font-size: .4rem;
+        margin-left: .1rem;
+    }
+
+    .sticker{
+        width: 15%;
+        display: block;
+        height: auto;
+        margin-left: .5rem;
     }
 
     .nightgl::after{

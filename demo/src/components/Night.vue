@@ -2,10 +2,11 @@
 <section>
         <div class="night">
             <div class="nightfont">
-                某一天深夜<span>00</span>点还在做题<span>😴</span>
+                与星同行的你<span>00:00</span>还在做题<span>😴</span>
             </div>
             <div class="nightgl">
-                默默努力，让成功成为你的声音🥳
+                这是独属于你的不眠之夜
+                <img class="sticker" src="../assets/img/sticker.png" alt="">
             </div>
             <div class="moon"></div>
             <div class="sea"></div>
