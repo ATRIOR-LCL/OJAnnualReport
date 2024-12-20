@@ -48,6 +48,12 @@ onMounted(()=>{
                 },1000)
             }else{
                 list.target.classList.remove('active1')
+                const pd1 = document.querySelector('.pd1')
+                    pd1.classList.remove('activepd1')
+                    const pd2 = document.querySelector('.pd2')
+                    pd2.classList.remove('activepd2')
+                    const pd3=document.querySelector('.pd3')
+                    pd3.classList.remove('activepd3')
             }
         })
     }, {threshold: .5})
