@@ -1,6 +1,6 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <section id="page1" class="page hide">
+  <section id="page1" class="page">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
