@@ -105,7 +105,7 @@ onMounted(()=>{
                     setTimeout(()=>{
                         txt2s.forEach(txt1=>txt1.classList.add('fontactive'))
                     }, 2000)
-                }, 7000)
+                }, 5000)
 
                 setTimeout(()=>{
                     bg2.value.classList.add('rotate1')
@@ -115,7 +115,7 @@ onMounted(()=>{
                     setTimeout(()=>{
                         txt3s.forEach(txt1=>txt1.classList.add('fontactive'))
                     }, 2000)
-                }, 15000)
+                }, 11000)
             }else{
                 list.target.classList.remove('active')
             }
