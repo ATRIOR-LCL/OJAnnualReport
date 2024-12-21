@@ -47,7 +47,6 @@
   <XiaoSai id="page10" class="page hide"></XiaoSai>
   <XinSheng id="page11" class="page hide"></XinSheng>
   <LeiTai id="page12" class="page hide"></LeiTai>
-
     <!-- <Question id="page10" class="page hide"></Question> -->
   <Last id="page13" class="page hide"></Last>
 </template>
