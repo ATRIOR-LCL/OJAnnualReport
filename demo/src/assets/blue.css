@@ -6,7 +6,8 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: all .2s linear;
+    transition: all 2s ease-in;
+
 }
 
 .bg-slide,
@@ -22,6 +23,51 @@
 .bg-slide .circle.bg img{
     object-fit: cover;
     transform: rotate(0) scale(2);
+}
+
+.txt1{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    top: 10%;
+    /* background-color: red; */
+    z-index: 44;
+}
+
+.txt1-a{
+    display: inline-block;
+    font-size: .6rem;
+    font-weight: 700;
+    /* letter-spacing: .04rem; */
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background-clip: text;
+    color: transparent;
+}
+
+.txt1-b{
+    display: inline-block;
+    font-size: .5rem;
+    font-weight: 700;
+    /* letter-spacing: .04rem; */
+    text-align: center;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.txt1-c{
+    display: inline-block;
+    font-size: .6rem;
+    font-weight: 700;
+    /* letter-spacing: .04rem; */
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-clip: text;
+    color: transparent;
 }
 
 

@@ -2,6 +2,17 @@
 <section>
     <div class="blu">
         <div class="bg-slide" style="z-index: 3;">
+            <div class="txt1">
+                <div class="txt1-a">
+                    在 2 月 3 日，一个临近年关的日子
+                </div>
+                <div class="txt1-b">
+                    000名兴趣相投的旅行者和你一同参加了 SDUT OJ 历史上最特别的比赛
+                </div>
+                <div class="txt1-c">
+                    蔚蓝系列赛 Round 2：原神主题赛
+                </div>
+            </div>
             <div class="circle bg " ref="bg1">
                 <img src="../assets/img/image1.jpg" alt="" >
             </div>
@@ -59,11 +70,11 @@ onMounted(()=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
                 list.target.classList.add('active')
-                setTimeout(()=>{
-                    bg1.value.classList.add('rotate1')
-                    large1.value.classList.add('rotate')
-                    small1.value.classList.add('rotate')
-                }, 500)
+                // setTimeout(()=>{
+                //     bg1.value.classList.add('rotate1')
+                //     large1.value.classList.add('rotate')
+                //     small1.value.classList.add('rotate')
+                // }, 500)
 
                 setTimeout(()=>{
                     bg2.value.classList.add('rotate1')
