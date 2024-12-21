@@ -44,8 +44,9 @@
   <Hard id="page7" class="page hide"></Hard>
   <BiSai id="page8" class="page hide"></BiSai>
   <Blue id="page9" class="page hide"></Blue>
+  <XiaoSai id="page10" class="page hide"</XiaoSai>
   <!-- <Question id="page10" class="page hide"></Question> -->
-  <Last id="page10" class="page hide"></Last>
+  <Last id="page11" class="page hide"></Last>
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
@@ -64,6 +65,7 @@ import NewContest from "./components/NewContest.vue";
 import AC from "./components/AC.vue";
 import BiSai from "./components/BiSai.vue";
 import Blue from "./components/Blue.vue";
+import XiaoSai from "./components/XiaoSai.vue";
 const isClick = ref(false);
 const tsxx = ref(true);
 const scr = ref(false);
