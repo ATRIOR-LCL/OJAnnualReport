@@ -1,0 +1,46 @@
+.blu{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.bg-slide,
+.bg-slide .circle,
+.bg-slide .circle img,
+.circle-dark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 2s ease;
+    transition-delay: 2.2s;
+}
+.bg-slide .circle.bg img{
+    object-fit: cover;
+    transform: rotate(0) scale(2);
+}
+
+
+
+.large,
+.circle-dark{
+    z-index: 2;
+    clip-path: circle(50% at 50% 50%);
+    transition: all 2.5s ease;
+    transition-delay: 1.8s;
+}
+
+.small{
+    z-index: 3;
+    clip-path: circle(40% at 50% 50%);
+    transition: all 2s ease ;
+    transition-delay: 1s;
+}
+
+.circle-dark{
+    background-color: rgba(0, 0, 0, .04);
+}

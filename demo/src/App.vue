@@ -1,6 +1,7 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <section id="page2" class="page">
+  <Blue id="page1" class="page hide"></Blue>
+  <section id="page2" class="page hide">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -62,6 +63,7 @@ import Special from "./components/Special.vue";
 import NewContest from "./components/NewContest.vue";
 import AC from "./components/AC.vue";
 import BiSai from "./components/BiSai.vue";
+import Blue from "./components/Blue.vue";
 const isClick = ref(false);
 const tsxx = ref(true);
 const scr = ref(false);
