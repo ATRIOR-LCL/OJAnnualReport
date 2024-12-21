@@ -7,7 +7,7 @@
                     在 2 月 3 日，一个临近年关的日子
                 </div>
                 <div class="txt1-b">
-                    000名兴趣相投的旅行者和你一同参加了 SDUT OJ 历史上最特别的比赛
+                    000名兴趣相投的旅行者和你一同参加了<br> SDUT OJ 历史上最特别的比赛
                 </div>
                 <div class="txt1-c">
                     蔚蓝系列赛 Round 2：原神主题赛
@@ -28,13 +28,13 @@
         <div class="bg-slide" style="z-index: 2">
             <div class="txt1">
                 <div class="txt2-a">
-                    你使用「xxxx」开门，并首先解锁了 country 篇
+                    你使用「xxxx」开门<br>并首先解锁了 country 篇
                 </div>
                 <div class="txt2-b">
-                    五个国度的新奇有趣的题目，一定让你回想起了旅行的意义
+                    五个国度的新奇有趣的题目<br>一定让你回想起了旅行的意义
                 </div>
                 <div class="txt2-c">
-                    别忘了，提瓦特大陆的星空永远会有你的位置
+                    别忘了<br>提瓦特大陆的星空永远会有你的位置
                 </div>
             </div>
             <div class="circle bg" ref="bg2">
@@ -52,13 +52,13 @@
         <div class="bg-slide" style="z-index: 1;">
             <div class="txt1">
                 <div class="txt3-a">
-                    蔚蓝系列赛从一个小小的点子到生根发芽，你的存在不可或缺
+                    蔚蓝系列赛从一个小小的点子到生根发芽<br>你的存在不可或缺
                 </div>
                 <div class="txt3-b">
-                    希望在不远的 Round 3 中，藉由星轨引导命定的重逢
+                    希望在不远的 Round 3 中<br>藉由星轨引导命定的重逢
                 </div>
                 <div class="txt3-c">
-                    让我们将新的玩法、新的设定，包裹成一份美梦般的快乐，再次传递给你
+                    让我们将新的玩法、新的设定<br>包裹成一份美梦般的快乐<br>再次传递给你
                 </div>
             </div>
             <div class="circle bg">
