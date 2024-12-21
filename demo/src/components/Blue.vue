@@ -70,11 +70,15 @@ onMounted(()=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
                 list.target.classList.add('active')
-                // setTimeout(()=>{
-                //     bg1.value.classList.add('rotate1')
-                //     large1.value.classList.add('rotate')
-                //     small1.value.classList.add('rotate')
-                // }, 500)
+                const txt1s = document.querySelectorAll('.txt1-a, .txt1-b, .txt1-c');
+                txt1s.forEach(txt1=>txt1.classList.add('fontactive'))
+                setTimeout(()=>{
+                    bg1.value.classList.add('rotate1')
+                    large1.value.classList.add('rotate')
+                    small1.value.classList.add('rotate')
+                    txt1s.forEach(txt1=>txt1.classList.remove('fontactive'))
+
+                }, 2000)
 
                 setTimeout(()=>{
                     bg2.value.classList.add('rotate1')
@@ -94,6 +98,12 @@ onMounted(()=>{
 
 <style scoped>
 @import url('../assets/blue.css');
+
+.fontactive{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
 
 .active{
     opacity: 1;

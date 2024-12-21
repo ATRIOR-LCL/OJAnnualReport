@@ -18,7 +18,7 @@
     width: 100%;
     height: 100%;
     transition: all 2s ease;
-    transition-delay: 2.2s;
+    transition-delay: 1s;
 }
 .bg-slide .circle.bg img{
     object-fit: cover;
@@ -42,11 +42,16 @@
     display: inline-block;
     font-size: .6rem;
     font-weight: 700;
+    text-align: center;
     /* letter-spacing: .04rem; */
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     background-clip: text;
     color: transparent;
+    transform: translateY(1rem);
+    filter: blur(.1rem);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .txt1-b{
@@ -58,16 +63,25 @@
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     background-clip: text;
     color: transparent;
+    transform: translateY(1rem);
+    filter: blur(.1rem);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .txt1-c{
     display: inline-block;
     font-size: .6rem;
     font-weight: 700;
+    text-align: center;
     /* letter-spacing: .04rem; */
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     background-clip: text;
     color: transparent;
+    transform: translateY(1rem);
+    filter: blur(.1rem);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 
@@ -77,14 +91,14 @@
     z-index: 2;
     clip-path: circle(50% at 50% 50%);
     transition: all 2.5s ease;
-    transition-delay: 1.8s;
+    transition-delay: .5s;
 }
 
 .small{
     z-index: 3;
     clip-path: circle(40% at 50% 50%);
     transition: all 2s ease ;
-    transition-delay: 1s;
+    transition-delay: .1s;
 }
 
 .circle-dark{
