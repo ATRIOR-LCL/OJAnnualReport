@@ -1,7 +1,6 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <Blue id="page1" class="page hide"></Blue>
-  <section id="page2" class="page hide">
+  <section id="page1" class="page hide">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -44,8 +43,9 @@
   <Night id="page8" class="page hide"></Night>
   <Hard id="page9" class="page hide"></Hard>
   <BiSai id="page10" class="page hide"></BiSai>
+  <Blue id="page11" class="page hide"></Blue>
   <!-- <Question id="page10" class="page hide"></Question> -->
-  <Last id="page11" class="page hide"></Last>
+  <Last id="page12" class="page hide"></Last>
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
