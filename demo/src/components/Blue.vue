@@ -26,6 +26,17 @@
             </div>
         </div>
         <div class="bg-slide" style="z-index: 2">
+            <div class="txt1">
+                <div class="txt2-a">
+                    你使用「xxxx」开门，并首先解锁了 country 篇
+                </div>
+                <div class="txt2-b">
+                    五个国度的新奇有趣的题目，一定让你回想起了旅行的意义
+                </div>
+                <div class="txt2-c">
+                    别忘了，提瓦特大陆的星空永远会有你的位置
+                </div>
+            </div>
             <div class="circle bg" ref="bg2">
                 <img src="../assets/img/image2.jpg" alt="">
             </div>
@@ -39,6 +50,17 @@
             </div>
         </div>
         <div class="bg-slide" style="z-index: 1;">
+            <div class="txt1">
+                <div class="txt3-a">
+                    蔚蓝系列赛从一个小小的点子到生根发芽，你的存在不可或缺
+                </div>
+                <div class="txt3-b">
+                    希望在不远的 Round 3 中，藉由星轨引导命定的重逢
+                </div>
+                <div class="txt3-c">
+                    让我们将新的玩法、新的设定，包裹成一份美梦般的快乐，再次传递给你
+                </div>
+            </div>
             <div class="circle bg">
                 <img src="../assets/img/image3.jpg" alt="">
             </div>
@@ -71,20 +93,29 @@ onMounted(()=>{
             if(list.isIntersecting){
                 list.target.classList.add('active')
                 const txt1s = document.querySelectorAll('.txt1-a, .txt1-b, .txt1-c');
+                const txt2s = document.querySelectorAll('.txt2-a, .txt2-b, .txt2-c');
+                const txt3s = document.querySelectorAll('.txt3-a, .txt3-b, .txt3-c');
+
                 txt1s.forEach(txt1=>txt1.classList.add('fontactive'))
                 setTimeout(()=>{
                     bg1.value.classList.add('rotate1')
                     large1.value.classList.add('rotate')
                     small1.value.classList.add('rotate')
                     txt1s.forEach(txt1=>txt1.classList.remove('fontactive'))
-
-                }, 2000)
+                    setTimeout(()=>{
+                        txt2s.forEach(txt1=>txt1.classList.add('fontactive'))
+                    }, 2000)
+                }, 7000)
 
                 setTimeout(()=>{
                     bg2.value.classList.add('rotate1')
                     large2.value.classList.add('rotate')
                     small2.value.classList.add('rotate')
-                }, 5000)
+                    txt2s.forEach(txt1=>txt1.classList.remove('fontactive'))
+                    setTimeout(()=>{
+                        txt3s.forEach(txt1=>txt1.classList.add('fontactive'))
+                    }, 2000)
+                }, 15000)
             }else{
                 list.target.classList.remove('active')
             }
