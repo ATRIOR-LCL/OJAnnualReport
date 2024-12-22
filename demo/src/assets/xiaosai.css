@@ -21,6 +21,18 @@
     align-items: center;
 }
 
+.xstxt2 div:nth-child(2){
+    text-shadow: 1px 1px #c2c2c2,
+                2px 2px #c2c2c2,
+                3px 3px #c2c2c2;
+}
+
+.xstxt2 div:nth-child(3) span{
+    text-shadow: 1px 1px #c2c2c2,
+                2px 2px #c2c2c2,
+                3px 3px #c2c2c2;
+}
+
 .xstxt2 div,
 .xstxt1 div{
     display: inline-block;
