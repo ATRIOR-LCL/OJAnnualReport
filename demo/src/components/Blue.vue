@@ -79,6 +79,7 @@
 </template>
 
 <script setup>
+import { can, isnext } from '@/assets/global';
 import { ref,onMounted } from 'vue';
 const bg1 = ref(null)
 const large1 = ref(null)
@@ -91,6 +92,10 @@ onMounted(()=>{
     const animstart = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
+                setTimeout(() => {
+                    can.value=true
+                    isnext.value=true
+                }, 12000);
                 list.target.classList.add('actives')
                 const txt1s = document.querySelectorAll('.txt1-a, .txt1-b, .txt1-c');
                 const txt2s = document.querySelectorAll('.txt2-a, .txt2-b, .txt2-c');

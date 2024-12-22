@@ -28,8 +28,9 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-
+import { can, isnext } from '@/assets/global';
+import { onMounted, ref } from 'vue';
+const first =ref(true)
 onMounted(()=>{
     const lttxts = document.querySelectorAll('.szyx, .jz, .ygg, .cc, .hwc, .llzm')
     const zgn = document.querySelector('.zgn')
@@ -37,6 +38,13 @@ onMounted(()=>{
     const ltall = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
+                if(first.value){
+                    setTimeout(() => {
+                        can.value=true
+                        isnext.value=true
+                    }, 9000);
+                    first.value=false
+                }
                 list.target.classList.add('ltactive')
                 zgn.classList.add('ltactive')
                 setTimeout(() => {

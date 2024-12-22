@@ -14,12 +14,17 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { can, isnext } from '@/assets/global';
+import { onMounted, ref } from 'vue';
 
 onMounted(()=>{
     const allin = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
+                setTimeout(() => {
+                    can.value=true
+                isnext.value=true
+                }, 2500);
                 list.target.classList.add('active1')
                 const xshtxt = document.querySelector('.xshtxt')
                 setTimeout(() => {

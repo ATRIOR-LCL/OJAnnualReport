@@ -78,13 +78,18 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { can, isnext } from '@/assets/global';
+import { onMounted, ref } from 'vue';
 
 
 onMounted(()=>{
     const allanim = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
+                setTimeout(() => {
+                    can.value=true
+                    isnext.value=true
+                }, 5000);
                 list.target.classList.add('active')
                 const xstxt1 = document.querySelector('.xstxt1')
                 const xstxt2 = document.querySelector('.xstxt2')

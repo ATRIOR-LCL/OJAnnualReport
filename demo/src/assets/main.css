@@ -10,6 +10,7 @@
 }
 
 .next{
+    z-index: 999;
     opacity: 0;
     width: 10%;
     position: absolute;

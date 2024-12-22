@@ -11,12 +11,20 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-
+import { can, isnext } from '@/assets/global';
+import { onMounted, ref } from 'vue';
+const first = ref(true)
 onMounted(()=>{
     const bstxtanim = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
+                if(first.value){
+                    setTimeout(() => {
+                        can.value=true
+                        isnext.value=true
+                    }, 2500);
+                    first.value=false
+                }
                 list.target.classList.add('active')
             }else{
                 list.target.classList.remove('active')

@@ -26,6 +26,7 @@
 </template>
 
 <script setup>
+import { can, isnext } from '@/assets/global';
 import{ref, onMounted} from 'vue'
 const star1 = ref(null)
 const star2 = ref(null)
@@ -35,6 +36,10 @@ onMounted(()=>{
     const txtanim = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
+                setTimeout(() => {
+                    can.value=true
+                    isnext.value=true
+                }, 2500);
                 list.target.classList.add('active')
                 star1.value.style.animationPlayState = 'running'
                 star2.value.style.animationPlayState = 'running'
