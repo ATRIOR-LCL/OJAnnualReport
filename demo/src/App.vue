@@ -1,7 +1,9 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
+  <audio src="./assets/img/atri.mp3" class="audio"></audio>
   <img src="./assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
-  <section id="page1" class="page">
+  <!-- <AchivementStar id="page1" class="page "></AchivementStar> -->
+  <section id="page1" class="page ">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -77,6 +79,7 @@ const scr = ref(false);
 const waiting = ref(false);
 const wait = ref(null);
 import { isnext, can } from "./assets/global";
+import AchivementStar from "./components/AchivementStar.vue";
 
     onMounted(()=>{
       let currentPage = 0;

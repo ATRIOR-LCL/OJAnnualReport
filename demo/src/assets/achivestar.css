@@ -1,0 +1,18 @@
+.achivstar{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    /* height: 100vh; */
+    /* display: flex; */
+    /* position: relative; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.pos{
+    top: 50%;
+    left: 5%;
+}
