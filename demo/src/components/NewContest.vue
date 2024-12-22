@@ -18,13 +18,14 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
-import { isnext } from '@/assets/global';
+import { can, isnext } from '@/assets/global';
 onMounted(()=>{
     const ncttxtanim = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
                 setTimeout(() => {
                     isnext.value = true
+                    can.value=true
                 }, 3000);
                 list.target.classList.add('active')
             }else{

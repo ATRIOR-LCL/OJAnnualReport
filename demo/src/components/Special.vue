@@ -22,7 +22,7 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
-import { isnext } from '@/assets/global';
+import { isnext, can } from '@/assets/global';
 const bili1 = ref(null)
 const bili2 = ref(null)
 onMounted(()=>{
@@ -47,6 +47,7 @@ onMounted(()=>{
             if(list.isIntersecting){
                 setTimeout(() => {
                     isnext.value = true
+                    can.value = true
                 }, 5000);
                 list.target.classList.add('erase')
             }else{

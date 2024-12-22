@@ -76,7 +76,7 @@ const tsxx = ref(true);
 const scr = ref(false);
 const waiting = ref(false);
 const wait = ref(null);
-import { isnext } from "./assets/global";
+import { isnext, can } from "./assets/global";
 
     onMounted(()=>{
       let currentPage = 0;
@@ -87,7 +87,7 @@ import { isnext } from "./assets/global";
     const handleTouch = (event) => {
       isnext.value=false
       console.log("yes")
-      if (isTouching) return; // 防止快速触摸多次翻页
+      if (!can.value) return; // 防止快速触摸多次翻页
 
       const touchStart = event.touches[0].clientY;
       let touchEnd;
@@ -97,6 +97,7 @@ import { isnext } from "./assets/global";
       };
 
       const handleTouchEnd = () => {
+      can.value = false
         if (touchEnd - touchStart > 50 && currentPage > 0) {
           pages[currentPage].classList.add('hide');
           currentPage--;
@@ -117,8 +118,7 @@ import { isnext } from "./assets/global";
       document.addEventListener('touchmove', handleTouchMove);
       document.addEventListener('touchend', handleTouchEnd);
     };
-
-    document.addEventListener('touchstart', handleTouch);
+      document.addEventListener('touchstart', handleTouch);
     })
 
 if (window.screen.width < 1000) {
@@ -128,6 +128,7 @@ if (window.screen.width < 1000) {
 function open() {
   setTimeout(() => {
     isnext.value = true;
+    can.value = true
   }, 5000);
   const confettis = document.querySelector('.confettis');
   confettis.classList.add('Delay');
