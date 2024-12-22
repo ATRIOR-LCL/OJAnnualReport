@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .lttxt{
@@ -68,7 +69,7 @@
     transition: all 1s ease;
     transition-delay: 3s;
     opacity: 0;
-    
+    z-index: 55;
 }
 
 .zgn img{
@@ -97,8 +98,9 @@
 .nailong{
     position: absolute;
     width: 20%;
-    top: 100%;
-    
+    bottom: 0;
+    opacity: 0;
+    z-index: 60;
 }
 
 @keyframes fly {
@@ -112,15 +114,19 @@
 
 @keyframes nl{
     0%{
+        
         transform: translate(0);
     }
     20%{
+        opacity: 1;
         transform: translateY(-60vh);
     }
     25%{
+        opacity: 1;
         transform: translateY(-50vh);
     }
     100%{
+        opacity: 1;
         transform: translateY(-150vh);
     }
 }

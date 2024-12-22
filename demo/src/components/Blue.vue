@@ -91,7 +91,7 @@ onMounted(()=>{
     const animstart = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
-                list.target.classList.add('active')
+                list.target.classList.add('actives')
                 const txt1s = document.querySelectorAll('.txt1-a, .txt1-b, .txt1-c');
                 const txt2s = document.querySelectorAll('.txt2-a, .txt2-b, .txt2-c');
                 const txt3s = document.querySelectorAll('.txt3-a, .txt3-b, .txt3-c');
@@ -117,7 +117,7 @@ onMounted(()=>{
                     }, 2000)
                 }, 11000)
             }else{
-                list.target.classList.remove('active')
+                list.target.classList.remove('actives')
             }
         })
     }, {threshold: .5});
@@ -136,7 +136,7 @@ onMounted(()=>{
     filter: blur(0);
 }
 
-.active{
+.actives{
     opacity: 1;
 }
 

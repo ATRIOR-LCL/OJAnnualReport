@@ -31,33 +31,39 @@
 import { onMounted } from 'vue';
 
 onMounted(()=>{
-    const all = new IntersectionObserver(lists=>{
+    const lttxts = document.querySelectorAll('.szyx, .jz, .ygg, .cc, .hwc, .llzm')
+    const zgn = document.querySelector('.zgn')
+    const nail = document.querySelector('.nailong')
+    const ltall = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
-                const zgn = document.querySelector('.zgn')
-                const nail = document.querySelector('.nailong')
-                const txts = document.querySelectorAll('.szyx, .jz, .ygg, .cc, .hwc, .llzm')
-                list.target.classList.add('active')
-                zgn.classList.add('active')
-                zgn.classList.add('zgnanim')
-                nail.classList.add('nlanim')
+                list.target.classList.add('ltactive')
+                zgn.classList.add('ltactive')
                 setTimeout(() => {
-                    txts.forEach(txt=>txt.classList.add('active'))
+                    zgn.classList.add('zgnanim')
+                    nail.classList.add('nlanim')
+                }, 5000);
+                setTimeout(() => {
+                    lttxts.forEach(txt=>txt.classList.add('ltactive'))
                 }, 8000);
             }else{
-                list.target.classList.remove('active')
+                list.target.classList.remove('ltactive')
+                zgn.classList.remove('ltactive')
+                zgn.classList.remove('zgnanim')
+                nail.classList.remove('nlanim')
+                lttxts.forEach(txt=>txt.classList.remove('ltactive'))
             }
         })
-    }, {threshold: .5})
+    }, {threshold: .7})
     const alls = document.querySelectorAll('.txt1, .txt2, .txt3, .txt4')
-    alls.forEach(alll=>all.observe(alll))
+    alls.forEach(alll=>ltall.observe(alll))
 })
 </script>
 
 <style scoped>
 @import url('../assets/leitai.css');
 
-.active{
+.ltactive{
     transform: translateX(0) translateY(0);
     opacity: 1;
     filter: blur(0);
@@ -65,12 +71,9 @@ onMounted(()=>{
 
 .zgnanim{
     animation: fly 1s forwards ;
-    /* background-color: red; */
-    animation-delay: 5s;
 }
 
 .nlanim{
     animation: nl 5s forwards;
-    animation-delay: 5s;
 }
 </style>

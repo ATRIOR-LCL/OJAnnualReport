@@ -43,10 +43,10 @@
   <Night id="page6" class="page hide"></Night>
   <Hard id="page7" class="page hide"></Hard>
   <BiSai id="page8" class="page hide"></BiSai>
-  <Blue id="page9" class="page hide"></Blue>
-  <XiaoSai id="page10" class="page hide"></XiaoSai>
-  <XinSheng id="page11" class="page hide"></XinSheng>
-  <LeiTai id="page12" class="page hide"></LeiTai>
+  <LeiTai id="page9" class="page hide"></LeiTai>
+  <XinSheng id="page10" class="page hide"></XinSheng>
+  <XiaoSai id="page11" class="page hide"></XiaoSai>
+  <Blue id="page12" class="page hide"></Blue>
     <!-- <Question id="page10" class="page hide"></Question> -->
   <Last id="page13" class="page hide"></Last>
 </template>
@@ -190,7 +190,7 @@ section {
 
 .hide {
   opacity: 0;
-      transform: translateY(-100%);
+      transform: translateY(-150%);
   }
 
 .fontactive {
