@@ -214,12 +214,16 @@ section {
 }
 
 @keyframes nexting{
-  from{
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }to{
+  0%{
     opacity: 0;
-    transform: translateX(-50%) translateY(5vh);
+    transform: translateX(-50%) translateY(0);
+  }
+  25%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-50%) translateY(3vh);
   }
 }
 </style>
