@@ -129,7 +129,7 @@ function open() {
   setTimeout(() => {
     isnext.value = true;
     can.value = true
-  }, 5000);
+  }, 3000);
   const confettis = document.querySelector('.confettis');
   confettis.classList.add('Delay');
   
