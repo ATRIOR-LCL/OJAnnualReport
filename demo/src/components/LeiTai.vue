@@ -1,6 +1,7 @@
 <template>
 <section>
     <div class="leitai">
+        <img src="../assets/img/pmc.png" alt="" class="pmc">
         <div class="lttxt">
             <div class="txt1">作为全新升级的组队赛</div>
             <div class="txt2">
@@ -35,6 +36,7 @@ onMounted(()=>{
     const lttxts = document.querySelectorAll('.szyx, .jz, .ygg, .cc, .hwc, .llzm')
     const zgn = document.querySelector('.zgn')
     const nail = document.querySelector('.nailong')
+    const pmc = document.querySelector('.pmc')
     const ltall = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
@@ -45,8 +47,10 @@ onMounted(()=>{
                     }, 9000);
                     first.value=false
                 }
+                
                 list.target.classList.add('ltactive')
                 zgn.classList.add('ltactive')
+                pmc.classList.add('bgactive')
                 setTimeout(() => {
                     zgn.classList.add('zgnanim')
                     nail.classList.add('nlanim')
@@ -83,5 +87,10 @@ onMounted(()=>{
 
 .nlanim{
     animation: nl 5s forwards;
+}
+
+.bgactive{
+    filter: blur(0);
+    opacity: .5;
 }
 </style>

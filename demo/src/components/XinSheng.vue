@@ -1,6 +1,7 @@
 <template>
     <section>
         <div class="xinsheng">
+            <img src="../assets/img/bbb.png" alt="" class="bbb">
             <div class="xshtxt">
                 <div>
                     作为新生，在争霸赛中首次展露头角
@@ -18,6 +19,7 @@ import { can, isnext } from '@/assets/global';
 import { onMounted, ref } from 'vue';
 
 onMounted(()=>{
+    const bbb = document.querySelector('.bbb')
     const allin = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
@@ -26,6 +28,7 @@ onMounted(()=>{
                 isnext.value=true
                 }, 2500);
                 list.target.classList.add('active1')
+                bbb.classList.add('bgactive')
                 const xshtxt = document.querySelector('.xshtxt')
                 setTimeout(() => {
                     xshtxt.classList.add('active')
@@ -52,5 +55,10 @@ onMounted(()=>{
 
 .active1{
     opacity: 1;
+}
+
+.bgactive{
+    opacity: .5;
+    filter: blur(0);
 }
 </style>
