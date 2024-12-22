@@ -293,13 +293,16 @@
 .s10{
     position: absolute;
     font-size: .2rem;
-    display: flex;
-    justify-content: start;
+    display: inline-block;
+    width: auto;
+    line-height: .2rem;
+    /* justify-content: start; */
     color: transparent;
     align-items: center;
     transform: rotate(-90deg);
     background-clip: text;
-    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    background-image: linear-gradient(to right,rgba(252, 0, 255, 0.5)  0%, rgb(0, 148, 222) 100%);
+
 }
 
 .s1{
@@ -316,7 +319,6 @@
     animation: rainanim 4s infinite linear;
     animation-delay: 10s;
     animation-play-state: paused;
-
 }
 
 .s3{
@@ -370,8 +372,6 @@
     animation: rainanim 3s infinite linear;
     animation-delay: 14s;
     animation-play-state: paused;
-
-
 }
 
 .s9{
@@ -380,7 +380,6 @@
     animation: rainanim 5s infinite linear;
     animation-delay: 9s;
     animation-play-state: paused;
-
 }
 
 .s10{
@@ -407,5 +406,10 @@ section p::after{
     left: -.3rem;
     color: #fff;
     opacity: 1 !important;
-
 }
+
+.atrior::after,
+.blue::after{
+    content: '' !important;
+}
+

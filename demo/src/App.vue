@@ -1,9 +1,10 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <audio src="./assets/img/atri.mp3" class="ado" controls></audio>
+  <!-- <audio src="./assets/img/atri.mp3" class="ado" controls></audio> -->
   <img src="./assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
   <!-- <AchivementStar id="page1" class="page "></AchivementStar> -->
-  <section id="page1" class="page ">
+  
+  <section id="page1" class="page">
     
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -52,6 +53,7 @@
   <Blue id="page12" class="page hide"></Blue>
     <!-- <Question id="page10" class="page hide"></Question> -->
   <Last id="page13" class="page hide"></Last>
+
 </template>
 <script setup>
 import Hard from "./components/Hard.vue";
@@ -82,8 +84,6 @@ import { isnext, can } from "./assets/global";
 import AchivementStar from "./components/AchivementStar.vue";
 
     onMounted(()=>{
-      const audio = document.querySelector('audio')
-      audio.play()
       let currentPage = 0;
     let isTouching = false;
     const pages = document.querySelectorAll('.page');

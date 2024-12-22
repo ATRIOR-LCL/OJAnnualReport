@@ -26,7 +26,7 @@
         filter: blur(.1rem);
         transition: all 1s ease;
         transition-delay: .5s;
-        color: rgb(255, 221, 0);
+        color: orange;
     }
 
     .saishi{
@@ -220,6 +220,4 @@
         transition: all .3s linear;
         transition-delay: 1.2s;
     }
-
-    
 }
