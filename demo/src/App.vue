@@ -1,6 +1,6 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <audio src="./assets/img/atri.mp3" class="audio"></audio>
+  <audio src="./assets/img/atri.mp3" class="ado" controls></audio>
   <img src="./assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
   <!-- <AchivementStar id="page1" class="page "></AchivementStar> -->
   <section id="page1" class="page ">
@@ -82,6 +82,8 @@ import { isnext, can } from "./assets/global";
 import AchivementStar from "./components/AchivementStar.vue";
 
     onMounted(()=>{
+      const audio = document.querySelector('audio')
+      audio.play()
       let currentPage = 0;
     let isTouching = false;
     const pages = document.querySelectorAll('.page');
