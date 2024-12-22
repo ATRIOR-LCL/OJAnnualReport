@@ -22,6 +22,7 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
+import { isnext } from '@/assets/global';
 const bili1 = ref(null)
 const bili2 = ref(null)
 onMounted(()=>{
@@ -44,6 +45,9 @@ onMounted(()=>{
     const allanim = new IntersectionObserver((lists)=>{
         lists.forEach((list)=>{
             if(list.isIntersecting){
+                setTimeout(() => {
+                    isnext.value = true
+                }, 5000);
                 list.target.classList.add('erase')
             }else{
                 list.target.classList.remove('erase')

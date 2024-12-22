@@ -1,5 +1,6 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
+  <img src="./assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
   <section id="page1" class="page">
     
     <div class="confettis" v-if="true">
@@ -75,6 +76,7 @@ const tsxx = ref(true);
 const scr = ref(false);
 const waiting = ref(false);
 const wait = ref(null);
+import { isnext } from "./assets/global";
 
     onMounted(()=>{
       let currentPage = 0;
@@ -83,6 +85,7 @@ const wait = ref(null);
     const totalPages = pages.length;
 
     const handleTouch = (event) => {
+      isnext.value=false
       console.log("yes")
       if (isTouching) return; // 防止快速触摸多次翻页
 
@@ -123,7 +126,9 @@ if (window.screen.width < 1000) {
 }
 
 function open() {
-
+  setTimeout(() => {
+    isnext.value = true;
+  }, 5000);
   const confettis = document.querySelector('.confettis');
   confettis.classList.add('Delay');
   
@@ -201,5 +206,19 @@ section {
 
 .cll {
   overflow: hidden;
+}
+
+.nextactive{
+  animation: nexting 2s ease-in-out infinite;
+}
+
+@keyframes nexting{
+  from{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }to{
+    opacity: 0;
+    transform: translateX(-50%) translateY(5vh);
+  }
 }
 </style>

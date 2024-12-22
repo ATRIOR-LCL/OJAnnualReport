@@ -8,6 +8,17 @@
     transition: all .5s ease;
     background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 }
+
+.next{
+    opacity: 0;
+    width: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transition: all .5s ease;
+    transform: translateX(-50%) translateY(0);
+}
+
 .title{
     display: block;
     height: .2rem;

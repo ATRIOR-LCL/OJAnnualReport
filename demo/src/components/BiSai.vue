@@ -3,7 +3,7 @@
     <div class="bisai">
         <div class="bstxt">
             <div class="bstxt1">今年你一共参加了<span>00</span>场比赛</div>
-            <div class="bstxt2">在<span>00000</span>中<br>你取得了<span>00</span>的年度最好成绩<br>可喜可贺，可喜可贺<span>🥳</span></div>
+            <div class="bstxt2">在<span>00000</span>中<br>你取得了<span>00</span>的年度最好成绩<span>💯</span><br>可喜可贺，可喜可贺<span>🥳</span></div>
         </div>
         <div class="loader"></div>
     </div>
