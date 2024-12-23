@@ -23,7 +23,7 @@
 }
 
 .next{
-    z-index: 999;
+    z-index: 999999999;
     opacity: 0;
     width: 10%;
     position: absolute;
@@ -503,3 +503,4 @@
       transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
     }
   }
+
