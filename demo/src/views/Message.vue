@@ -59,7 +59,7 @@
     <LeiTai id="page9" class="page hide"></LeiTai>
     <XinSheng id="page10" class="page hide"></XinSheng>
     <XiaoSai id="page11" class="page hide"></XiaoSai>
-    <!-- <Blue id="page12" class="page hide"></Blue> -->
+    <Blue id="page12" class="page hide"></Blue>
     <AchivementStar id="page1" class="page hide"></AchivementStar>
     <Master id="page13" class="page hide"></Master>
     <Last id="page14" class="page hide"></Last>
