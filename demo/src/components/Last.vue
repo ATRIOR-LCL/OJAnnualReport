@@ -13,7 +13,7 @@
     <div class="font2">
         <span>Practice coding, </span><span>compete with players, </span><span>and become a master.</span>
     </div>
-    <div class="sdutoj"ref="ojoj">
+    <div class="sdutoj" ref="ojoj">
         <div class="font1">
             Practice coding, compete with players, and become a master.
         </div>
@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 const text1 = ref(null);
 const text2 = ref(null);
 const text3 = ref(null);
@@ -47,9 +47,10 @@ const text6 = ref(null);
 const ojoj=ref(null)
 
 onMounted(()=>{
-    let shadow = '';
+    nextTick(()=>{
+        let shadow = '';
     let shadow3 = '';
-    if(window.screen.width<1000){
+    // if(window.screen.width<1000){
         let total = 10;
         for (let i = 1; i <= total; i++) {
             shadow += `-${i}px ${i}px #c2c2c2,`;
@@ -59,17 +60,17 @@ onMounted(()=>{
         }
         shadow = shadow.slice(0, -1);
         shadow3 = shadow3.slice(0, -1);
-    }else{
-        let total = 20;
-        for (let i = 1; i <= total; i++) {
-        shadow += `-${i}px ${i}px #c2c2c2,`;
-        }
-        for (let i = 1; i <= total; i++) {
-        shadow3 += `${i}px ${i}px #c2c2c2,`;
-        }
-        shadow = shadow.slice(0, -1);
-        shadow3 = shadow3.slice(0, -1);
-    }
+    // }else{
+    //     let total = 20;
+    //     for (let i = 1; i <= total; i++) {
+    //     shadow += `-${i}px ${i}px #c2c2c2,`;
+    //     }
+    //     for (let i = 1; i <= total; i++) {
+    //     shadow3 += `${i}px ${i}px #c2c2c2,`;
+    //     }
+    //     shadow = shadow.slice(0, -1);
+    //     shadow3 = shadow3.slice(0, -1);
+    // }
     
     if (text1.value) text1.value.style.textShadow = shadow;
     if (text2.value) text2.value.style.textShadow = shadow;
@@ -131,14 +132,14 @@ onMounted(()=>{
             entry.target.classList.remove('btm-logo')
         }
         })
-    }, {threshold: 0.5})
+    }, {threshold: 0.1})
+    nextTick(()=>{
+        const chars = document.querySelectorAll('.chars, .nc')
+        chars.forEach(char=>charsanimation.observe(char))
 
-    const chars = document.querySelectorAll('.chars, .nc')
-    chars.forEach(char=>charsanimation.observe(char))
-
-    const fonts = document.querySelector('.font1')
-    fontanimation.observe(fonts);
-
+        const fonts = document.querySelector('.font1')
+        fontanimation.observe(fonts);
+    })
     const sdutojs = document.querySelector('.sdutoj')
     sdutojanimation.observe(sdutojs)
 
@@ -147,7 +148,8 @@ onMounted(()=>{
 
     const bottomIcon = document.querySelector('.bottom-icon')
     bottomIconanim.observe(bottomIcon)
-
+    })
+    
     })
 </script>
 <style scoped>

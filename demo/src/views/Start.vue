@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {nextTick, ref} from 'vue'
 import { gogo } from '@/assets/global';
 const isChecked = ref(false)
 import { contain } from '@/assets/global';
