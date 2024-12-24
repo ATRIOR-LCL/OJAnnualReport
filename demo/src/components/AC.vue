@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import{ref, onMounted} from 'vue'
 const star1 = ref(null)
 const star2 = ref(null)
@@ -39,6 +39,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     can.value=true
                     isnext.value=true
+                    isScoll.value=true
                 }, 2500);
                 list.target.classList.add('active')
                 star1.value.style.animationPlayState = 'running'

@@ -79,7 +79,7 @@
 </template>
 
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import { ref,onMounted } from 'vue';
 const bg1 = ref(null)
 const large1 = ref(null)
@@ -95,6 +95,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     can.value=true
                     isnext.value=true
+                    isScoll.value=true
                 }, 12000);
                 list.target.classList.add('actives')
                 const txt1s = document.querySelectorAll('.txt1-a, .txt1-b, .txt1-c');

@@ -24,7 +24,7 @@
     </section>
 </template>
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import { onMounted, ref } from 'vue';
 const activeAnmi1 = ref("1")
 const soMucn = ref(false)
@@ -83,6 +83,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     can.value=true
                     isnext.value=true
+                    isScoll.value=true
                 }, 2000);
                 list.target.classList.add('active')
             }else{

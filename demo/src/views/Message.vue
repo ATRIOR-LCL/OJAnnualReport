@@ -1,6 +1,5 @@
 <template>
     <p class="title fontremove">SDUT Online Judge</p>
-    <!-- <audio src="./assets/img/atri.mp3" class="ado" controls></audio> -->
     <img src="../assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
     <section id="page1" class="page">
       <div class="confettis" v-if="true">
@@ -60,11 +59,11 @@
     <LeiTai id="page9" class="page hide"></LeiTai>
     <XinSheng id="page10" class="page hide"></XinSheng>
     <XiaoSai id="page11" class="page hide"></XiaoSai>
-    <Blue id="page12" class="page hide"></Blue>
+    <!-- <Blue id="page12" class="page hide"></Blue> -->
     <AchivementStar id="page1" class="page hide"></AchivementStar>
     <Master id="page13" class="page hide"></Master>
-      <!-- <Question id="page10" class="page hide"></Question> -->
     <Last id="page14" class="page hide"></Last>
+      <!-- <Question id="page10" class="page hide"></Question> -->
   </template>
   <script setup>
   import Hard from "../components/Hard.vue";

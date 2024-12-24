@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import { onMounted, ref } from 'vue';
 const first = ref(true)
 onMounted(()=>{
@@ -25,6 +25,7 @@ onMounted(()=>{
                     setTimeout(() => {
                         can.value=true
                         isnext.value=true
+                        isScoll.value=true
                     }, 2500);
                     first.value=false
                 }

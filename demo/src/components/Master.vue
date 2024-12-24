@@ -163,7 +163,7 @@
 </template>
 
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import {ref, onMounted} from 'vue'
 onMounted(()=>{
     const medals = document.querySelector('.medals')
@@ -175,6 +175,7 @@ onMounted(()=>{
                     medals.classList.add('slide-in-top')
                     can.value=true
                     isnext.value=true
+                    isScoll.value=true
                 }, 4000);
             }else{
                 list.target.classList.remove('msactive')

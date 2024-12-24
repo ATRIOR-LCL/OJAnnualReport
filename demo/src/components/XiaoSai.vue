@@ -78,7 +78,7 @@
 </template>
 
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import { onMounted, ref } from 'vue';
 
 
@@ -89,6 +89,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     can.value=true
                     isnext.value=true
+                    isScoll.value=true
                 }, 5000);
                 list.target.classList.add('active')
                 const xstxt1 = document.querySelector('.xstxt1')

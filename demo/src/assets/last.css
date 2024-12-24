@@ -5,17 +5,11 @@
     height: 100%;
     font-weight: 700;
     opacity: 0;
-    /* font-family: initial; */
-    /* background-color: red; */
-    /* perspective: 300; */
-    /* display: flex; */
-    /* letter-spacing: .1rem; */
     justify-content: center;
     gap: .2rem;
     align-items: center;
     /* overflow: hidden; */
     user-select: none;
-
 }
 .sdutojanim{
     opacity: 1;
@@ -86,9 +80,7 @@
     position: relative;
     font-size: 1rem;
     color: #fff;
-    /* background-color: aqua; */
     transform: scale(1.4) rotate3d(10, 10, 0, 40deg) translateZ(-.6rem);
-    
     opacity: 0;
 }
 
@@ -105,6 +97,10 @@
     color: #fff;
     transform: scale(1.4) rotate3d(10, -10, 0, 40deg) translateZ(-.6rem);
     opacity: 0;
+}
+
+.sdutoj span{
+    z-index: 9999;
 }
 
 .sdutoj span:nth-last-child(6){
@@ -216,7 +212,7 @@
     background-color: #fff;
 }
 
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){ */
 
     .chars,
     .nc{
@@ -279,7 +275,7 @@
         content: url('./img/master.svg');
         position: absolute;
     } */
-}
+/* } */
 
 .s1,
 .s2,

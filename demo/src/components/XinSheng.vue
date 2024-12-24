@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 import { onMounted, ref } from 'vue';
 
 onMounted(()=>{
@@ -26,6 +26,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     can.value=true
                 isnext.value=true
+                isScoll.value=true
                 }, 2500);
                 list.target.classList.add('active1')
                 bbb.classList.add('bgactive')

@@ -1,6 +1,6 @@
 <template>
 <section>
-    <p class="s1">SDUT Online Judge SDUT Online Judge </p>
+    <!-- <p class="s1">SDUT Online Judge SDUT Online Judge </p>
     <p class="s2">SDUT Online Judge SDUT Online Judge </p>
     <p class="s3">SDUT Online Judge SDUT Online Judge </p>
     <p class="s4">SDUT Online Judge SDUT Online Judge </p>
@@ -9,7 +9,7 @@
     <p class="s7">SDUT Online Judge SDUT Online Judge </p>
     <p class="s8">SDUT Online Judge SDUT Online Judge </p>
     <p class="s9">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s10">SDUT Online Judge SDUT Online Judge</p>
+    <p class="s10">SDUT Online Judge SDUT Online Judge</p> -->
     <div class="font2">
         <span>Practice coding, </span><span>compete with players, </span><span>and become a master.</span>
     </div>
@@ -88,7 +88,7 @@ onMounted(()=>{
             entry.target.classList.remove('charsanim')
         }
         })
-    }, {threshold: 0.5})
+    }, {threshold: 0.1})
 
     const fontanimation = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
@@ -98,14 +98,14 @@ onMounted(()=>{
             entry.target.classList.remove('font1anim')
         }
         })
-    }, {threshold: 0.5})
+    }, {threshold: 0.1})
     const sdutojanimation = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
         if(entry.isIntersecting){
-            const rains = document.querySelectorAll(".s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10")
-            rains.forEach(rain=>{
-                rain.classList.add('animrunning')
-            })
+            // const rains = document.querySelectorAll(".s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10")
+            // rains.forEach(rain=>{
+            //     rain.classList.add('animrunning')
+            // })
             entry.target.classList.add('sdutojanim')
         }else{
             entry.target.classList.remove('sdutojanim')
@@ -152,17 +152,16 @@ onMounted(()=>{
 </script>
 <style scoped>
 @import url('../assets/last.css');
-section{
-    /* opacity: 0;
-    filter: blur(.1rem); */
-    position: relative;
+section {
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
-    transition: all .1s linear;
+    transition: all 0.3s linear;
 }
 .btm-logo{
     animation: opop ease 1s forwards;

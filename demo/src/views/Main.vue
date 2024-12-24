@@ -1,13 +1,9 @@
 <template>
 <transition name="fade">
-    <div v-if="gogo">
-        <Start></Start>
-    </div>
+        <Start v-if="gogo"></Start>
 </transition>
 <transition name="defa">
-    <div v-if="!gogo">
-        <Message></Message>
-    </div>
+        <Message v-if="!gogo"></Message>
 </transition>
 </template>
 

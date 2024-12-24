@@ -112,7 +112,7 @@
 
 
 
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){ */
     .night{
         justify-content: center;
         width: 100%;
@@ -168,4 +168,4 @@
         /* height: calc(100*0.1); */
         bottom: 15%;
     }
-}
+/* } */

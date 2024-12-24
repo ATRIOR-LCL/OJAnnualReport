@@ -21,7 +21,7 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
 onMounted(()=>{
     const ncttxtanim = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
@@ -29,6 +29,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     isnext.value = true
                     can.value=true
+                    isScoll.value=true
                 }, 3000);
                 list.target.classList.add('active')
             }else{
