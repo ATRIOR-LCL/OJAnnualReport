@@ -25,8 +25,6 @@
                 <span>Get Start</span>
             </div>
             </button>
-
-
             <div class="tongyi">
                 <input type="checkbox" class="ui-checkbox" v-model="isChecked">
                 <p>同意SDUTOJ统计我的数据</p>

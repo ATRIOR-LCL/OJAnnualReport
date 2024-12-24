@@ -213,14 +213,6 @@
   flex-direction: column;
 }
 
-.curve {
-  width: 180%;
-  height: 180%;
-  position: absolute;
-  animation: rotate 8s linear infinite;
-  fill: transparent;
-}
-
 .blackhole {
   z-index: -1;
   display: flex;
