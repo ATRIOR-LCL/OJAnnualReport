@@ -53,17 +53,15 @@
     justify-content: center;
     align-items: start;
     position: absolute;
-    bottom: 1px;
+    /* bottom: 1px; */
     left: 50%;
-    transform: translateX(-50%) translateY(0)  rotateX(0deg) rotateY(0deg) rotateX(-170deg);
-    transform-style: preserve-3d;
+    transform: translateX(-50%);
     transform-origin: bottom;
-    perspective: 1000px;
     width: 4.2rem;
     height:5rem;
     z-index: 3;
     transition: all 1.5s ease;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
 }
 
 .lt2{
@@ -144,9 +142,7 @@
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* 定义三角形的区域 */
 }
 
-.upp{
-    height: 5rem;
-}
+
 
 .donn{
     transform: translateY(.5rem);
@@ -194,13 +190,13 @@
     width: .36rem;
 }
 .jiyu{
-    padding: .4rem;
-    padding-top: .2rem;
+    /* padding: .4rem; */
+    /* padding-top: .2rem; */
     font-weight: 700;
     font-size: .1rem;
     word-wrap: break-word;
     color: gray;
-    border: .01rem solid gray;
+    /* border: .01rem solid gray; */
     display: block;
     text-align: center;
     line-height: .2rem;
@@ -210,17 +206,8 @@
     /* background-color: red; */
     top: .2rem;
     z-index: 10;
-    border-radius: .1rem;
-    transition: all 1s ease;
-}
-
-
-
-.jiyu::after{
-    content: '---- SDUTOJ';
-    position: absolute;
-    bottom: .01rem;
-    right: 0.1rem;
+    /* border-radius: .1rem; */
+    /* transition: all 1s ease; */
 }
 
 .e1,
@@ -283,9 +270,10 @@
 
 @media screen and (max-width: 1000px) {
     .letter{
-        position: relative !important;
+        position: none !important;
         width: 78%;
         height: 30%;
+        /* transform: translateY(1rem); */
     }
 
     .lt2{
@@ -328,22 +316,169 @@
         height: 4rem;
     }
 
-    .upp{
-        height: 130% !important;
-    } 
-
     .lt_txt{
+        position: absolute;
+
+        /* z-index: 99; */
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: start;
         width: 6.5rem;
-        height: 3.8rem;
+        height: 7rem;
+        bottom: 40%;
+
+    }
+    .jiyu2{
+        border: 0;
+        display: block;
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        position: relative;
+        background-color: #fff;
+        /* background-color: red ; */
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        transition: all 1s ease;
+        transform-origin: bottom;
+        transform: rotateX(-180deg) ;
+        z-index: 11 !important;
+    }
+
+    .upp{
+        animation: upanim 1.5s linear forwards;
+        animation-delay: 1s;
+    }
+
+    .changes{
+        animation: lt_txt 1s linear forwards;
+    }
+
+    @keyframes upanim {
+        0%{
+            transform: rotateX(-180deg);
+        }
+        50%{
+            transform: rotateX(-90deg);
+        }
+        100%{
+            transform: rotateX(0deg) rotateY(0);
+        }
+    }
+
+    @keyframes lt_txt {
+        from{
+            transform: translateX(-50%) scaleY(1) scaleX(1);
+        }to{
+            transform: translateX(-50%) scaleY(1.7) scaleX(1.3) translateY(2.5rem) ;
+        }
+    }
+    #jiyu1{
+        transform:rotateX(0deg) rotateY(0deg);
+        transform-style: preserve-3d;
+        transform-origin: top;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        /* background-color: red; */
+        width: 100%;
+        height: 50%;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: #eee;
+        /* background-color: green !important; */
+        z-index: 10 !important;
+        border-radius: 0;
+        /* z-index: 99999; */
+
+        /* z-index: 99; */
+        /* transform: scale(1.4) !important; */
+        /* top: .8rem !important; */
+    }
+
+    .dan{
+        animation: jiyu 1.5s linear forwards;
+        animation-delay: 1s;
+    }
+    @keyframes jiyu {
+        0%{
+            background-color: #eee;
+        }
+        100%{
+            transform: translateY(-.01rem) ;
+            background-color: #fff;
+        }
+    }
+
+    .kmc{
+        padding: .7rem;
+        margin: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        width: auto;
+        height: auto;
+        font-size: .3rem;
+        font-weight: 700;
+        transition: all 1.5s ease;
+        transition-delay: 2.5s;
+        z-index: 33;
+        letter-spacing: .1rem;
+        border-radius: .3rem;
+        border: .07rem solid gray;
+        text-indent: 2em;
+        color: rgb(97, 97, 97);
+        text-decoration: underline;
+    }
+
+    .hei{
+        position: absolute;
+        width: 50%;
+        height: 10%;
+        /* background-color: red; */
+        left: 2%;
+        top: 2%;
+        display: flex;
+        justify-content: start;
+        /* text-align: start; */
+        align-items: center;
+    }
+
+    .hei span{
+        display: inline-block;
+        text-align: center;
+        margin-left: .1rem;
+        letter-spacing: normal;
+        text-indent: 0;
+    }
+
+    .hei img{
+        width: .6rem;
+        height: .5rem;
+    }
+
+    .kmc-oj{
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        
     }
 
     .ts{
         width: inherit;
-        position: relative;
-        top: 3%;
+        position: absolute;
+        /* top: 0%; */
+        bottom: 35%;
         color: gray;
         font-size: .3rem;
         font-weight: 700;
@@ -356,18 +491,6 @@
         /* border-radius: 0; */
         /* border-radius: 50%; */
         /* z-index: 10; */
-    }
-
-    .jiyu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* align-items: center; */
-        /* background-color: red; */
-        width: 70%;
-        height: 38%;
-        transform: scale(1.4) !important;
-        top: .8rem !important;
     }
     .e1{
         left: .5rem;
@@ -402,8 +525,10 @@
     }
 
     .donn{
-        transform: translateY(1.5rem);
+        transform: translateY(100vh);
     }
+
+    
 
 }
 
