@@ -1,6 +1,7 @@
 <template>
     <p class="title fontremove">SDUT Online Judge</p>
     <img src="../assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
+    
     <section id="page1" class="page">
       <div class="confettis" v-if="true">
         <div class="confetti"></div>

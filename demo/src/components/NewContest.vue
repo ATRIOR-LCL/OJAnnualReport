@@ -5,9 +5,6 @@
                 <p class="saishi">这一年里OJ共举办了<br> <span>00</span>场中大型正式赛事</p>
                 <p class="bipin">共有<span>0000</span>名选手参与了这些激情的比拼</p>
             </div>
-            <!-- <div class="pd1">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
-            <div class="pd2">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
-            <div class="pd3">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div> -->
             <div class="acmacm">
                 <div class="outer">
                 <div class="dot"></div>

@@ -18,20 +18,20 @@ onMounted(()=>{
     const bstxtanim = new IntersectionObserver(lists=>{
         lists.forEach(list=>{
             if(list.isIntersecting){
-                if(first.value){
+                // if(first.value){
                     setTimeout(() => {
                         can.value=true
                         isnext.value=true
                         isScoll.value=true
                     }, 2500);
                     first.value=false
-                }
+                // }
                 list.target.classList.add('active')
             }else{
                 list.target.classList.remove('active')
             }
         })
-    })
+    }, {threshold: .1})
 
     const bstxts = document.querySelectorAll('.bstxt, .loader')
     bstxts.forEach(bstxt=>bstxtanim.observe(bstxt))
