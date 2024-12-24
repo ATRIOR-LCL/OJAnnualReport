@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){ */
     .newcontest{
         display: flex;
         width: 100vw;
@@ -220,4 +220,4 @@
         transition: all .3s linear;
         transition-delay: 1.2s;
     }
-}
+/* } */

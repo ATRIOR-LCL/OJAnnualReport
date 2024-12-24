@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){ */
     .special{
         position: relative;
         width: 100vw;
@@ -338,4 +338,4 @@
         top: -.9rem;
         right: -2rem;
     }
-}
+/* } */

@@ -22,7 +22,7 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
-import { isnext, can } from '@/assets/global';
+import { isnext, can, isScoll } from '@/assets/global';
 const bili1 = ref(null)
 const bili2 = ref(null)
 onMounted(()=>{
@@ -48,6 +48,7 @@ onMounted(()=>{
                 setTimeout(() => {
                     isnext.value = true
                     can.value = true
+                    isScoll.value=true
                 }, 5000);
                 list.target.classList.add('erase')
             }else{

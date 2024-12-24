@@ -1,19 +1,22 @@
 <template>
-<div class="newcontest">
-    <div class="ncttxt">
-        <p class="saishi">这一年里OJ共举办了<span>00</span>场中大型正式赛事</p>
-        <p class="bipin">共有<span>0000</span>名选手参与了这些激情的比拼</p>
-    </div>
-    <div class="pd1">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
-    <div class="pd2">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
-    <div class="pd3">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
-    <div class="acmacm">
-        <img src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg" alt="">
-        <p class="qds">ACM庆典赛</p>
-        <p class="wls">蔚蓝系列赛</p>
-        <p class="lts">新生擂台赛</p>
-    </div>
-</div>
+    <section>
+        <div class="newcontest">
+            <div class="ncttxt">
+                <p class="saishi">这一年里OJ共举办了<span>00</span>场中大型正式赛事</p>
+                <p class="bipin">共有<span>0000</span>名选手参与了这些激情的比拼</p>
+            </div>
+            <div class="pd1">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
+            <div class="pd2">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
+            <div class="pd3">SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM SDUTACM</div>
+            <div class="acmacm">
+                <img src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg" alt="">
+                <p class="qds">ACM庆典赛</p>
+                <p class="wls">蔚蓝系列赛</p>
+                <p class="lts">新生擂台赛</p>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <script setup>

@@ -9,7 +9,8 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import { can, isnext } from '@/assets/global';
+import { can, isnext, isScoll } from '@/assets/global';
+
 onMounted(()=>{
     const page2anim = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
@@ -17,6 +18,7 @@ onMounted(()=>{
             setTimeout(() => {
                 isnext.value =true
                 can.value=true
+                isScoll.value=true
             }, 2000);
             entry.target.classList.add('fontactive')
         }else{

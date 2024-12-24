@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <div class="start">
+        <section>
+            <div class="start">
             <div class="sdutoj">
                 SDUT OJ
             </div>
@@ -26,13 +26,20 @@
                 <p>同意SDUTOJ统计我的数据</p>
             </div>
         </div>
-    </section>
+        </section>
 </template>
 
 <script setup>
 import {ref} from 'vue'
 import { gogo } from '@/assets/global';
 const isChecked = ref(false)
+import { contain } from '@/assets/global';
+if(window.screen.width>1000){
+    contain.value=true
+}
+else{
+    contain.value=false
+}
 function Going(){
     setTimeout(() => {
         gogo.value=false
@@ -42,4 +49,9 @@ function Going(){
 
 <style scoped>
 @import url('../assets/start.css');
+.smallcontain{
+    max-width: 1000px;
+    height: 100vh;
+    position: relative;
+}
 </style>

@@ -65,7 +65,6 @@
     <Master id="page13" class="page hide"></Master>
       <!-- <Question id="page10" class="page hide"></Question> -->
     <Last id="page14" class="page hide"></Last>
-  
   </template>
   <script setup>
   import Hard from "../components/Hard.vue";
@@ -88,10 +87,11 @@
   import { isnext, can } from "../assets/global";
   import AchivementStar from "../components/AchivementStar.vue";
   import Master from "../components/Master.vue";
-  
+  import { contain } from "../assets/global";
+  import { isScoll } from "../assets/global";
       onMounted(()=>{
         let currentPage = 0;
-      let isTouching = false;
+      // let isTouching = false;
       const pages = document.querySelectorAll('.page');
       const totalPages = pages.length;
   
@@ -116,10 +116,6 @@
               currentPage--;
               pages[currentPage].classList.remove('hide');
             }, 1000);
-
-            
-            
-            
           } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 1) {
             pages[currentPage].classList.add('fontremove');
             setTimeout(() => {
@@ -127,30 +123,47 @@
               currentPage++;
               pages[currentPage].classList.remove('hide');
             }, 1000);
-            
-            
           }
   
           document.removeEventListener('touchmove', handleTouchMove);
           document.removeEventListener('touchend', handleTouchEnd);
-          isTouching = false;
+          // isTouching = false;
         };
   
-        isTouching = true;
+        // isTouching = true;
         document.addEventListener('touchmove', handleTouchMove);
         document.addEventListener('touchend', handleTouchEnd);
       };
+
+      const mouseScroll = (event)=>{
+        isnext.value=false
+        if(isScoll.value == false) return ;
+        isScoll.value=false
+        if(event.deltaY > 0){
+          pages[currentPage].classList.add('fontremove');
+            setTimeout(() => {
+              pages[currentPage].classList.add('hide');
+              currentPage++;
+              pages[currentPage].classList.remove('hide');
+              
+            }, 1000);
+        }
+      }
         document.addEventListener('touchstart', handleTouch);
+        document.addEventListener('wheel', mouseScroll)
       })
   
   if (window.screen.width < 1000) {
     scr.value = true;
+  }else{
+    contain.value=true
   }
   
   function open() {
     setTimeout(() => {
       isnext.value = true;
       can.value = true
+      isScoll.value=true
     }, 3000);
     const confettis = document.querySelector('.confettis');
     confettis.classList.add('Delay');
@@ -211,7 +224,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     transition: all 0.3s linear;
