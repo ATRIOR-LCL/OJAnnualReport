@@ -49,6 +49,7 @@
     <Special id="page2" class="page hide"></Special>
     <XinZeng id="page3" class="page hide"></XinZeng>
     <NewContest id="page4" class="page hide"></NewContest>
+
     <AC id="page5" class="page hide"></AC>
     <!-- <Diligent id="page6" class="page hide"></Diligent>
     <Achievement id="page7" class="page hide"></Achievement> -->

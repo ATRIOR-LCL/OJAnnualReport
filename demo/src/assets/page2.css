@@ -61,7 +61,7 @@
 }
 
 .yh::after{
-    content: 'This year, OJ has added 0000 new users !';
+    content: '总注册用户数已逾0000人。';
     position: absolute;
     display: flex;
     width: 8rem;
@@ -77,7 +77,7 @@
 }
 
 .tj::after{
-    content: 'New submissions 0000 !';
+    content: '截止目前,已累计0000条提交,即将达到 1000 万大关。';
     position: absolute;
     display: flex;
     width: 8rem;

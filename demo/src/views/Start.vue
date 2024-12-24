@@ -7,6 +7,12 @@
             <div class="ndbg">
                 2024年度报告
             </div>
+            <div class="loader">
+                <div class="blackhole">
+                    <div class="blackhole-circle"></div>
+                    <div class="blackhole-disc"></div>
+                </div>
+            </div>
             <router-link to="/login" class="back">
                 <img src="../assets/img/qq.png" alt="">
                 <span>Come Back</span>
