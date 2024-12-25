@@ -231,6 +231,7 @@
     height: 100vh;
     overflow: hidden;
     transition: all 0.3s linear;
+    background-color: rgb(41, 41, 41);
     /* z-index: 99999999999; */
   }
   

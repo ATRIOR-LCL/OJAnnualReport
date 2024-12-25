@@ -13,7 +13,7 @@
         height: 100vh;
         overflow: hidden;
         background-color: rgb(41, 41, 41);
-        z-index: 0;
+        z-index: -3;
         display: flex;
         justify-content: center;
       }
@@ -25,7 +25,7 @@
     </script>
     <script>
       const app = document.querySelector('#app')
-      app.style.width = 375+'px'
+      app.style.width = 10 +'rem'
       app.style.position = 'relative'
       const useRem=()=>{
         let w=window.innerWidth

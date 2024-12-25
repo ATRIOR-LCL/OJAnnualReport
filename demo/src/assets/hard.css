@@ -8,6 +8,7 @@
     align-items: end;
     /* background-color: red; */
     background-color: rgb(41, 41, 41);
+    z-index: 11 !important;
 }
 
 .hardtxt{

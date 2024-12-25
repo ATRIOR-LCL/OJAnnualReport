@@ -1,5 +1,6 @@
 <template>
         <section>
+            <lay-qrcode text="https://oj-annual-report.vercel.app/" class="qr"></lay-qrcode>
             <div class="start">
             <div class="sdutoj">
                 SDUTOJ

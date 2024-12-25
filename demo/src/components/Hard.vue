@@ -15,29 +15,30 @@
 
 <script setup>
 import { can, isnext, isScoll } from '@/assets/global';
-import { onMounted, ref } from 'vue';
-const first = ref(true)
+import { nextTick, onMounted, ref } from 'vue';
 onMounted(()=>{
-    const sunanim = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-            if(first.value){
-                    setTimeout(() => {
-                        can.value=true
-                        isnext.value=true
-                        isScoll.value=true
-                    }, 2500);
-                    first.value=false
-                }
-            entry.target.classList.add('fontactive')
-        }else{
-            entry.target.classList.remove('fontactive')
-        }
-        })
-    }, {threshold: 0.5})
+    setTimeout(() => {
+        nextTick(()=>{
+        const sunanim = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                console.log('chuxianle')
+                        setTimeout(() => {
+                            can.value=true
+                            isnext.value=true
+                            isScoll.value=true
+                        }, 2500);
+                entry.target.classList.add('fontactive')
+            }else{
+                entry.target.classList.remove('fontactive')
+            }
+            })
+        }, {threshold: 0.1})
 
-    const suns = document.querySelectorAll(".hardtxt, .hard_slogan, .sun")
-    suns.forEach(sun=>sunanim.observe(sun))
+        const suns = document.querySelectorAll(".hardtxt, .hard_slogan, .sun")
+        suns.forEach(sun=>sunanim.observe(sun))
+    })
+    }, 500);
 })
 
 </script>
