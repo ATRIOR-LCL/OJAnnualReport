@@ -177,7 +177,7 @@
 
 .bottom-icon::before{
     content: '全栈开发 / 二次元 / Coser';
-    font-size: .08rem !important;
+    font-size: 25% !important;
     color: #fff;
     position: absolute;
     bottom: -.01rem;
@@ -186,7 +186,7 @@
 
 .bottom-icon::after{
     content: '前端 / 二次元 / 初来乍到';
-    font-size: .08rem !important;
+    font-size: 25% !important;
     color: #fff;
     position: absolute;
     bottom: -.01rem;
