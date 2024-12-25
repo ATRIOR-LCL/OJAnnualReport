@@ -47,6 +47,7 @@
             </div>
         </div>
     </section>
+
     <Special id="page2" class="page hide"></Special>
     <XinZeng id="page3" class="page hide"></XinZeng>
     <NewContest id="page4" class="page hide"></NewContest>
@@ -65,6 +66,7 @@
     <AchivementStar id="page1" class="page hide"></AchivementStar>
     <Master id="page13" class="page hide"></Master>
     <Last id="page14" class="page hide"></Last>
+    
       <!-- <Question id="page10" class="page hide"></Question> -->
   </template>
   <script setup>

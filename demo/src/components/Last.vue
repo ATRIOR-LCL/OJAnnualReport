@@ -13,7 +13,7 @@
     <div class="font2">
         <span>Practice coding, </span><span>compete with players, </span><span>and become a master.</span>
     </div>
-    <div class="sdutoj" ref="ojoj">
+    <div class="sdutoj">
         <div class="font1">
             Practice coding, compete with players, and become a master.
         </div>
@@ -47,7 +47,8 @@ const text6 = ref(null);
 const ojoj=ref(null)
 
 onMounted(()=>{
-    nextTick(()=>{
+    setTimeout(() => {
+        nextTick(()=>{
         let shadow = '';
     let shadow3 = '';
     // if(window.screen.width<1000){
@@ -100,23 +101,24 @@ onMounted(()=>{
         }
         })
     }, {threshold: 0.1})
-    const sdutojanimation = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-            // const rains = document.querySelectorAll(".s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10")
-            // rains.forEach(rain=>{
-            //     rain.classList.add('animrunning')
-            // })
-            entry.target.classList.add('sdutojanim')
-        }else{
-            entry.target.classList.remove('sdutojanim')
-        }
-        })
-    }, {threshold: 0.5})
+    // const sdutojanimation = new IntersectionObserver((entries)=>{
+    //     entries.forEach((entry)=>{
+    //     if(entry.isIntersecting){
+    //         console.log('in the screen')
+    //         setTimeout(() => {
+    //             entry.target.classList.add('sdutojanim')
+    //         }, 6000);
+    //     }else{
+    //         entry.target.classList.remove('sdutojanim')
+    //     }
+    //     })
+    // }, {threshold: 0.5})
 
     const font2animation = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
         if(entry.isIntersecting){
+            const sdutoj = document.querySelector('.sdutoj')
+            sdutoj.classList.add('sdutojanim')
             entry.target.classList.add('font2anim')
         }else{
             entry.target.classList.remove('font2anim')
@@ -133,15 +135,17 @@ onMounted(()=>{
         }
         })
     }, {threshold: 0.1})
-    nextTick(()=>{
+    // nextTick(()=>{
         const chars = document.querySelectorAll('.chars, .nc')
-        chars.forEach(char=>charsanimation.observe(char))
+        chars.forEach(char=>{
+            charsanimation.observe(char)
+        })
 
         const fonts = document.querySelector('.font1')
         fontanimation.observe(fonts);
-    })
-    const sdutojs = document.querySelector('.sdutoj')
-    sdutojanimation.observe(sdutojs)
+    // })
+    // const sdutojs = document.querySelector('.sdutoj')
+    // sdutojanimation.observe(sdutojs)
 
     const font2s = document.querySelector('.font2')
     font2animation.observe(font2s)
@@ -149,7 +153,7 @@ onMounted(()=>{
     const bottomIcon = document.querySelector('.bottom-icon')
     bottomIconanim.observe(bottomIcon)
     })
-    
+    }, 100);
     })
 </script>
 <style scoped>
@@ -179,4 +183,18 @@ section {
             opacity: 1;
         }
     }
+.sdutojanim{
+    opacity: 1;
+    filter: blur(0);
+    animation: upmove 1.5s ease forwards;
+    animation-delay: 7.5s;
+}
+
+@keyframes upmove{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(-1.0rem);
+    }
+}
 </style>
