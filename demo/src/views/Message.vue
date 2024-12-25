@@ -1,8 +1,7 @@
 <template>
     <p class="title fontremove">SDUT Online Judge</p>
     <img src="../assets/img/next.svg" alt="" class="next" :class="{'nextactive':isnext}">
-    <Last id="page14" class="page"></Last>
-    <section id="page1" class="page hide">
+    <section id="page1" class="page">
       <div class="confettis" v-if="true">
         <div class="confetti"></div>
         <div class="confetti"></div>
@@ -47,6 +46,7 @@
             </div>
         </div>
     </section>
+    <Last id="page14" class="page hide"></Last>
 
     <Special id="page2" class="page hide"></Special>
     <XinZeng id="page3" class="page hide"></XinZeng>
