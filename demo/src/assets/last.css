@@ -157,11 +157,31 @@
 }
 
 .bottom-icon p{
+    
     font-size: .2rem;
     /* font-weight: 70; */
 }
 
+.bluetxt{
+    position: absolute;
+    font-size: .1rem;
+    color: #fff;
+    bottom: -.08rem;
+    left: -.3rem;
+}
+
+.atriortxt{
+    position: absolute;
+    position: absolute;
+    font-size: .1rem;
+    color: #fff;
+    bottom: -.08rem;
+    left: 42%;
+}
+
 .blue{
+    position: relative;
+    right: .2rem;
     margin-left: .1rem;
     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
     background-clip: text;
@@ -175,7 +195,7 @@
     color: transparent;
 }
 
-.bottom-icon::before{
+/* .bottom-icon::before{
     content: '全栈开发/二次元/Coser';
     font-size: 4px !important;
     color: #fff;
@@ -191,11 +211,11 @@
     position: absolute;
     bottom: -.04rem;
     left: 1.2rem;
-}
+} */
 
 .lcllab{
     position: relative;
-    left: .14rem;
+    left: .3rem;
     top: .04rem;
 }
 
@@ -204,6 +224,7 @@
     left: .05rem;
     width: .01rem;
     height: 60%;
+    z-index: 99 !important;
     background-color: #fff;
 }
 
