@@ -15,9 +15,15 @@
             <img src="../assets/img/qq.png" alt="">
             <span class="rank3">atrior</span>
         </div>
-        <img ref="star2" src="../assets/img/star.png" alt="" class="star2">
-        <img ref="star1" src="../assets/img/star.png" alt="" class="star1">
-        <img ref="star3" src="../assets/img/star.png" alt="" class="star3">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>  
+        </div>
         <img src="../assets/img/star.png" alt="" class="star4">
         <img src="../assets/img/star.png" alt="" class="star5">
     </div>

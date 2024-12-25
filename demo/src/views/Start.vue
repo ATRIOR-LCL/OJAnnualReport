@@ -2,7 +2,7 @@
         <section>
             <div class="start">
             <div class="sdutoj">
-                SDUT OJ
+                SDUTOJ
             </div>
             <div class="ndbg">
                 2024年度报告
