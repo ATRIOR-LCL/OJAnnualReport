@@ -12,6 +12,13 @@
   user-select: none;
 }
 
+.btm-txt{
+  position: absolute;
+  width: 90%;
+  bottom: -.2rem;
+  left: -.5rem;
+}
+
 .font1 {
   width: 80%;
   height: 0.5rem;

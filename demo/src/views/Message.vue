@@ -60,6 +60,7 @@
     <AchivementStar id="page13" class="page hide"></AchivementStar>
     <Master id="page14" class="page hide"></Master>
     <Last id="page15" class="page hide"></Last>
+
   </template>
   <script setup>
   import Hard from "../components/Hard.vue";

@@ -19,8 +19,9 @@
         Practice coding, compete with players, and become a master.
       </div>
       <div class="bottom-icon">
-        <span class="bluetxt">全栈开发/二次元/Coser/流萤的狗</span>
-        <span class="atriortxt">前端/二次元/爱吃麦当劳</span>
+        <img src="../assets/img/bottomicon.png" alt="" class="btm-txt">
+        <!-- <span class="bluetxt">全栈开发/二次元/Coser/流萤的狗</span>
+        <span class="atriortxt">前端/二次元/爱吃麦当劳</span> -->
         <img
           src="../assets/img/bLue.png"
           alt=""
