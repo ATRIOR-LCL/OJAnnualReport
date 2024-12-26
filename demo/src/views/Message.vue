@@ -50,9 +50,6 @@
     <XinZeng id="page3" class="page hide"></XinZeng>
     <NewContest id="page4" class="page hide"></NewContest>
     <AC id="page5" class="page hide"></AC>
-    <!-- <Diligent id="page6" class="page hide"></Diligent>
-    <Achievement id="page7" class="page hide"></Achievement> -->
-    <!-- <Busy id="page7" class="page hide"></Busy> -->
     <Night id="page6" class="page hide"></Night>
     <Hard id="page7" class="page hide"></Hard>
     <BiSai id="page8" class="page hide"></BiSai>
@@ -63,7 +60,6 @@
     <AchivementStar id="page1" class="page hide"></AchivementStar>
     <Master id="page13" class="page hide"></Master>
     <Last id="page14" class="page hide"></Last>
-      <!-- <Question id="page10" class="page hide"></Question> -->
   </template>
   <script setup>
   import Hard from "../components/Hard.vue";
@@ -90,7 +86,6 @@
   import { isScoll } from "../assets/global";
       onMounted(()=>{
         let currentPage = 0;
-      // let isTouching = false;
       const pages = document.querySelectorAll('.page');
       const totalPages = pages.length;
   
@@ -126,10 +121,8 @@
   
           document.removeEventListener('touchmove', handleTouchMove);
           document.removeEventListener('touchend', handleTouchEnd);
-          // isTouching = false;
         };
   
-        // isTouching = true;
         document.addEventListener('touchmove', handleTouchMove);
         document.addEventListener('touchend', handleTouchEnd);
       };
@@ -182,8 +175,6 @@
     ts.classList.add('fontremove');
     const kmc = document.querySelector('.kmc')
     kmc.classList.add('fontactive')
-    // const jy = document.querySelector('.jiyu');
-    // jy.classList.add('fontactive');
   
     const emojis = document.querySelectorAll(".e1,.e2,.e3,.e4");
     emojis.forEach((emoji) => {
@@ -228,19 +219,16 @@
     overflow: hidden;
     transition: all 0.3s linear;
     background-color: rgb(41, 41, 41);
-    /* z-index: 99999999999; */
   }
   
   .fontremove {
     opacity: 0;
     filter: blur(.1rem);
-    /* transition: all 1s ease; */
   }
   
   .hide {
     opacity: 0;
     transition: all .5s ease-in-out;
-    /* transition-delay: .5s; */
     transform: translateY(-150%);
 }
   
