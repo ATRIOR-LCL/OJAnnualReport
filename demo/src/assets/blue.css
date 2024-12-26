@@ -33,7 +33,6 @@
   width: 100%;
   height: 35%;
   top: 10%;
-  /* background-color: red; */
   z-index: 44;
 }
 .txt3-a,
@@ -43,12 +42,18 @@
   font-size: 0.4rem;
   font-weight: 700;
   text-align: center;
-  /* letter-spacing: .04rem; */
-  background-color: #484848;
-  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
-  /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
-  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
-  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
   background-clip: text;
   color: transparent;
   transform: translateY(1rem);
@@ -56,18 +61,40 @@
   opacity: 0;
   transition: all 1s ease;
 }
+
+.txt1-a span,
+.txt1-b span,
+.txt1-c span,
+.txt2-a span,
+.txt3-b span {
+  background-image: linear-gradient(
+    120deg,
+    #89f7fe 0%,
+    #66a6ff 100%
+  ) !important;
+  background-clip: text;
+  color: transparent !important;
+}
+
 .txt3-b,
 .txt2-b,
 .txt1-b {
   display: inline-block;
   font-size: 0.5rem;
   font-weight: 700;
-  /* letter-spacing: .04rem; */
   text-align: center;
-  background-color: #484848;
-  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
-  /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
-  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
   background-clip: text;
   color: transparent;
   transform: translateY(1rem);
@@ -82,11 +109,18 @@
   font-size: 0.6rem;
   font-weight: 700;
   text-align: center;
-  /* letter-spacing: .04rem; */
-  background-color: #484848;
-  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
-  /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
-  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
   background-clip: text;
   color: transparent;
   transform: translateY(1rem);

@@ -28,7 +28,6 @@ import { isnext, can, isScoll } from "@/assets/global";
 const bili1 = ref(null);
 const bili2 = ref(null);
 onMounted(() => {
-  // if(window.screen.width<1000){
   let total = 15;
   let shadow = "";
   let shadow2 = "";
@@ -42,7 +41,6 @@ onMounted(() => {
   shadow2 = shadow2.slice(0, -1);
   bili1.value.style.boxShadow = shadow;
   bili2.value.style.boxShadow = shadow2;
-  // }
 
   const allanim = new IntersectionObserver(
     (lists) => {

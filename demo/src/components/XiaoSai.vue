@@ -2,9 +2,9 @@
   <section>
     <div class="xiaosai">
       <div class="xstxt1">
-        <div class="txt1">在 5 月 12 日，你参加了紧张刺激的第十六届校赛</div>
-        <div class="txt2">你与 x 名选手以及 y 名中小学生同台竞技</div>
-        <div class="txt3">并拿下了金奖|第x名|总第x名的好成绩</div>
+        <div class="txt1">在<span>5</span>月<span>12</span>日，你参加了紧张刺激的第十六届校赛</div>
+        <div class="txt2">你与<span>x</span>名选手以及<span>y</span>名中小学生同台竞技</div>
+        <div class="txt3">并拿下了<span>金奖|第x名|总第x名</span>的好成绩</div>
       </div>
       <div class="xstxt2">
         <div>这届校赛中</div>

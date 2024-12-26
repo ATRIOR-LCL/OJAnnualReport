@@ -6,7 +6,7 @@
           你总共在OJ上AC了<span>00</span>道题目<span>🥴</span>
         </div>
         <div class="xinac">其中，<span>00</span>道是今年新AC的题目</div>
-        <div class="sts">你的刷题数傲立群雄， 超过了OJ 00%的用户</div>
+        <div class="sts">你的刷题数傲立群雄， 超过了OJ <span>00%</span>的用户</div>
       </div>
       <div class="acstar">
         <div class="stzx">
