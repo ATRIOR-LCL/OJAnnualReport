@@ -204,7 +204,9 @@
   z-index: 99;
   position: absolute;
   color: #fff;
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   font-size: 0.7rem;
   font-weight: 700;
   top: 30%;
@@ -215,11 +217,26 @@
   margin: 0.1rem;
 }
 
+.rank1,
+.stzx img:nth-child(3){
+  transform: scale(1.3) translateY(-.5rem);
+}
+
+.stzx img:nth-child(3){
+  margin-right: .4rem;
+}
+
+.rank1,
+.rank2,
+.rank3{
+  display: flex;
+  justify-content: center;
+}
+
 .rank1::after {
   content: "0000";
   position: absolute;
   font-size: 0.5rem;
-  left: 55%;
   transform: translateX(-50%);
   top: 120%;
 }
@@ -228,7 +245,6 @@
   content: "0000";
   position: absolute;
   font-size: 0.5rem;
-  left: 20%;
   transform: translateX(-50%);
   top: 120%;
 }
@@ -237,7 +253,6 @@
   content: "0000";
   position: absolute;
   font-size: 0.5rem;
-  left: 87%;
   transform: translateX(-50%);
   top: 120%;
 }
@@ -267,8 +282,8 @@
 }
 
 .pyramid-loader .wrapper .side {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -300,8 +315,8 @@
 }
 
 .pyramid-loader .wrapper .shadow {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   background: #8b5ad5;
   position: absolute;
   top: 0;
@@ -309,6 +324,6 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  transform: rotateX(90deg) translateZ(-40px);
-  filter: blur(12px);
+  transform: rotateX(90deg) translateZ(-50px);
+  filter: blur(16px);
 }

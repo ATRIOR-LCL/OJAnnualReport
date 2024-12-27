@@ -8,7 +8,7 @@
 }
 
 .spl1 {
-  width: inherit;
+  width: 100%;
   height: 8%;
   background-image: linear-gradient(
     -225deg,
@@ -22,7 +22,7 @@
   top: 57%;
   left: 0;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 0.6rem;
   font-size: 0.4rem;
@@ -42,7 +42,7 @@
 }
 
 .spl2 {
-  width: inherit;
+  width: 100%;
   height: 8%;
   background-image: linear-gradient(
     to top,
@@ -56,7 +56,7 @@
   top: 65%;
   left: 0;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 0.6rem;
   font-size: 0.35rem;
@@ -70,7 +70,7 @@
 }
 
 .spl3 {
-  width: inherit;
+  width: 100%;
   height: 8%;
   background-image: linear-gradient(
     -225deg,
@@ -84,7 +84,7 @@
   top: 76%;
   left: 0;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 0.6rem;
   font-size: 0.35rem;
@@ -120,7 +120,7 @@
 }
 
 .spl4 {
-  width: inherit;
+  width: 100%;
   height: 8%;
   background-image: linear-gradient(
     to top,
@@ -134,7 +134,7 @@
   top: 69%;
   left: 0;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 0.6rem;
   font-size: 0.3rem;
