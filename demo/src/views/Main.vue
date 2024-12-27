@@ -1,10 +1,6 @@
 <template>
-<transition name="fade">
         <Start v-if="gogo"></Start>
-</transition>
-<transition name="defa">
         <Message v-if="!gogo"></Message>
-</transition>
 </template>
 
 <script setup>
