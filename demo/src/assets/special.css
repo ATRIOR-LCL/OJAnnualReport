@@ -36,6 +36,8 @@
 }
 
 .spl1 span:nth-child(1) {
+  font-size: 0.7rem;
+  letter-spacing: 0;
   color: #fff;
 }
 
@@ -96,6 +98,8 @@
 }
 
 .spl3 span:nth-last-child(2) {
+  font-size: 0.6rem;
+  letter-spacing: 0;
   color: #fff;
 }
 
