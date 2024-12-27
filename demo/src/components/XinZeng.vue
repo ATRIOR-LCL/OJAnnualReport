@@ -2,11 +2,12 @@
   <section>
     <div class="xinzeng">
       <p class="yh">
-        <span>今年OJ共新增 </span><span class="yhnum">0000</span
-        ><span> 名用户 !</span>
+        <span>这一年里OJ迎来了</span><span class="yhnum">0000</span
+        ><span>名新用户!</span>
       </p>
       <p class="tj">
-        <span>新增提交数</span><span class="tjnum">0000</span><span>个 !</span>
+        <span>这一年里OJ新增了</span><span class="tjnum">0000</span
+        ><span>条提交!</span>
       </p>
     </div>
   </section>
@@ -36,7 +37,7 @@ onMounted(() => {
   );
 
   const page2font = document.querySelectorAll(
-    ".yh, .tj, .qf1, .qf2, .qf3, .emoji"
+    ".yh, .tj"
   );
   page2font.forEach((page2font) => page2anim.observe(page2font));
 });

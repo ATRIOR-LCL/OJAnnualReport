@@ -1,15 +1,5 @@
 <template>
   <section>
-    <!-- <p class="s1">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s2">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s3">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s4">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s5">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s6">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s7">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s8">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s9">SDUT Online Judge SDUT Online Judge </p>
-    <p class="s10">SDUT Online Judge SDUT Online Judge</p> -->
     <div class="font2">
       <span>Practice coding, </span><span>compete with players, </span
       ><span>and become a master.</span>
@@ -19,9 +9,7 @@
         Practice coding, compete with players, and become a master.
       </div>
       <div class="bottom-icon">
-        <img src="../assets/img/bottomicon.png" alt="" class="btm-txt">
-        <!-- <span class="bluetxt">全栈开发/二次元/Coser/流萤的狗</span>
-        <span class="atriortxt">前端/二次元/爱吃麦当劳</span> -->
+        <img src="../assets/img/bottomicon.png" alt="" class="btm-txt" />
         <img
           src="../assets/img/bLue.png"
           alt=""
@@ -70,7 +58,6 @@ onMounted(() => {
     nextTick(() => {
       let shadow = "";
       let shadow3 = "";
-      // if(window.screen.width<1000){
       let total = 10;
       for (let i = 1; i <= total; i++) {
         shadow += `-${i}px ${i}px #c2c2c2,`;
@@ -80,17 +67,6 @@ onMounted(() => {
       }
       shadow = shadow.slice(0, -1);
       shadow3 = shadow3.slice(0, -1);
-      // }else{
-      //     let total = 20;
-      //     for (let i = 1; i <= total; i++) {
-      //     shadow += `-${i}px ${i}px #c2c2c2,`;
-      //     }
-      //     for (let i = 1; i <= total; i++) {
-      //     shadow3 += `${i}px ${i}px #c2c2c2,`;
-      //     }
-      //     shadow = shadow.slice(0, -1);
-      //     shadow3 = shadow3.slice(0, -1);
-      // }
 
       if (text1.value) text1.value.style.textShadow = shadow;
       if (text2.value) text2.value.style.textShadow = shadow;
@@ -126,18 +102,6 @@ onMounted(() => {
         },
         { threshold: 0.1 }
       );
-      // const sdutojanimation = new IntersectionObserver((entries)=>{
-      //     entries.forEach((entry)=>{
-      //     if(entry.isIntersecting){
-      //         console.log('in the screen')
-      //         setTimeout(() => {
-      //             entry.target.classList.add('sdutojanim')
-      //         }, 6000);
-      //     }else{
-      //         entry.target.classList.remove('sdutojanim')
-      //     }
-      //     })
-      // }, {threshold: 0.5})
 
       const font2animation = new IntersectionObserver(
         (entries) => {
@@ -166,18 +130,12 @@ onMounted(() => {
         },
         { threshold: 0.1 }
       );
-      // nextTick(()=>{
       const chars = document.querySelectorAll(".chars, .nc");
       chars.forEach((char) => {
         charsanimation.observe(char);
       });
-
       const fonts = document.querySelector(".font1");
       fontanimation.observe(fonts);
-      // })
-      // const sdutojs = document.querySelector('.sdutoj')
-      // sdutojanimation.observe(sdutojs)
-
       const font2s = document.querySelector(".font2");
       font2animation.observe(font2s);
 

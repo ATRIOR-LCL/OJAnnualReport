@@ -6,7 +6,8 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-  <section id="page1" class="page">
+  <Special id="page2" class="page "></Special>
+  <section id="page1" class="page hide">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -61,7 +62,6 @@
       <div class="jiyu" id="jiyu1"></div>
     </div>
   </section>
-  <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
   <AC id="page5" class="page hide"></AC>
@@ -75,6 +75,7 @@
   <AchivementStar id="page13" class="page hide"></AchivementStar>
   <Master id="page14" class="page hide"></Master>
   <Last id="page15" class="page hide"></Last>
+  <section style="z-index: -1"></section>
 </template>
 <script setup>
 import Hard from "../components/Hard.vue";
@@ -222,7 +223,7 @@ section {
   height: 100vh;
   overflow: hidden;
   transition: all 0.3s linear;
-  background-color: rgb(41, 41, 41);
+  /* background-color: rgb(41, 41, 41); */
 }
 
 .fontremove {
