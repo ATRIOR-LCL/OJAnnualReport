@@ -2,7 +2,7 @@
   <section>
     <div class="card qr">
       <img src="../assets/img/qq.png" alt="" />
-      <p>推荐使用微信或浏览器<br />扫码获取更佳体验</p>
+      <p>~ 推荐使用微信扫码<br />获取最佳体验</p>
       <lay-qrcode text="https://oj-annual-report.vercel.app/"></lay-qrcode>
     </div>
 

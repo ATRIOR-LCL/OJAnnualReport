@@ -6,8 +6,8 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-
-  <section id="page1" class="page">
+  <Sumarry id="page16" class="page"></Sumarry>
+  <section id="page1" class="page hide">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -75,6 +75,7 @@
   <Blue id="page12" class="page hide"></Blue>
   <AchivementStar id="page13" class="page hide"></AchivementStar>
   <Master id="page14" class="page hide"></Master>
+  
   <Last id="page15" class="page hide"></Last>
   <section style="z-index: -1"></section>
 </template>
@@ -101,6 +102,7 @@ import AchivementStar from "../components/AchivementStar.vue";
 import Master from "../components/Master.vue";
 import { contain } from "../assets/global";
 import { isScoll } from "../assets/global";
+import Sumarry from "@/components/Sumarry.vue";
 onMounted(() => {
   let currentPage = 0;
   const pages = document.querySelectorAll(".page");

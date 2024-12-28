@@ -9,6 +9,11 @@
           ><br />可喜可贺，可喜可贺<span>🥳</span>
         </div>
       </div>
+      <div class="emoji emoji--like">
+      <div class="emoji__hand">
+        <div class="emoji__thumb"></div>
+      </div>
+    </div>
       <div class="loader"></div>
     </div>
   </section>
