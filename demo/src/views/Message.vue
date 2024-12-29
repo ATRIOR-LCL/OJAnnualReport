@@ -6,8 +6,7 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-  <Sumarry id="page16" class="page"></Sumarry>
-  <section id="page1" class="page hide">
+  <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -75,8 +74,8 @@
   <Blue id="page12" class="page hide"></Blue>
   <AchivementStar id="page13" class="page hide"></AchivementStar>
   <Master id="page14" class="page hide"></Master>
-  
   <Last id="page15" class="page hide"></Last>
+
   <section style="z-index: -1"></section>
 </template>
 <script setup>
@@ -117,7 +116,7 @@ onMounted(() => {
     const handleTouchEnd = () => {
       if (touchEnd - touchStart > 50 && currentPage > 0) {
         null;
-      } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 1) {
+      } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 2) {
         pages[currentPage].classList.add("fontremove");
         setTimeout(() => {
           pages[currentPage].classList.add("hide");

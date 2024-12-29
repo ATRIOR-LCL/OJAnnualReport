@@ -32,30 +32,56 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 1;
+  opacity: 0;
+}
+.font2 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+  top: 50%;
+  font-size: 0.4rem;
+  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  /* background-clip: text; */
+  /* color: transparent; */
+  transition: all 1s ease;
+  /* transition-delay: 8s; */
+  /* transform: translateX(-1rem); */
+  /* opacity: 0; */
+  /* filter: blur(.5rem); */
+  z-index: 99;
+  overflow: hidden;
+}
+.font2 span {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
 }
 
-.font2 {
-  width: 80%;
-  height: 0.5rem;
-  font-size: 0.2rem;
-  text-align: center;
-  line-height: 0.5rem;
-  color: #fff;
-  position: absolute;
-  top: 2rem;
-  left: 1.2rem;
-  filter: blur(0.1rem);
-  opacity: 0;
-  transform: translateX(-3rem);
-  transition: all 0.5s ease;
-  transition-delay: 8s;
+.font2 span:nth-last-child(1) {
+  font-size: 0.8rem;
 }
+
+/* .font2 span:nth-last-child(1){
+  font-size: .6rem;
+} */
 
 .font2anim {
-  transform: translateX(0);
-  filter: blur(0);
-  opacity: 1;
+  animation: showshow 10s forwards linear;
+}
+
+@keyframes showshow {
+  0% {
+    transform: translateY(15vh);
+  }
+  100% {
+    transform: translateY(-67vh);
+  }
 }
 
 .font1anim {
@@ -65,9 +91,11 @@
 
 @keyframes fontmove {
   from {
+    opacity: 1;
     background-position: -500%;
   }
   to {
+    opacity: 1;
     background-position: 500%;
   }
 }
@@ -198,24 +226,6 @@
   color: transparent;
 }
 
-/* .bottom-icon::before{
-    content: '全栈开发/二次元/Coser';
-    font-size: 4px !important;
-    color: #fff;
-    position: absolute;
-    bottom: -.04rem;
-    left: 0rem;
-}
-
-.bottom-icon::after{
-    content: '前端/二次元/初来乍到';
-    font-size: 4px !important;
-    color: #fff;
-    position: absolute;
-    bottom: -.04rem;
-    left: 1.2rem;
-} */
-
 .lcllab {
   position: relative;
   left: 0.3rem;
@@ -231,8 +241,6 @@
   background-color: #fff;
 }
 
-/* @media screen and (max-width: 1000px){ */
-
 .chars,
 .nc {
   font-size: 1.8rem;
@@ -240,21 +248,6 @@
 
 .font1 {
   font-size: 0.25rem !important;
-}
-
-.font2 {
-  display: flex;
-  height: 2.1rem !important;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-  top: 50%;
-  font-size: 0.4rem;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  background-clip: text;
-  color: transparent;
-  gap: 0.3rem;
-  z-index: 99;
 }
 
 .bottom-icon {
@@ -277,148 +270,51 @@
   }
 }
 
-/* .font2 span:nth-child(1)::after{
-        content: url('./img/code.svg');
-        position: absolute;
-    }
-
-    .font2 span:nth-child(2)::after{
-        content: url('./img/group.svg');
-        position: absolute;
-    }
-
-    .font2 span:nth-child(3)::after{
-        content: url('./img/master.svg');
-        position: absolute;
-    } */
-/* } */
-
-.s1,
-.s2,
-.s3,
-.s4,
-.s5,
-.s6,
-.s7,
-.s8,
-.s9,
-.s10 {
-  position: absolute;
-  font-size: 0.2rem;
-  display: inline-block;
-  width: auto;
-  line-height: 0.2rem;
-  /* justify-content: start; */
-  color: transparent;
-  align-items: center;
-  transform: rotate(-90deg);
-  background-clip: text;
-  background-image: linear-gradient(
-    to right,
-    rgba(252, 0, 255, 0.5) 0%,
-    rgb(0, 148, 222) 100%
-  );
-}
-
-.s1 {
-  left: 5%;
-  top: -50%;
-  animation: rainanim 5s infinite linear;
-  animation-delay: 9s;
-  animation-play-state: paused;
-}
-
-.s2 {
-  left: 0%;
-  top: -50%;
-  animation: rainanim 4s infinite linear;
-  animation-delay: 10s;
-  animation-play-state: paused;
-}
-
-.s3 {
-  left: 12%;
-  top: -50%;
-  animation: rainanim 12s infinite linear;
-  animation-delay: 9s;
-  animation-play-state: paused;
-}
-
-.s4 {
-  left: 19%;
-  top: -50%;
-  animation: rainanim 20s infinite linear;
-  animation-delay: 8s;
-  animation-play-state: paused;
-}
-
-.s5 {
-  left: 26%;
-  top: -50%;
-  animation: rainanim 6s infinite linear;
-  animation-delay: 9s;
-  animation-play-state: paused;
-}
-
-.s6 {
-  left: 30%;
-  top: -50%;
-  animation: rainanim 10s infinite linear;
-  animation-delay: 12s;
-  animation-play-state: paused;
-}
-
-.s7 {
-  left: 40%;
-  top: -50%;
-  animation: rainanim 3s infinite linear;
-  animation-delay: 9s;
-  animation-play-state: paused;
-}
-
-.s8 {
-  left: 56%;
-  top: -50%;
-  animation: rainanim 3s infinite linear;
-  animation-delay: 14s;
-  animation-play-state: paused;
-}
-
-.s9 {
-  left: 60%;
-  top: -50%;
-  animation: rainanim 5s infinite linear;
-  animation-delay: 9s;
-  animation-play-state: paused;
-}
-
-.s10 {
-  left: 75%;
-  top: -50%;
-  animation: rainanim 7s infinite linear;
-  animation-delay: 8s;
-  animation-play-state: paused;
-}
-
-@keyframes rainanim {
-  from {
-    opacity: 0;
-    top: -50%;
-  }
-  to {
-    top: 140%;
-  }
-}
-
-section p::after {
-  content: "✨️";
-  position: absolute;
-  left: -0.3rem;
-  color: #fff;
-  opacity: 1 !important;
-}
-
 .atrior::after,
 .blue::after {
   content: "" !important;
+}
+
+/* From Uiverse.io by CristianMontoya98 */
+.btn {
+  position: absolute;
+  bottom: 20%;
+  /* left: 50%; */
+  width: 8rem;
+  height: 2rem;
+  background: black;
+  color: white;
+  border: none;
+  /* border-radius: 0.625em; */
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 11;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+  transition-delay: 7.5s;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }

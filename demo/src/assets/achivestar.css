@@ -210,22 +210,49 @@
   border: 0.1rem solid rgb(255, 192, 74);
   /* background-color: red; */
   overflow: hidden;
+  /* background-color: #fff; */
 }
 
 .waitao {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  /* background-color: red; */
+  height: 100% !important;
+  /* background-color: red; */
+  transform: translateX(0);
 }
-.chengjiu li {
-  display: block;
-  width: 100%;
-  margin: 0.23rem;
+
+.hang{
+  width: auto;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* transform: translateX(-331.5px); */
+  /* transition: all 5s linear; */
+}
+.waitao li {
+  display: inline-block;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
   text-align: center;
+  border-radius: 20px;
+  /* margin: 0.23rem; */
   font-size: 0.5rem;
-  letter-spacing: 0.2rem;
-  /* background-color: #f4c430; */
-  font-weight: 700;
+  /* font-weight: 700; */
   color: #fff;
+  margin: .1rem;
+}
+
+.icon{
+  display: inline-block;
 }
