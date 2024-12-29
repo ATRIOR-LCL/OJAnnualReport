@@ -50,7 +50,7 @@
     </div>
   </section>
   <section v-else class="summ">
-    <button
+    <!-- <button
       class="main-button"
       @click="downloadAsImage"
       @touchstart="downloadAsImage"
@@ -66,16 +66,37 @@
           d="M15.75 5.125a3.125 3.125 0 1 1 .754 2.035l-8.397 3.9a3.124 3.124 0 0 1 0 1.88l8.397 3.9a3.125 3.125 0 1 1-.61 1.095l-8.397-3.9a3.125 3.125 0 1 1 0-4.07l8.397-3.9a3.125 3.125 0 0 1-.144-.94Z"
         ></path>
       </svg>
+    </button> -->
+    <button class="Btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="1em"
+        viewBox="0 0 384 512"
+        class="svgIcon"
+        @click="downloadAsImage"
+        @touchstart="downloadAsImage"
+      >
+        <path
+          d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+        ></path>
+      </svg>
+      <span class="icon2"></span>
     </button>
     <div class="sumarry" ref="sumarry">
+      <lay-qrcode
+          :width="70"
+          class="sum-qr"
+          text="https://oj-annual-report.vercel.app/"
+        ></lay-qrcode>
       <img
         src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg"
         alt=""
         class="back"
       />
-      
+
       <div class="results-summary-container">
-        <div class="confetti">
+        
+        <div class="Iconfetti">
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
@@ -145,6 +166,7 @@
 <script setup>
 import { ref, onMounted, nextTick } from "vue";
 import html2canvas from "html2canvas";
+import QRCode from "qrcode";
 const text1 = ref(null);
 const text2 = ref(null);
 const text3 = ref(null);
@@ -264,24 +286,63 @@ onMounted(() => {
     });
   }, 100);
 });
-function downloadAsImage() {
-  if (sumarry.value) {
-    html2canvas(sumarry.value, {
-      useCORS: true, // 启用跨域支持
-      scale: 2, // 提升图片分辨率
-    }).then((canvas) => {
-      // 将 canvas 转换为图片 URL
-      const imgUrl = canvas.toDataURL("image/png");
-      // 创建一个下载链接
-      const link = document.createElement("a");
-      link.href = imgUrl;
-      link.download = "webpage_image.png"; // 设置下载文件名
-      link.click(); // 模拟点击下载
+const generateQRCode = async (text) => {
+  try {
+    const qrCodeDataUrl = await QRCode.toDataURL(text, {
+      width: 200, // 控制二维码的大小
+      margin: 1, // 控制二维码的边距
+      color: {
+        dark: "#000000", // 二维码的颜色
+        light: "#ffffff", // 背景颜色
+      },
     });
+    return qrCodeDataUrl;
+  } catch (error) {
+    console.error("生成二维码失败", error);
+  }
+};
+const downloadAsImage = async () => {
+  if (sumarry.value) {
+    try {
+      const qrCodeDataUrl = await generateQRCode("http://localhost:5173/");
+      html2canvas(sumarry.value, {
+        useCORS: true, // 启用跨域支持
+        scale: 2, // 提升图片分辨率
+      }).then((canvas) => {
+        const ctx = canvas.getContext("2d");
+
+        // 等待二维码图片加载完成
+        const img = new Image();
+        img.src = qrCodeDataUrl;
+        img.onload = () => {
+          // 在 Canvas 上绘制二维码，设置位置和大小
+          const qrSize = 100; // 二维码的大小
+          ctx.drawImage(
+            img,
+            canvas.width - qrSize - 20,
+            canvas.height - qrSize - 20,
+            qrSize,
+            qrSize
+          ); // 在右下角绘制二维码
+
+          // 将修改后的 Canvas 转换为图片 URL
+          const imageUrl = canvas.toDataURL("image/png");
+
+          // 创建下载链接并触发下载
+          const link = document.createElement("a");
+          link.href = imageUrl;
+          link.download = "screenshot_with_qrcode.png";
+          link.click();
+        };
+      });
+    } catch (error) {
+      console.error("生成二维码或截图失败", error);
+    }
   } else {
     console.log("null");
   }
-}
+};
+
 const sumarry = ref(null);
 const tags = ref([
   "刷题王",
