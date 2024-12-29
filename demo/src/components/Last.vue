@@ -50,7 +50,11 @@
     </div>
   </section>
   <section v-else class="summ">
-    <button class="main-button" @click="downloadAsImage" @touchstart="downloadAsImage">
+    <button
+      class="main-button"
+      @click="downloadAsImage"
+      @touchstart="downloadAsImage"
+    >
       <svg
         width="30"
         height="30"
@@ -69,7 +73,7 @@
         alt=""
         class="back"
       />
-      <div class="topoj">SDUT Online Judge</div>
+      
       <div class="results-summary-container">
         <div class="confetti">
           <div class="confetti-piece"></div>
@@ -103,12 +107,14 @@
               <div class="ac-num">
                 <p>总AC:<span>1111</span></p>
                 <p>今年AC:<span>234</span></p>
-                <p>90%</p>
+                <!-- <p>90%</p> -->
               </div>
-              <div class="rating">
-                Rating:<span class="rating-color">1900</span>
+              <div class="ac-num">
+                <div class="rating">
+                  Rating:<span class="rating-color">1900</span>
+                </div>
+                <div class="achiv-num">总成就数:<span>89</span></div>
               </div>
-              <div class="achiv-num">总成就数:<span>89</span></div>
               <div class="contests">
                 <li
                   v-for="(item, index) in contests"
@@ -124,12 +130,12 @@
         </div>
         <div class="results-summary-container__options">
           <div class="tag-head">2024回忆标签✨️</div>
-          <!-- <div class="heading-secondary heading-secondary--blue">Summary</div> -->
           <ul class="summary-result-options">
             <li v-for="(item, index) in tags" :key="index" class="tag">
               {{ item }}
             </li>
           </ul>
+          <div class="topoj">SDUT Online Judge</div>
         </div>
       </div>
     </div>
@@ -138,7 +144,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from "vue";
-import html2canvas from 'html2canvas'
+import html2canvas from "html2canvas";
 const text1 = ref(null);
 const text2 = ref(null);
 const text3 = ref(null);
@@ -146,7 +152,7 @@ const text4 = ref(null);
 const text5 = ref(null);
 const text6 = ref(null);
 const ojoj = ref(null);
-const generate = ref(true);
+const generate = ref(false);
 
 function gosum() {
   setTimeout(() => {
