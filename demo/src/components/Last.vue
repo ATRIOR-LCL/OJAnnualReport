@@ -50,7 +50,7 @@
     </div>
   </section>
   <section v-else class="summ">
-    <button class="main-button" @click="downloadAsImage">
+    <button class="main-button" @click="downloadAsImage" @touchstart="downloadAsImage">
       <svg
         width="30"
         height="30"
