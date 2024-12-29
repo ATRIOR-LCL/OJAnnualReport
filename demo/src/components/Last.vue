@@ -48,7 +48,7 @@
       <span ref="text6" class="nc">J</span>
     </div>
   </section>
-  <section v-else>
+  <section v-else class="summ">
     <button class="main-button" @click="downloadAsImage">
       <svg
         width="30"
@@ -133,7 +133,6 @@
       </div>
     </div>
   </section>
-  <!-- <Sumarry v-if="!generate"></Sumarry> -->
 </template>
 
 <script setup>
@@ -354,5 +353,11 @@ section {
   to {
     transform: translateY(-1rem);
   }
+}
+
+.summ {
+  opacity: 1 !important;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(0) !important;
 }
 </style>

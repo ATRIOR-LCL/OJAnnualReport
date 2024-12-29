@@ -6,6 +6,7 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
+
   <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
@@ -61,6 +62,8 @@
       <div class="jiyu" id="jiyu1"></div>
     </div>
   </section>
+  <Last id="page15" class="page hide"></Last>
+
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
@@ -74,7 +77,6 @@
   <Blue id="page12" class="page hide"></Blue>
   <AchivementStar id="page13" class="page hide"></AchivementStar>
   <Master id="page14" class="page hide"></Master>
-  <Last id="page15" class="page hide"></Last>
 
   <section style="z-index: -1"></section>
 </template>
