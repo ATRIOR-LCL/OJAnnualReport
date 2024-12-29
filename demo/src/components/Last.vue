@@ -7,7 +7,8 @@
       <span class="font2-txt">却承载了我们无可忘却的珍重回忆。</span>
       <span class="font2-txt">以这份回忆的重量所编织的纽带，</span>
       <span class="font2-txt">正是连结我们并一起前进的动力。</span>
-      <span class="font2-txt">愿时间与你共写美梦，愿祝福伴你终抵云顶。</span>
+      <span class="font2-txt">愿时间与你共写美梦，</span>
+      <span class="font2-txt">愿祝福伴你终抵云顶。</span>
       <span class="font2-txt">感谢陪伴！</span>
     </div>
     <button class="btn" @click="gosum">点击生成你的专属OJ年报🥳</button>
@@ -137,6 +138,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from "vue";
+import html2canvas from 'html2canvas'
 const text1 = ref(null);
 const text2 = ref(null);
 const text3 = ref(null);
@@ -256,7 +258,24 @@ onMounted(() => {
     });
   }, 100);
 });
-
+function downloadAsImage() {
+  if (sumarry.value) {
+    html2canvas(sumarry.value, {
+      useCORS: true, // 启用跨域支持
+      scale: 2, // 提升图片分辨率
+    }).then((canvas) => {
+      // 将 canvas 转换为图片 URL
+      const imgUrl = canvas.toDataURL("image/png");
+      // 创建一个下载链接
+      const link = document.createElement("a");
+      link.href = imgUrl;
+      link.download = "webpage_image.png"; // 设置下载文件名
+      link.click(); // 模拟点击下载
+    });
+  } else {
+    console.log("null");
+  }
+}
 const sumarry = ref(null);
 const tags = ref([
   "刷题王",
@@ -285,28 +304,6 @@ const contests = ref([
     rank: 12,
   },
 ]);
-
-function downloadAsImage() {
-  nextTick(() => {
-    if (sumarry.value) {
-      html2canvas(sumarry.value, {
-        useCORS: true, // 启用跨域支持
-        scale: 2, // 提升图片分辨率
-      }).then((canvas) => {
-        // 将 canvas 转换为图片 URL
-        const imgUrl = canvas.toDataURL("image/png");
-        // 创建一个下载链接
-        const link = document.createElement("a");
-        link.href = imgUrl;
-        link.download = "webpage_image.png"; // 设置下载文件名
-        link.click(); // 模拟点击下载
-      });
-    } else {
-      console.log("null");
-    }
-  });
-  // 使用 html2canvas 截取 #content 元素的内容
-}
 </script>
 <style scoped>
 @import url("../assets/sumarry.css");
