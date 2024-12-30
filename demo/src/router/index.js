@@ -6,12 +6,12 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/onlinejudge3/annual-report-2024",
+      path: "/",
       name: "main",
       component: Main,
     },
     {
-      path: "/onlinejudge3/annual-report-2024/login",
+      path: "/login",
       name: "login",
       component: Login,
     },
