@@ -31,7 +31,7 @@
           <div class="txt2-b">
             五个国度的新奇有趣的题目<br />一定让你回想起了旅行的意义
           </div>
-          <div class="txt2-c">别忘了<br />提瓦特大陆的星空永远会有你的位置</div>
+          <div class="txt2-c">别忘了<br />提瓦特大陆的星空<br>永远会有你的位置</div>
         </div>
         <div class="circle bg" ref="bg2">
           <img src="../assets/img/image2.jpg" alt="" />

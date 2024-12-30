@@ -58,6 +58,7 @@
   /* overflow: hidden; */
 }
 .font2 span {
+  white-space: nowrap;
   font-size: 0.6rem;
   font-weight: 700;
   color: #fff;

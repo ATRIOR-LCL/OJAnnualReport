@@ -20,12 +20,12 @@
 .hardtxt {
   letter-spacing: 0.1rem;
   width: 6rem;
-  height: 0.6rem;
+  height: 0.8rem;
   display: flex;
   font-size: 0.35rem;
   font-weight: 700;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   background-clip: text;
   flex-wrap: wrap;
   color: rgba(0, 0, 0, 0);
