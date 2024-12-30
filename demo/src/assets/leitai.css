@@ -58,6 +58,9 @@
 }
 
 .txt2 span {
+  margin: 0 !important;
+  font-size: .7rem;
+  letter-spacing: 0 !important;
   color: #fff;
 }
 
@@ -73,6 +76,7 @@
 }
 
 .txt3 span {
+  font-size: .6rem;
   color: #fff;
 }
 

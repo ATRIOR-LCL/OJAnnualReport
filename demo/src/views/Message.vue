@@ -6,8 +6,8 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-
-  <section id="page1" class="page hide">
+  <Last id="pae15" class="page "></Last>
+  <!-- <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -61,27 +61,36 @@
       <div class="jiyu2"></div>
       <div class="jiyu" id="jiyu1"></div>
     </div>
-  </section>
-  <Last id="pae15" class="page hide"></Last>
-  
+  </section> -->
   <Special id="page2" class="page hide"></Special>
+  
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
   <AC id="page5" class="page hide"></AC>
-  <Night id="page6" class="page hide"></Night>
-  <Hard id="page7" class="page hide"></Hard>
-  <BiSai id="page8" class="page hide"></BiSai>
-  <LeiTai id="page9" class="page hide"></LeiTai>
-  <XinSheng id="page10" class="page hide"></XinSheng>
-  <XiaoSai id="page11" class="page hide"></XiaoSai>
-  <Blue id="page12" class="page hide"></Blue>
-  <AchivementStar id="page13" class="page hide"></AchivementStar>
+  <Night id="page6" class="page hide" v-if="hasNight"></Night>
+  <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
+  <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
+  <LeiTai id="page9" class="page hide" v-if="haspmc"></LeiTai>
+  <XinSheng id="page10" class="page hide" v-if="ncc"></XinSheng>
+  <XiaoSai id="page11" class="page hide" v-if="hasXiaoSai"></XiaoSai>
+  <Blue id="page12" class="page hide" v-if="hasBlue"></Blue>
+  <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
   <Master id="page14" class="page hide"></Master>
+
 
   <section style="z-index: -1"></section>
 </template>
 <script setup>
+import { liuyang } from "../assets/global";
+const hasNight = ref(false)
+if(liuyang.value.nightWalker){
+  hasNight.value=true
+}
 import Hard from "../components/Hard.vue";
+const hasMaxTries = ref(false)
+if(liuyang.value.maxTries.count>=5){
+  hasMaxTries.value=true
+}
 import Last from "../components/Last.vue";
 import "vue3-fullpage/styles";
 import { onMounted, ref, nextTick } from "vue";
@@ -91,15 +100,39 @@ import Special from "../components/Special.vue";
 import NewContest from "../components/NewContest.vue";
 import AC from "../components/AC.vue";
 import BiSai from "../components/BiSai.vue";
+let hascontest = ref(false)
+if(liuyang.value.competition.attendedCompetitionCount>0){
+  hascontest.value=true
+}
 import Blue from "../components/Blue.vue";
+const hasBlue = ref(false)
+if(liuyang.value.competition.asGenshin){
+  hasBlue.value=true
+}
 import XiaoSai from "../components/XiaoSai.vue";
+const hasXiaoSai = ref(false)
+if(liuyang.value.competition.sdutpc16){
+  hasXiaoSai.value=true
+}
 import XinSheng from "../components/XinSheng.vue";
+let ncc = ref(false)
+if(liuyang.value.competition.sdutncc6th){
+  ncc.value=true
+}
 import LeiTai from "../components/LeiTai.vue";
+const haspmc = ref(false)
+if(liuyang.value.competition.sdutpmc16th){
+  haspmc.value=true
+}
 const isClick = ref(false);
 const tsxx = ref(true);
 const scr = ref(false);
 import { isnext, can } from "../assets/global";
 import AchivementStar from "../components/AchivementStar.vue";
+const hasAchive = ref(false)
+if(liuyang.value.achievements.length>0){
+  hasAchive.value=true
+}
 import Master from "../components/Master.vue";
 import { contain } from "../assets/global";
 import { isScoll } from "../assets/global";

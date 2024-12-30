@@ -10,6 +10,11 @@
   transition: all 1.5s ease;
 }
 
+.rank{
+  letter-spacing: 0;
+  font-size: .8rem;
+}
+
 .bbb {
   position: absolute;
   top: 0;

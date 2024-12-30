@@ -1,0 +1,137 @@
+{
+  "userId": 70655,
+  "username": "karashi",
+  "nickname": "计科2203孙童乐 ",
+  "createdAt": "2022-09-20T11:12:28.000Z",
+  "lastTime": "2024-12-23T00:28:03.000Z",
+  "avatar": "70655_316012a9f0254605.png",
+  "rating": 1675,
+  "type": 1,
+  "annualActive": true,
+  "accepted": 348,
+  "submitted": 365,
+  "annualNewAccepted": 72,
+  "achievements": [
+    "AttendRatingCompetitionsLv1",
+    "RatingLv1",
+    "AttendRatingCompetitionsLv2",
+    "AttendCompetitionAPF",
+    "AttendCompetitionSDUTPC",
+    "AttendCompetitionAzurSeries",
+    "AttendCompetitionGenshinImpact",
+    "TooManyPenalties",
+    "CompetitionACCombo",
+    "FB",
+    "SolveDuringFrozenTime",
+    "SetAvatar",
+    "SetBannerImage",
+    "SolutionGetCE",
+    "SolutionFailedOnFirstTest",
+    "SolutionGetRTE",
+    "SolveInOneDay",
+    "SolveInContinuouslyDayLv1",
+    "SolutionGetAC",
+    "SolveWithAttemptedLv1",
+    "SolutionFailedOnLastTest",
+    "SolveProblemsLv2",
+    "CompleteSetPartially",
+    "SolutionGetWA",
+    "SolveProblemsLv1",
+    "NightSolver",
+    "SolutionGetTLE",
+    "SolutionGetMLE",
+    "SolveWithAttemptedLv2",
+    "SolveProblemsLv3",
+    "LanguageUsageLv1",
+    "CompleteSetAll",
+    "SolveWithMultiResults",
+    "JoinGroup"
+  ],
+  "createdDateStr": "2022-09-20",
+  "annualNewAcceptedTopPercent": 0.060382276281494354,
+  "nightWalker": {
+    "date": "2024-12-04",
+    "timeStr": "12 月 4 日 04:09:40",
+    "togetherUserCount": 65
+  },
+  "acMostDay": {
+    "dateStr": "12 月 2 日",
+    "count": 12
+  },
+  "maxTries": {
+    "problemId": 5171,
+    "problemTitle": "“交互”题",
+    "count": 79
+  },
+  "competition": {
+    "attendedCompetitionCount": 2,
+    "attendedCompetitions": [
+      {
+        "key": "asGenshin",
+        "title": "蔚蓝系列赛 R2：原神主题赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 70655,
+            "nickname": "karashi"
+          },
+          "score": 3396,
+          "time": 54767,
+          "rank": 31,
+          "rawRank": 31
+        },
+        "rankStr": "第 31 名",
+        "awardStr": "第 31 名",
+        "medal": null
+      },
+      {
+        "key": "sdutpc16",
+        "title": "第十六届校赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 70655,
+            "nickname": "karashi"
+          },
+          "score": 7,
+          "time": 24897,
+          "rank": 8,
+          "rawRank": 14
+        },
+        "rankStr": "第 8 名",
+        "awardStr": "金奖",
+        "medal": "gold"
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutpc16",
+      "title": "第十六届校赛",
+      "unofficialParticipation": false,
+      "rank": {
+        "user": {
+          "userId": 70655,
+          "nickname": "karashi"
+        },
+        "score": 7,
+        "time": 24897,
+        "rank": 8,
+        "rawRank": 14
+      },
+      "rankStr": "第 8 名",
+      "awardStr": "金奖",
+      "medal": "gold"
+    },
+    "asGenshin": {
+      "travelerCount": 132,
+      "genshinLaunchWord": "原神启动",
+      "firstUnlockedCountry": "mondstadt"
+    },
+    "sdutpc16": {
+      "officialParticipantCount": 109,
+      "unofficialParticipantCount": 148,
+      "awardStr": "金奖"
+    },
+    "sdutncc6th": null,
+    "sdutpmc16th": null
+  }
+}

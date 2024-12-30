@@ -1,0 +1,90 @@
+{
+  "userId": 75706,
+  "username": "_EXcalibur_",
+  "nickname": "_EXcalibur_",
+  "createdAt": "2024-12-09T09:14:06.000Z",
+  "lastTime": "2024-12-24T09:13:20.000Z",
+  "avatar": "75706_94622f10420b499f.png",
+  "rating": 0,
+  "type": 2,
+  "annualActive": true,
+  "accepted": 14,
+  "submitted": 18,
+  "annualNewAccepted": 14,
+  "achievements": [
+    "SetBannerImage",
+    "SetAvatar",
+    "SolutionGetWA",
+    "SolutionFailedOnFirstTest",
+    "SolutionGetAC",
+    "SolutionGetRTE",
+    "SolutionGetCE",
+    "LanguageUsageLv1",
+    "SolveWithAttemptedLv1",
+    "SolutionGetTLE",
+    "FB",
+    "CompetitionACCombo",
+    "SolveDuringFrozenTime",
+    "SolveInContinuouslyDayLv1"
+  ],
+  "createdDateStr": "2024-12-09",
+  "annualNewAcceptedTopPercent": 0.5204170286707211,
+  "nightWalker": null,
+  "acMostDay": {
+    "dateStr": "12 月 15 日",
+    "count": 9
+  },
+  "maxTries": {
+    "problemId": 1002,
+    "problemTitle": "Biorhythms",
+    "count": 5
+  },
+  "competition": {
+    "attendedCompetitionCount": 1,
+    "attendedCompetitions": [
+      {
+        "key": "sdutpmc16th",
+        "title": "第十六擂台赛",
+        "unofficialParticipation": true,
+        "rank": {
+          "user": {
+            "userId": 75706,
+            "nickname": "青春ACMer..."
+          },
+          "score": 9,
+          "time": 35968,
+          "rank": null,
+          "rawRank": 1
+        },
+        "rankStr": "总第 1 名",
+        "awardStr": "总第 1 名",
+        "medal": null
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutpmc16th",
+      "title": "第十六擂台赛",
+      "unofficialParticipation": true,
+      "rank": {
+        "user": {
+          "userId": 75706,
+          "nickname": "青春ACMer..."
+        },
+        "score": 9,
+        "time": 35968,
+        "rank": null,
+        "rawRank": 1
+      },
+      "rankStr": "总第 1 名",
+      "awardStr": "总第 1 名",
+      "medal": null
+    },
+    "asGenshin": null,
+    "sdutpc16": null,
+    "sdutncc6th": null,
+    "sdutpmc16th": {
+      "solved": 9,
+      "awardStr": "总第 1 名"
+    }
+  }
+}

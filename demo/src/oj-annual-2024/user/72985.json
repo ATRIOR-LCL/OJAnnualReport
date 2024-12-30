@@ -1,0 +1,89 @@
+{
+  "userId": 72985,
+  "username": "20230525070",
+  "nickname": "张铭洋",
+  "createdAt": "2023-05-24T16:01:27.000Z",
+  "lastTime": null,
+  "avatar": null,
+  "rating": 1900,
+  "type": 1,
+  "annualActive": null,
+  "accepted": 20,
+  "submitted": 22,
+  "annualNewAccepted": 10,
+  "achievements": [
+    "AttendRatingCompetitionsLv1",
+    "RatingLv1",
+    "RatingLv2",
+    "AttendCompetitionSDUTPC",
+    "TooManyPenalties",
+    "CompetitionACCombo",
+    "SolveDuringFrozenTime",
+    "FB",
+    "SolutionGetAC",
+    "SolveInOneDay",
+    "SolutionGetRTE",
+    "SolutionGetWA",
+    "SolveWithAttemptedLv1",
+    "SolutionFailedOnFirstTest",
+    "SolutionFailedOnLastTest",
+    "SolutionGetCE"
+  ],
+  "createdDateStr": "2023-05-25",
+  "annualNewAcceptedTopPercent": 0.5799304952215465,
+  "nightWalker": null,
+  "acMostDay": {
+    "dateStr": "5 月 12 日",
+    "count": 10
+  },
+  "maxTries": null,
+  "competition": {
+    "attendedCompetitionCount": 1,
+    "attendedCompetitions": [
+      {
+        "key": "sdutpc16",
+        "title": "第十六届校赛",
+        "unofficialParticipation": true,
+        "rank": {
+          "user": {
+            "userId": 72985,
+            "nickname": "张铭洋"
+          },
+          "score": 10,
+          "time": 33831,
+          "rank": null,
+          "rawRank": 1
+        },
+        "rankStr": "总第 1 名",
+        "awardStr": "总第 1 名",
+        "medal": null
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutpc16",
+      "title": "第十六届校赛",
+      "unofficialParticipation": true,
+      "rank": {
+        "user": {
+          "userId": 72985,
+          "nickname": "张铭洋"
+        },
+        "score": 10,
+        "time": 33831,
+        "rank": null,
+        "rawRank": 1
+      },
+      "rankStr": "总第 1 名",
+      "awardStr": "总第 1 名",
+      "medal": null
+    },
+    "asGenshin": null,
+    "sdutpc16": {
+      "officialParticipantCount": 109,
+      "unofficialParticipantCount": 148,
+      "awardStr": "总第 1 名"
+    },
+    "sdutncc6th": null,
+    "sdutpmc16th": null
+  }
+}

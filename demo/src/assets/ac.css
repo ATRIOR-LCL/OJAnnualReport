@@ -59,6 +59,7 @@
 }
 
 .xinac span {
+  font-size: .7rem;
   color: #fff;
 }
 
@@ -76,6 +77,9 @@
 }
 
 .sts span{
+  white-space: nowrap;
+  display: inline-block;
+  font-size: .5rem;
   color: #fff;
 }
 
@@ -230,11 +234,12 @@
 .rank2,
 .rank3{
   display: flex;
+  font-size: .45rem;
   justify-content: center;
 }
 
 .rank1::after {
-  content: "0000";
+  content: "252";
   position: absolute;
   font-size: 0.5rem;
   transform: translateX(-50%);
@@ -242,7 +247,7 @@
 }
 
 .rank2::after {
-  content: "0000";
+  content: "242";
   position: absolute;
   font-size: 0.5rem;
   transform: translateX(-50%);
@@ -250,7 +255,7 @@
 }
 
 .rank3::after {
-  content: "0000";
+  content: "232";
   position: absolute;
   font-size: 0.5rem;
   transform: translateX(-50%);

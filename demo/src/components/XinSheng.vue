@@ -4,13 +4,15 @@
       <img src="../assets/img/bbb.png" alt="" class="bbb" />
       <div class="xshtxt">
         <div>作为新生，在争霸赛中首次展露头角</div>
-        <div>你以第 x 名的成绩<br />向大家宣告了你的存在<br />「嗯呢嗯呢」</div>
+        <div>你以<span class="rank">{{rank}}</span>的成绩<br />向大家宣告了你的存在<br />「嗯呢嗯呢」</div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { liuyang } from "@/assets/global";
+let rank = liuyang.value.competition.sdutncc6th.rankStr
 import { can, isnext, isScoll } from "@/assets/global";
 import { onMounted, ref } from "vue";
 

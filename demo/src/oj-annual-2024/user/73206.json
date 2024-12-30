@@ -1,0 +1,123 @@
+{
+  "userId": 73206,
+  "username": "yld",
+  "nickname": "杨丶老爹",
+  "createdAt": "2023-09-07T10:30:03.000Z",
+  "lastTime": "2024-12-14T08:19:44.000Z",
+  "avatar": "73206_af0b602b0850f921.png",
+  "rating": 1744,
+  "type": 1,
+  "annualActive": true,
+  "accepted": 105,
+  "submitted": 114,
+  "annualNewAccepted": 56,
+  "achievements": [
+    "AttendRatingCompetitionsLv1",
+    "RatingLv1",
+    "AttendCompetitionAPF",
+    "AttendCompetitionSDUTPC",
+    "AttendCompetitionAzurSeries",
+    "TooManyPenalties",
+    "CompetitionACCombo",
+    "FB",
+    "SolveDuringFrozenTime",
+    "SetAvatar",
+    "SetBannerImage",
+    "SolutionGetRTE",
+    "SolutionFailedOnFirstTest",
+    "SolveInOneDay",
+    "SolutionGetAC",
+    "SolveWithAttemptedLv1",
+    "SolutionGetCE",
+    "SolutionGetWA",
+    "SolutionGetTLE",
+    "SolveProblemsLv1",
+    "SolutionGetMLE",
+    "SolutionFailedOnLastTest",
+    "SolveWithAttemptedLv2",
+    "SolveInContinuouslyDayLv1",
+    "SolveProblemsLv2"
+  ],
+  "createdDateStr": "2023-09-07",
+  "annualNewAcceptedTopPercent": 0.07471763683753258,
+  "nightWalker": null,
+  "acMostDay": {
+    "dateStr": "7 月 1 日",
+    "count": 9
+  },
+  "maxTries": {
+    "problemId": 5196,
+    "problemTitle": "我不是聒喃",
+    "count": 68
+  },
+  "competition": {
+    "attendedCompetitionCount": 2,
+    "attendedCompetitions": [
+      {
+        "key": "sdutpc16",
+        "title": "第十六届校赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 73206,
+            "nickname": "Alterego"
+          },
+          "score": 7,
+          "time": 22211,
+          "rank": 6,
+          "rawRank": 10
+        },
+        "rankStr": "第 6 名",
+        "awardStr": "金奖",
+        "medal": "gold"
+      },
+      {
+        "key": "sdutpmc16th",
+        "title": "第十六擂台赛",
+        "unofficialParticipation": true,
+        "rank": {
+          "user": {
+            "userId": 75706,
+            "nickname": "青春ACMer..."
+          },
+          "score": 9,
+          "time": 35968,
+          "rank": null,
+          "rawRank": 1
+        },
+        "rankStr": "总第 1 名",
+        "awardStr": "总第 1 名",
+        "medal": null
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutpmc16th",
+      "title": "第十六擂台赛",
+      "unofficialParticipation": true,
+      "rank": {
+        "user": {
+          "userId": 75706,
+          "nickname": "青春ACMer..."
+        },
+        "score": 9,
+        "time": 35968,
+        "rank": null,
+        "rawRank": 1
+      },
+      "rankStr": "总第 1 名",
+      "awardStr": "总第 1 名",
+      "medal": null
+    },
+    "asGenshin": null,
+    "sdutpc16": {
+      "officialParticipantCount": 109,
+      "unofficialParticipantCount": 148,
+      "awardStr": "金奖"
+    },
+    "sdutncc6th": null,
+    "sdutpmc16th": {
+      "solved": 9,
+      "awardStr": "总第 1 名"
+    }
+  }
+}

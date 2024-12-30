@@ -38,6 +38,7 @@
 .txt3-a,
 .txt2-a,
 .txt1-a {
+  white-space: nowrap;
   display: inline-block;
   font-size: 0.4rem;
   font-weight: 700;
@@ -76,9 +77,17 @@
   color: transparent !important;
 }
 
+.txt2-a span,
+.txt1-b span,
+.txt1-a span{
+  font-size: .7rem;
+}
+
+
 .txt3-b,
 .txt2-b,
 .txt1-b {
+  white-space: nowrap;
   display: inline-block;
   font-size: 0.5rem;
   font-weight: 700;
@@ -105,6 +114,7 @@
 .txt3-c,
 .txt2-c,
 .txt1-c {
+  white-space: nowrap;
   display: inline-block;
   font-size: 0.6rem;
   font-weight: 700;

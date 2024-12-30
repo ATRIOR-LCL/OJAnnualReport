@@ -7,7 +7,7 @@
             <div class="name">作为成就大师</div>
             <div class="handle">@Achievement</div>
             <div class="title">
-              <span class="emoji">😊</span> 你总计达成了 x 项成就<br />
+              <span class="emoji">😊</span> 你总计达成了<p>{{allcnt}}</p>项成就<br />
               继续努力向全收集进发吧！
             </div>
           </div>
@@ -58,44 +58,13 @@
   </section>
 </template>
 <script setup>
-import { can, isnext, isScoll } from "@/assets/global";
+import { can, isnext, isScoll, liuyang } from "@/assets/global";
 import { nextTick, onMounted, ref } from "vue";
 import achivements from "@/configs/achivement-config";
-const activeAnmi1 = ref("1");
-const soMucn = ref(false);
-const tests = [
-  "SolveInContinuouslyDayLv1",
-  "SolveInContinuouslyDayLv2",
-  "SolveWithAttemptedLv2",
-  "NightSolver",
-  "SolveInOneDay",
-  "SolveWithAttemptedLv1",
-  "SolveWithAttemptedLv2",
-  "SolveWithMultiResults",
-  "AttendRatingCompetitionsLv3",
-  "SolveInContinuouslyDayLv1",
-  "SolveInContinuouslyDayLv2",
-  "SolveWithAttemptedLv2",
-  "NightSolver",
-  "SolveInOneDay",
-  "SolveWithAttemptedLv1",
-  "SolveWithAttemptedLv2",
-  "SolveWithMultiResults",
-  "AttendRatingCompetitionsLv3",
-  "SolveWithAttemptedLv1",
-  "SolveWithAttemptedLv2",
-  "SolveWithMultiResults",
-  "AttendRatingCompetitionsLv3",
-  "SolveInContinuouslyDayLv1",
-  "SolveInContinuouslyDayLv2",
-  "SolveWithAttemptedLv2",
-  "NightSolver",
-  "SolveInOneDay",
-  "SolveWithAttemptedLv1",
-  "SolveWithAttemptedLv2",
-  "SolveWithMultiResults",
-  "AttendRatingCompetitionsLv3",
-];
+
+let allcnt = liuyang.value.achievements.length
+
+const tests = liuyang.value.achievements
 
 let len = 0;
 if (tests.length < 5) {

@@ -10,9 +10,12 @@
 
 .msimg {
   display: inline-block;
-  width: 0.5rem;
+  width: 0.6rem;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
+  position: relative;
+  bottom: .2rem;
+  /* margin-bottom: .1rem; */
 }
 
 .mstxt {
@@ -58,6 +61,49 @@
   transform: translateY(1rem);
   filter: blur(0.1rem);
   opacity: 0;
+}
+.mstxt2{
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.mstxt2 span:nth-child(3){
+  font-size: .7rem;
+}
+
+.mstxt3 span{
+  color: #f7b733;
+  font-size: .7rem;
+  letter-spacing: 0;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
+.mstxt4 span{
+  color: #f7b733;
+  font-size: .7rem;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  /* letter-spacing: .1rem; */
+}
+
+.mstxt5 span{
+  font-size: .5rem;
+  letter-spacing: .1rem;
+  color: #f7b733;
+}
+
+.mstxt6 span{
+  font-size: .7rem;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  /* letter-spacing: .1rem; */
+  color: #f7b733;
 }
 
 .mstxt3,
@@ -125,8 +171,8 @@
 .splitLine {
   position: absolute;
   width: 200px;
-  height: 10px;
-  top: 100px;
+  height: 6px;
+  top: 62%;
   background-image: linear-gradient(
     to right,
     transparent 10%,

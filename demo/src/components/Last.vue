@@ -2,7 +2,7 @@
   <section v-if="generate">
     <div class="font2">
       <span class="font2-txt">时至今日，</span>
-      <span class="font2-txt">我们的旅程已经开始了 x 天。</span>
+      <span class="font2-txt">我们的旅程已经开始了{{days}}天。</span>
       <span class="font2-txt">看似一眨眼的时间，</span>
       <span class="font2-txt">却承载了我们无可忘却的珍重回忆。</span>
       <span class="font2-txt">以这份回忆的重量所编织的纽带，</span>
@@ -50,23 +50,6 @@
     </div>
   </section>
   <section v-else class="summ">
-    <!-- <button
-      class="main-button"
-      @click="downloadAsImage"
-      @touchstart="downloadAsImage"
-    >
-      <svg
-        width="30"
-        height="30"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M15.75 5.125a3.125 3.125 0 1 1 .754 2.035l-8.397 3.9a3.124 3.124 0 0 1 0 1.88l8.397 3.9a3.125 3.125 0 1 1-.61 1.095l-8.397-3.9a3.125 3.125 0 1 1 0-4.07l8.397-3.9a3.125 3.125 0 0 1-.144-.94Z"
-        ></path>
-      </svg>
-    </button> -->
     <button class="Btn">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +101,7 @@
           <div class="confetti-piece"></div>
         </div>
         <div class="results-summary-container__result">
-          <div class="heading-tertiary">你的OJ年报<span>🥳</span></div>
+          <div class="heading-tertiary">我的OJ年报<span>🥳</span></div>
           <div class="result-box">
             <img src="../assets/img/qq.png" alt="" />
           </div>
@@ -164,6 +147,7 @@
 </template>
 
 <script setup>
+import { days } from "@/assets/global";
 import { ref, onMounted, nextTick } from "vue";
 import html2canvas from "html2canvas";
 import QRCode from "qrcode";
@@ -174,7 +158,7 @@ const text4 = ref(null);
 const text5 = ref(null);
 const text6 = ref(null);
 const ojoj = ref(null);
-const generate = ref(false);
+const generate = ref(true);
 
 function gosum() {
   setTimeout(() => {
@@ -366,10 +350,10 @@ const contests = ref([
     name: "校赛",
     rank: 12,
   },
-  {
-    name: "原神赛",
-    rank: 12,
-  },
+  // {
+  //   name: "原神赛",
+  //   rank: 12,
+  // },
 ]);
 </script>
 <style scoped>

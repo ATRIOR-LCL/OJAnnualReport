@@ -36,15 +36,33 @@
 .txt1 span,
 .txt2 span,
 .txt3 span {
+  white-space: nowrap;
+  font-size: .7rem;
   color: #fff !important;
 }
 
 .xstxt2 div:nth-child(2) {
+  color: #fff !important;
   text-shadow: 1px 1px #c2c2c2, 2px 2px #c2c2c2, 3px 3px #c2c2c2;
 }
 
 .xstxt2 div:nth-child(3) span {
+  color: #fff;
   text-shadow: 1px 1px #c2c2c2, 2px 2px #c2c2c2, 3px 3px #c2c2c2;
+}
+
+.xstxt2 div:nth-last-child(1) span{
+  color: #fff;
+}
+.xstxt2 div{
+  background-image: linear-gradient(
+    -225deg,
+    #5d9fff 0%,
+    #b8dcff 48%,
+    #6bbbff 100%
+  );
+  background-clip: text;
+  color: transparent !important;
 }
 
 .xstxt2 div,
@@ -67,6 +85,7 @@
   transform: translateY(1rem);
   filter: blur(0.1rem);
   opacity: 0;
+  color: #fff;
   transition: all 1s ease-in-out;
 }
 

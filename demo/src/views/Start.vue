@@ -15,7 +15,7 @@
           <div class="blackhole-disc"></div>
         </div>
       </div>
-      <router-link to="/login" class="back">
+      <router-link to="/onlinejudge3/annual-report-2024/login" class="back">
         <img src="../assets/img/qq.png" alt="" />
         <span>Come Back</span>
       </router-link>
@@ -41,8 +41,12 @@
 
 <script setup>
 import { nextTick, ref } from "vue";
+import { userid, avatar } from "@/assets/global";
 import { gogo } from "@/assets/global";
+import req from "@/utils/req";
 const isChecked = ref(false);
+
+
 import { contain } from "@/assets/global";
 if (window.screen.width > 1000) {
   contain.value = true;

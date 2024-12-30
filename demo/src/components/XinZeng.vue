@@ -2,11 +2,11 @@
   <section>
     <div class="xinzeng">
       <p class="yh">
-        <span>这一年里OJ迎来了</span><span class="yhnum">0000</span
+        <span>这一年里OJ迎来了</span><span class="yhnum">2052</span
         ><span>名新用户!</span>
       </p>
       <p class="tj">
-        <span>这一年里OJ新增了</span><span class="tjnum">0000</span
+        <span>这一年里OJ新增了</span><span class="tjnum">175371</span
         ><span>条提交!</span>
       </p>
     </div>

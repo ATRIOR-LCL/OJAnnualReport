@@ -1,0 +1,120 @@
+{
+  "userId": 75230,
+  "username": "Huamanlou",
+  "nickname": "花满楼",
+  "createdAt": "2024-09-09T13:31:47.000Z",
+  "lastTime": "2024-12-16T00:36:19.000Z",
+  "avatar": "75230_820c53b3a7723dca.jpeg",
+  "rating": 1648,
+  "type": 1,
+  "annualActive": true,
+  "accepted": 200,
+  "submitted": 201,
+  "annualNewAccepted": 200,
+  "achievements": [
+    "SetAvatar",
+    "SolutionGetTLE",
+    "SolveInContinuouslyDayLv1",
+    "CompleteSetPartially",
+    "SolveProblemsLv1",
+    "SolveProblemsLv2",
+    "SolutionFailedOnFirstTest",
+    "SolutionFailedOnLastTest",
+    "SolutionGetAC",
+    "SolveWithAttemptedLv1",
+    "SolutionGetCE",
+    "SolveInOneDay",
+    "SolveInContinuouslyDayLv2",
+    "SolutionGetWA",
+    "SolutionGetRTE",
+    "NightSolver",
+    "CompleteSetAll",
+    "RatingLv1",
+    "AttendRatingCompetitionsLv1",
+    "SolveProblemsLv3"
+  ],
+  "createdDateStr": "2024-09-09",
+  "annualNewAcceptedTopPercent": 0.005212858384013901,
+  "nightWalker": {
+    "date": "2024-10-05",
+    "timeStr": "10 月 5 日 00:12:51",
+    "togetherUserCount": 2
+  },
+  "acMostDay": {
+    "dateStr": "9 月 16 日",
+    "count": 14
+  },
+  "maxTries": {
+    "problemId": 1152,
+    "problemTitle": "求两个整数之和",
+    "count": 8
+  },
+  "competition": {
+    "attendedCompetitionCount": 2,
+    "attendedCompetitions": [
+      {
+        "key": "sdutncc6th",
+        "title": "第六届新生争霸赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75230,
+            "nickname": "花满楼"
+          },
+          "score": 4,
+          "time": 16432,
+          "rank": 3,
+          "rawRank": 3
+        },
+        "rankStr": "第 3 名",
+        "awardStr": "金奖",
+        "medal": "gold"
+      },
+      {
+        "key": "sdutpmc16th",
+        "title": "第十六擂台赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75700,
+            "nickname": "三等分的奶龙石块"
+          },
+          "score": 7,
+          "time": 33290,
+          "rank": 2,
+          "rawRank": 7
+        },
+        "rankStr": "第 2 名",
+        "awardStr": "金奖",
+        "medal": "gold"
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutncc6th",
+      "title": "第六届新生争霸赛",
+      "unofficialParticipation": false,
+      "rank": {
+        "user": {
+          "userId": 75230,
+          "nickname": "花满楼"
+        },
+        "score": 4,
+        "time": 16432,
+        "rank": 3,
+        "rawRank": 3
+      },
+      "rankStr": "第 3 名",
+      "awardStr": "金奖",
+      "medal": "gold"
+    },
+    "asGenshin": null,
+    "sdutpc16": null,
+    "sdutncc6th": {
+      "rankStr": "第 3 名"
+    },
+    "sdutpmc16th": {
+      "solved": 7,
+      "awardStr": "金奖"
+    }
+  }
+}

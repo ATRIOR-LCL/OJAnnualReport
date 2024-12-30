@@ -1,0 +1,115 @@
+{
+  "userId": 75333,
+  "username": "LINlinlinlin",
+  "nickname": "LINlinlinlin",
+  "createdAt": "2024-09-18T15:23:30.000Z",
+  "lastTime": "2024-12-10T13:54:35.000Z",
+  "avatar": null,
+  "rating": 1487,
+  "type": 1,
+  "annualActive": true,
+  "accepted": 108,
+  "submitted": 122,
+  "annualNewAccepted": 108,
+  "achievements": [
+    "SolutionGetCE",
+    "SolveWithAttemptedLv1",
+    "CompleteSetPartially",
+    "SolutionGetRTE",
+    "SolutionFailedOnLastTest",
+    "SolutionGetTLE",
+    "SolveProblemsLv1",
+    "SolveInContinuouslyDayLv1",
+    "SolutionGetAC",
+    "SolveInOneDay",
+    "SolutionFailedOnFirstTest",
+    "NightSolver",
+    "SolutionGetWA",
+    "SolveProblemsLv2",
+    "AttendRatingCompetitionsLv1"
+  ],
+  "createdDateStr": "2024-09-18",
+  "annualNewAcceptedTopPercent": 0.03866203301476977,
+  "nightWalker": {
+    "date": "2024-09-22",
+    "timeStr": "9 月 22 日 02:05:02",
+    "togetherUserCount": 5
+  },
+  "acMostDay": {
+    "dateStr": "10 月 5 日",
+    "count": 10
+  },
+  "maxTries": {
+    "problemId": 3730,
+    "problemTitle": "字符串分割",
+    "count": 10
+  },
+  "competition": {
+    "attendedCompetitionCount": 2,
+    "attendedCompetitions": [
+      {
+        "key": "sdutncc6th",
+        "title": "第六届新生争霸赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75333,
+            "nickname": "AK之神"
+          },
+          "score": 1,
+          "time": 1280,
+          "rank": 39,
+          "rawRank": 39
+        },
+        "rankStr": "第 39 名",
+        "awardStr": "铜奖",
+        "medal": "bronze"
+      },
+      {
+        "key": "sdutpmc16th",
+        "title": "第十六擂台赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75727,
+            "nickname": "尧家军"
+          },
+          "score": 2,
+          "time": 10708,
+          "rank": 42,
+          "rawRank": 49
+        },
+        "rankStr": "第 42 名",
+        "awardStr": "第 42 名",
+        "medal": null
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutncc6th",
+      "title": "第六届新生争霸赛",
+      "unofficialParticipation": false,
+      "rank": {
+        "user": {
+          "userId": 75333,
+          "nickname": "AK之神"
+        },
+        "score": 1,
+        "time": 1280,
+        "rank": 39,
+        "rawRank": 39
+      },
+      "rankStr": "第 39 名",
+      "awardStr": "铜奖",
+      "medal": "bronze"
+    },
+    "asGenshin": null,
+    "sdutpc16": null,
+    "sdutncc6th": {
+      "rankStr": "第 39 名"
+    },
+    "sdutpmc16th": {
+      "solved": 2,
+      "awardStr": "第 42 名"
+    }
+  }
+}

@@ -4,10 +4,10 @@
       <div class="ncttxt">
         <p class="saishi">
           这一年里OJ共举办了<br />
-          <span>00</span>场<br />中大型正式赛事<span>😲</span>
+          <span>4</span>场<br />中大型正式赛事<span>😲</span>
         </p>
         <p class="bipin">
-          共有<span>0000</span>名选手<br />参与了这些激情的比拼<span>💭</span>
+          共有<span>496</span>名选手<br />参与了这些激情的比拼<span>💭</span>
         </p>
       </div>
       <div class="acmacm">
@@ -15,7 +15,7 @@
           <div class="dot"></div>
           <div class="card">
             <div class="ray"></div>
-            <div class="text">0000</div>
+            <div class="text">496</div>
             <div class="pt">Participants</div>
             <div class="line topl"></div>
             <div class="line leftl"></div>

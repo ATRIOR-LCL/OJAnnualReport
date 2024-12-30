@@ -2,8 +2,8 @@
   <section>
     <div class="hard">
       <div class="hardtxt">
-        <span>还记得</span><span>xxxx</span><span>这道题吗</span
-        ><span>你提交了整整00次才过</span>
+        <span>还记得</span><span>{{ maxtries }}</span><span>这道题吗</span
+        ><span>你提交了整整<span class="cnt">{{ cnt }}</span>次才过</span>
       </div>
       <div class="hard_slogan">
         那份喜悦背后的坚韧,一定也陪你走到了今天
@@ -16,6 +16,9 @@
 </template>
 
 <script setup>
+import { liuyang } from "@/assets/global";
+let maxtries = liuyang.value.maxTries.problemTitle
+let cnt = liuyang.value.maxTries.count
 import { can, isnext, isScoll } from "@/assets/global";
 import { nextTick, onMounted, ref } from "vue";
 onMounted(() => {

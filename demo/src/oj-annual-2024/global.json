@@ -1,0 +1,130 @@
+{
+  "solutionCount": 9798834,
+  "solutionCountAnnual": 175371,
+  "userCount": 70262,
+  "userCountAnnual": 2052,
+  "competitionCount": 4,
+  "competitionUniqueParticipantCount": 496,
+  "annualACTopStandings": [
+    {
+      "userId": 75314,
+      "username": "2728612979",
+      "nickname": "旺旺碎冰冰",
+      "avatar": "75314_dd87efbade79f8ad.jpeg",
+      "accepted": 252,
+      "submitted": 270,
+      "annualNewAccepted": 252
+    },
+    {
+      "userId": 75141,
+      "username": "1YiSoaring",
+      "nickname": "译翼飞鸾",
+      "avatar": "75141_5586eae46bf12fca.jpeg",
+      "accepted": 242,
+      "submitted": 253,
+      "annualNewAccepted": 242
+    },
+    {
+      "userId": 74126,
+      "username": "23110501002",
+      "nickname": "jsj张存源",
+      "avatar": null,
+      "accepted": 232,
+      "submitted": 232,
+      "annualNewAccepted": 232
+    },
+    {
+      "userId": 75267,
+      "username": "Coco520",
+      "nickname": "COCO520",
+      "avatar": "75267_7c32ec3ace5fa207.jpeg",
+      "accepted": 226,
+      "submitted": 250,
+      "annualNewAccepted": 226
+    },
+    {
+      "userId": 73749,
+      "username": "hexiaole",
+      "nickname": "hexiaole",
+      "avatar": "73749_cccfd8c74adbf29f.jpeg",
+      "accepted": 241,
+      "submitted": 243,
+      "annualNewAccepted": 221
+    }
+  ],
+  "achievementNum": 52,
+  "topRareAchievements": [
+    {
+      "achievementKey": "RatingLv2",
+      "count": 1
+    },
+    {
+      "achievementKey": "LanguageUsageLv3",
+      "count": 4
+    },
+    {
+      "achievementKey": "SolutionRunsWithLargeMemory",
+      "count": 6
+    }
+  ],
+  "achievementTopUsers": [
+    {
+      "userId": 63375,
+      "username": "20110573086",
+      "nickname": "凌乱之风",
+      "createdAt": "2020-09-28T02:03:59.000Z",
+      "lastTime": "2024-11-12T07:31:27.000Z",
+      "avatar": "63375_f0aea31d158cb06c.png",
+      "rating": 1836,
+      "type": 1,
+      "annualActive": true,
+      "accepted": 913,
+      "submitted": 931,
+      "annualNewAccepted": 67,
+      "achievements": [
+        "AttendRatingCompetitionsLv1",
+        "RatingLv1",
+        "AttendCompetitionSDUTRound",
+        "AttendCompetitionAPF",
+        "AttendCompetitionSDUTPC",
+        "FB",
+        "Competition1AMaster",
+        "CompetitionACCombo",
+        "SolveDuringFrozenTime",
+        "TooManyPenalties",
+        "SetAvatar",
+        "SetBannerImage",
+        "SendAndReceiveMessageWithSameUser",
+        "Fav",
+        "JoinGroup",
+        "SolutionGetRTE",
+        "SolutionGetCE",
+        "NightSolver",
+        "SolutionGetOLE",
+        "SolveProblemsLv3",
+        "SolveWithMultiResults",
+        "SolutionGetMLE",
+        "SolveInContinuouslyDayLv1",
+        "SolveWithAttemptedLv1",
+        "CompleteSetPartially",
+        "SolveProblemsLv4",
+        "SolutionGetPE",
+        "SolutionGetTLE",
+        "SolutionFailedOnFirstTest",
+        "SolutionFailedOnLastTest",
+        "SolveProblemsLv2",
+        "SolveInOneDay",
+        "LanguageUsageLv1",
+        "SolveProblemsLv1",
+        "CompleteSetAll",
+        "LanguageUsageLv2",
+        "SolveWithAttemptedLv2",
+        "SolveInContinuouslyDayLv2",
+        "SolutionGetAC",
+        "SolutionGetWA",
+        "SolutionRunsWithLargeMemory",
+        "LanguageUsageLv3"
+      ]
+    }
+  ]
+}

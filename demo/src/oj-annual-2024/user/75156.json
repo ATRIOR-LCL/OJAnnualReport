@@ -1,0 +1,120 @@
+{
+  "userId": 75156,
+  "username": "liangjiakun",
+  "nickname": "yume",
+  "createdAt": "2024-08-31T08:14:09.000Z",
+  "lastTime": "2024-12-23T03:39:08.000Z",
+  "avatar": null,
+  "rating": 1707,
+  "type": 1,
+  "annualActive": true,
+  "accepted": 200,
+  "submitted": 202,
+  "annualNewAccepted": 200,
+  "achievements": [
+    "SolveWithAttemptedLv1",
+    "SolutionFailedOnFirstTest",
+    "SolutionGetCE",
+    "SolveProblemsLv2",
+    "CompleteSetPartially",
+    "SolveInOneDay",
+    "SolutionGetWA",
+    "SolutionGetRTE",
+    "SolutionGetAC",
+    "SolveInContinuouslyDayLv1",
+    "SolveProblemsLv1",
+    "SolutionFailedOnLastTest",
+    "CompleteSetAll",
+    "SolutionGetTLE",
+    "SolutionGetMLE",
+    "FB",
+    "RatingLv1",
+    "AttendRatingCompetitionsLv1",
+    "NightSolver",
+    "SolveProblemsLv3"
+  ],
+  "createdDateStr": "2024-08-31",
+  "annualNewAcceptedTopPercent": 0.005212858384013901,
+  "nightWalker": {
+    "date": "2024-11-29",
+    "timeStr": "11 月 29 日 02:04:58",
+    "togetherUserCount": 4
+  },
+  "acMostDay": {
+    "dateStr": "9 月 18 日",
+    "count": 30
+  },
+  "maxTries": {
+    "problemId": 5175,
+    "problemTitle": "A magical sequence",
+    "count": 12
+  },
+  "competition": {
+    "attendedCompetitionCount": 2,
+    "attendedCompetitions": [
+      {
+        "key": "sdutncc6th",
+        "title": "第六届新生争霸赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75156,
+            "nickname": "yume"
+          },
+          "score": 6,
+          "time": 36260,
+          "rank": 1,
+          "rawRank": 1
+        },
+        "rankStr": "第 1 名",
+        "awardStr": "金奖",
+        "medal": "gold"
+      },
+      {
+        "key": "sdutpmc16th",
+        "title": "第十六擂台赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75726,
+            "nickname": "听说有键盘我就来了"
+          },
+          "score": 8,
+          "time": 34350,
+          "rank": 1,
+          "rawRank": 6
+        },
+        "rankStr": "第 1 名",
+        "awardStr": "金奖",
+        "medal": "gold"
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutncc6th",
+      "title": "第六届新生争霸赛",
+      "unofficialParticipation": false,
+      "rank": {
+        "user": {
+          "userId": 75156,
+          "nickname": "yume"
+        },
+        "score": 6,
+        "time": 36260,
+        "rank": 1,
+        "rawRank": 1
+      },
+      "rankStr": "第 1 名",
+      "awardStr": "金奖",
+      "medal": "gold"
+    },
+    "asGenshin": null,
+    "sdutpc16": null,
+    "sdutncc6th": {
+      "rankStr": "第 1 名"
+    },
+    "sdutpmc16th": {
+      "solved": 8,
+      "awardStr": "金奖"
+    }
+  }
+}

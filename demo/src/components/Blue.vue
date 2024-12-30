@@ -7,7 +7,7 @@
             在<span>2</span>月<span>3</span>日，一个临近年关的日子
           </div>
           <div class="txt1-b">
-            <span>000</span>名兴趣相投的旅行者和你一同参加了<br />
+            <span>{{ cnt }}</span>名兴趣相投的旅行者<br>和你一同参加了<br />
             SDUT OJ历史上最特别的比赛
           </div>
           <div class="txt1-c">蔚蓝系列赛<span>Round 2：原神主题赛</span></div>
@@ -26,7 +26,7 @@
       <div class="bg-slide" style="z-index: 2">
         <div class="txt1">
           <div class="txt2-a">
-            你使用「<span>xxxx</span>」开门<br />并首先解锁了<span>country</span>篇
+            你使用「<span>{{ opendoor }}</span>」开门<br />并首先解锁了<span>{{ fir }}</span>篇
           </div>
           <div class="txt2-b">
             五个国度的新奇有趣的题目<br />一定让你回想起了旅行的意义
@@ -72,6 +72,19 @@
 </template>
 
 <script setup>
+import { liuyang } from "@/assets/global";
+const cnt = liuyang.value.competition.asGenshin.travelerCount
+const opendoor  = liuyang.value.competition.asGenshin.genshinLaunchWord
+let ginshen = {
+  "mondstadt":'蒙德',
+  'liyue':'璃月',
+  'inazuma':'稻妻',
+  'sumeru':'须弥',
+  'fontaine':'枫丹'
+}
+const fir = ginshen[liuyang.value.competition.asGenshin.firstUnlockedCountry]
+
+
 import { can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
 const bg1 = ref(null);

@@ -11,6 +11,12 @@
   z-index: 11 !important;
 }
 
+.cnt{
+  letter-spacing: 0;
+  font-size: .7rem;
+  color: #fff;
+}
+
 .hardtxt {
   letter-spacing: 0.1rem;
   width: 6rem;

@@ -4,16 +4,16 @@
       <div class="mstxt">
         <div class="mstxt1">纵观整个OJ</div>
         <div class="mstxt2">
-          最强成就大师<img
+          <span>最强成就大师</span><img
             src="../assets/img/qq.png"
             alt=""
             class="msimg"
-          />atrior
+          /><span>凌乱之风</span>
         </div>
-        <div class="mstxt3">已经达成了00项成就</div>
-        <div class="mstxt4">距离00项全成就仅有一步之遥</div>
-        <div class="mstxt5">在所有成就中，最稀有的成就是0000</div>
-        <div class="mstxt6">仅有00人达成</div>
+        <div class="mstxt3">已经达成了<span>42</span>项成就</div>
+        <div class="mstxt4">距离<span>52</span>项全成就仅有一步之遥</div>
+        <div class="mstxt5">在所有成就中，最稀有的成就是<span>{{ title }}</span></div>
+        <div class="mstxt6">仅有<span>1</span>人达成</div>
       </div>
       <div class="cards">
         <div class="outlinePage">
@@ -57,7 +57,7 @@
           <p class="ranking_number">1<span class="ranking_word">st</span></p>
           <div class="splitLine"></div>
           <img src="../assets/img/qq.png" alt="" class="mmm" />
-          <p class="userName">ATRIOR</p>
+          <p class="userName">凌乱之风</p>
         </div>
         <div class="detailPage">
           <svg
@@ -150,7 +150,7 @@
               ></path>
             </svg>
             <p class="gradesBoxLabel">AMOUNT</p>
-            <p class="gradesBoxNum">00</p>
+            <p class="gradesBoxNum">42</p>
           </div>
         </div>
       </div>
@@ -161,6 +161,12 @@
 <script setup>
 import { can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
+import achivements from "@/configs/achivement-config";
+let title = ref(null)
+achivements.forEach(achiv=>{
+  if(achiv.achievementKey === 'RatingLv2')
+    title.value=achiv.title
+})
 onMounted(() => {
   const medals = document.querySelector(".medals");
   const ms1anim = new IntersectionObserver(

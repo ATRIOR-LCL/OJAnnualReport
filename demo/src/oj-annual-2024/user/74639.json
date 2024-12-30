@@ -1,0 +1,76 @@
+{
+  "userId": 74639,
+  "username": "20240509040",
+  "nickname": "陈其贤",
+  "createdAt": "2024-05-09T04:33:34.000Z",
+  "lastTime": "2024-10-27T06:20:10.000Z",
+  "avatar": null,
+  "rating": 1410,
+  "type": 1,
+  "annualActive": true,
+  "accepted": 3,
+  "submitted": 3,
+  "annualNewAccepted": 3,
+  "achievements": [
+    "AttendRatingCompetitionsLv1",
+    "AttendCompetitionSDUTPC",
+    "SolutionGetAC"
+  ],
+  "createdDateStr": "2024-05-09",
+  "annualNewAcceptedTopPercent": 0.788010425716768,
+  "nightWalker": null,
+  "acMostDay": {
+    "dateStr": "10 月 27 日",
+    "count": 2
+  },
+  "maxTries": null,
+  "competition": {
+    "attendedCompetitionCount": 1,
+    "attendedCompetitions": [
+      {
+        "key": "sdutpc16",
+        "title": "第十六届校赛",
+        "unofficialParticipation": true,
+        "rank": {
+          "user": {
+            "userId": 74639,
+            "nickname": "小草帽"
+          },
+          "score": 1,
+          "time": 155,
+          "rank": null,
+          "rawRank": 236
+        },
+        "rankStr": "总第 236 名",
+        "awardStr": "总第 236 名",
+        "medal": null
+      }
+    ],
+    "bestRankCompetition": {
+      "key": "sdutpc16",
+      "title": "第十六届校赛",
+      "unofficialParticipation": true,
+      "rank": {
+        "user": {
+          "userId": 74639,
+          "nickname": "小草帽"
+        },
+        "score": 1,
+        "time": 155,
+        "rank": null,
+        "rawRank": 236
+      },
+      "rankStr": "总第 236 名",
+      "awardStr": "总第 236 名",
+      "medal": null
+    },
+    "asGenshin": null,
+    "sdutpc16": {
+      "officialParticipantCount": 109,
+      "unofficialParticipantCount": 148,
+      "awardStr": "总第 236 名"
+    },
+    "sdutncc6th": null,
+    "sdutpmc16th": null
+  }
+}
