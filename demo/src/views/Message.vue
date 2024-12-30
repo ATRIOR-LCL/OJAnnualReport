@@ -151,7 +151,7 @@ onMounted(() => {
     const handleTouchEnd = () => {
       if (touchEnd - touchStart > 50 && currentPage > 0) {
         null;
-      } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 2) {
+      } else if (touchStart - touchEnd > 50 && currentPage < totalPages - 1) {
         pages[currentPage].classList.add("fontremove");
         setTimeout(() => {
           pages[currentPage].classList.add("hide");
